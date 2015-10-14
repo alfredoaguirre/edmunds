@@ -7,3 +7,5 @@ c:\Users\alfredo aguirre\documents\visual studio 2013\Projects\edmunds\edmunds.T
 c:\Users\alfredo aguirre\documents\visual studio 2013\Projects\edmunds\edmunds.Test\obj\Debug\edmunds.Test.pdb
 C:\Users\Alfredo Aguirre\Documents\Visual Studio 2013\Projects\edmunds\edmunds.Test\bin\Debug\Newtonsoft.Json.dll
 C:\Users\Alfredo Aguirre\Documents\Visual Studio 2013\Projects\edmunds\edmunds.Test\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Alfredo Aguirre\Documents\Visual Studio 2013\Projects\edmunds\edmunds.Test\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\Alfredo Aguirre\Documents\Visual Studio 2013\Projects\edmunds\edmunds.Test\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.xml
