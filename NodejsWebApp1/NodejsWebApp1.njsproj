@@ -38,17 +38,17 @@
   </PropertyGroup>
   <ItemGroup>
     <Content Include="event.json" />
-    <Content Include="util\JSON.json" />
+    <Content Include="alexa\JSON.json" />
     <Content Include="package.json" />
     <Content Include="README.md" />
-    <Content Include="Schema.json" />
-    <Content Include="util\Utterance.txt" />
+    <Content Include="alexa\Schema.json" />
+    <Content Include="alexa\Utterance.txt" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="index.js" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="util\" />
+    <Folder Include="alexa\" />
   </ItemGroup>
   <!-- Do not delete the following Import Project.  While this appears to do nothing it is a marker for setting TypeScript properties before our import that depends on them. -->
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="False" />
