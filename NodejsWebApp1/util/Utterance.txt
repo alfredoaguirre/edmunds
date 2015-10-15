@@ -1,0 +1,6 @@
+﻿Sample Utterances
+GetMPGByModel get mpg of {make} {model} {year} 
+
+
+Utterances
+GetMPGByModel get mpg of Acura Integra two thousand and one

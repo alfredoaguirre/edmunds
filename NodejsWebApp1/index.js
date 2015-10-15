@@ -1,5 +1,3 @@
-// For development/testing purposes
-
 exports.handler = function( event, context ) {
     console.log("Running index.handler");
     var arg = event.request.intent.slots;
