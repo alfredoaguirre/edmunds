@@ -62,7 +62,5 @@ exports.handler = function( event, context ) {
     }
     
     http.request(options, callback).end();
-
- //   context.succeed(response); 
 }
 
