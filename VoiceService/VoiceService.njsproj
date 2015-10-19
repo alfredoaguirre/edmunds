@@ -3,7 +3,7 @@
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
-    <Name>NodejsWebApp1</Name>
+    <Name>VoiceService</Name>
     <RootNamespace>NodejsWebApp1</RootNamespace>
     <ScriptArguments>run</ScriptArguments>
     <NodeExeArguments>
@@ -14,7 +14,8 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>73612600-c307-4e71-b06e-cd00089f4704</ProjectGuid>
-    <ProjectHome>.</ProjectHome>
+    <ProjectHome>
+    </ProjectHome>
     <StartupFile>node_modules\node-lambda\bin\node-lambda </StartupFile>
     <StartWebBrowser>True</StartWebBrowser>
     <SearchPath>
