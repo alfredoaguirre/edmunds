@@ -1,0 +1,37 @@
+{
+	"session": {
+		"sessionId": "SessionId.9c6cdbab-d8c6-4635-9e96-d22ac0bf62bc",
+		"application": {
+			"applicationId": "amzn1.echo-sdk-ams.app.8de72717-a87d-4503-93d8-6dc3bc5b7789"
+		},
+		"attributes": null,
+		"user": {
+			"userId": "amzn1.account.AGQMN5GPWT45VKPIUEH3SHSXM34Q",
+			"accessToken": null
+		},
+		"new": true
+	},
+	"request": {
+		"type": "IntentRequest",
+		"requestId": "EdwRequestId.f40a87c7-28a4-475a-8cf0-098df4ec9bc3",
+		"timestamp": 1444709621291,
+		"intent": {
+			"name": "GetMPGByModel",
+			"slots": {
+				"model": {
+					"name": "model",
+					"value": "Integra"
+				},
+				"make": {
+					"name": "make",
+					"value": "Acura"
+				},
+				"year": {
+					"name": "make",
+					"value": "2001"
+				}
+			}
+		},
+		"reason": null
+	}
+}
