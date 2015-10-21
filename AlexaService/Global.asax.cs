@@ -11,6 +11,8 @@ namespace AlexaService
     {
         protected void Application_Start()
         {
+            var json = GlobalConfiguration.Configuration.Formatters.JsonFormatter;
+            json.UseDataContractJsonSerializer = true;
             GlobalConfiguration.Configure(WebApiConfig.Register);
         }
     }
