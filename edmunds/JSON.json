@@ -1,0 +1,2812 @@
+﻿{
+	"makes": [
+		{
+			"id": 200002038,
+			"name": "Acura",
+			"niceName": "acura",
+			"models": [
+				{
+					"id": "Acura_Integra",
+					"name": "Integra",
+					"niceName": "integra",
+					"years": [
+						{
+							"id": 3271,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Acura_Legend",
+					"name": "Legend",
+					"niceName": "legend",
+					"years": [
+						{
+							"id": 3278,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Acura_NSX",
+					"name": "NSX",
+					"niceName": "nsx",
+					"years": [
+						{
+							"id": 3282,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Acura_TL",
+					"name": "TL",
+					"niceName": "tl",
+					"years": [
+						{
+							"id": 100000368,
+							"year": 1995
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": 200000001,
+			"name": "Audi",
+			"niceName": "audi",
+			"models": [
+				{
+					"id": "Audi_90",
+					"name": "90",
+					"niceName": "90",
+					"years": [
+						{
+							"id": 900,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Audi_A6",
+					"name": "A6",
+					"niceName": "a6",
+					"years": [
+						{
+							"id": 3311,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Audi_Cabriolet",
+					"name": "Cabriolet",
+					"niceName": "cabriolet",
+					"years": [
+						{
+							"id": 3316,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Audi_S6",
+					"name": "S6",
+					"niceName": "s6",
+					"years": [
+						{
+							"id": 3323,
+							"year": 1995
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": 200000081,
+			"name": "BMW",
+			"niceName": "bmw",
+			"models": [
+				{
+					"id": "BMW_3_Series",
+					"name": "3 Series",
+					"niceName": "3-series",
+					"years": [
+						{
+							"id": 3209,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "BMW_5_Series",
+					"name": "5 Series",
+					"niceName": "5-series",
+					"years": [
+						{
+							"id": 912,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "BMW_7_Series",
+					"name": "7 Series",
+					"niceName": "7-series",
+					"years": [
+						{
+							"id": 3223,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "BMW_8_Series",
+					"name": "8 Series",
+					"niceName": "8-series",
+					"years": [
+						{
+							"id": 3230,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "BMW_M3",
+					"name": "M3",
+					"niceName": "m3",
+					"years": [
+						{
+							"id": 100503359,
+							"year": 1995
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": 200006659,
+			"name": "Buick",
+			"niceName": "buick",
+			"models": [
+				{
+					"id": "Buick_Century",
+					"name": "Century",
+					"niceName": "century",
+					"years": [
+						{
+							"id": 3240,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Buick_LeSabre",
+					"name": "LeSabre",
+					"niceName": "lesabre",
+					"years": [
+						{
+							"id": 3251,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Buick_Park_Avenue",
+					"name": "Park Avenue",
+					"niceName": "park-avenue",
+					"years": [
+						{
+							"id": 3020,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Buick_Regal",
+					"name": "Regal",
+					"niceName": "regal",
+					"years": [
+						{
+							"id": 927,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Buick_Riviera",
+					"name": "Riviera",
+					"niceName": "riviera",
+					"years": [
+						{
+							"id": 930,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Buick_Roadmaster",
+					"name": "Roadmaster",
+					"niceName": "roadmaster",
+					"years": [
+						{
+							"id": 3043,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Buick_Skylark",
+					"name": "Skylark",
+					"niceName": "skylark",
+					"years": [
+						{
+							"id": 3050,
+							"year": 1995
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": 200001663,
+			"name": "Cadillac",
+			"niceName": "cadillac",
+			"models": [
+				{
+					"id": "Cadillac_DeVille",
+					"name": "DeVille",
+					"niceName": "deville",
+					"years": [
+						{
+							"id": 3067,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Cadillac_Eldorado",
+					"name": "Eldorado",
+					"niceName": "eldorado",
+					"years": [
+						{
+							"id": 2955,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Cadillac_Fleetwood",
+					"name": "Fleetwood",
+					"niceName": "fleetwood",
+					"years": [
+						{
+							"id": 2963,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Cadillac_Seville",
+					"name": "Seville",
+					"niceName": "seville",
+					"years": [
+						{
+							"id": 946,
+							"year": 1995
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": 200000404,
+			"name": "Chevrolet",
+			"niceName": "chevrolet",
+			"models": [
+				{
+					"id": "Chevrolet_Astro",
+					"name": "Astro",
+					"niceName": "astro",
+					"years": [
+						{
+							"id": 948,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Chevrolet_Astro_Cargo",
+					"name": "Astro Cargo",
+					"niceName": "astro-cargo",
+					"years": [
+						{
+							"id": 100503360,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Chevrolet_Beretta",
+					"name": "Beretta",
+					"niceName": "beretta",
+					"years": [
+						{
+							"id": 2985,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Chevrolet_Blazer",
+					"name": "Blazer",
+					"niceName": "blazer",
+					"years": [
+						{
+							"id": 2992,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Chevrolet_C/K_1500_Series",
+					"name": "C/K 1500 Series",
+					"niceName": "ck-1500-series",
+					"years": [
+						{
+							"id": 3000,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Chevrolet_C/K_2500_Series",
+					"name": "C/K 2500 Series",
+					"niceName": "ck-2500-series",
+					"years": [
+						{
+							"id": 3009,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Chevrolet_C/K_3500_Series",
+					"name": "C/K 3500 Series",
+					"niceName": "ck-3500-series",
+					"years": [
+						{
+							"id": 3018,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Chevrolet_Camaro",
+					"name": "Camaro",
+					"niceName": "camaro",
+					"years": [
+						{
+							"id": 809,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Chevrolet_Caprice",
+					"name": "Caprice",
+					"niceName": "caprice",
+					"years": [
+						{
+							"id": 2904,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Chevrolet_Cavalier",
+					"name": "Cavalier",
+					"niceName": "cavalier",
+					"years": [
+						{
+							"id": 2910,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Chevrolet_Chevy_Van",
+					"name": "Chevy Van",
+					"niceName": "chevy-van",
+					"years": [
+						{
+							"id": 2920,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Chevrolet_Corsica",
+					"name": "Corsica",
+					"niceName": "corsica",
+					"years": [
+						{
+							"id": 816,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Chevrolet_Corvette",
+					"name": "Corvette",
+					"niceName": "corvette",
+					"years": [
+						{
+							"id": 2938,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Chevrolet_Impala",
+					"name": "Impala",
+					"niceName": "impala",
+					"years": [
+						{
+							"id": 2944,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Chevrolet_Lumina",
+					"name": "Lumina",
+					"niceName": "lumina",
+					"years": [
+						{
+							"id": 818,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Chevrolet_Lumina_Minivan",
+					"name": "Lumina Minivan",
+					"niceName": "lumina-minivan",
+					"years": [
+						{
+							"id": 2671,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Chevrolet_Monte_Carlo",
+					"name": "Monte Carlo",
+					"niceName": "monte-carlo",
+					"years": [
+						{
+							"id": 821,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Chevrolet_S_10",
+					"name": "S-10",
+					"niceName": "s-10",
+					"years": [
+						{
+							"id": 825,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Chevrolet_Sportvan",
+					"name": "Sportvan",
+					"niceName": "sportvan",
+					"years": [
+						{
+							"id": 2700,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Chevrolet_Suburban",
+					"name": "Suburban",
+					"niceName": "suburban",
+					"years": [
+						{
+							"id": 2708,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Chevrolet_Tahoe",
+					"name": "Tahoe",
+					"niceName": "tahoe",
+					"years": [
+						{
+							"id": 827,
+							"year": 1995
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": 200003644,
+			"name": "Chrysler",
+			"niceName": "chrysler",
+			"models": [
+				{
+					"id": "Chrysler_Cirrus",
+					"name": "Cirrus",
+					"niceName": "cirrus",
+					"years": [
+						{
+							"id": 2719,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Chrysler_Concorde",
+					"name": "Concorde",
+					"niceName": "concorde",
+					"years": [
+						{
+							"id": 2723,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Chrysler_LHS",
+					"name": "LHS",
+					"niceName": "lhs",
+					"years": [
+						{
+							"id": 833,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Chrysler_Le_Baron",
+					"name": "Le Baron",
+					"niceName": "le-baron",
+					"years": [
+						{
+							"id": 2529,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Chrysler_New_Yorker",
+					"name": "New Yorker",
+					"niceName": "new-yorker",
+					"years": [
+						{
+							"id": 2534,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Chrysler_Sebring",
+					"name": "Sebring",
+					"niceName": "sebring",
+					"years": [
+						{
+							"id": 2536,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Chrysler_Town_and_Country",
+					"name": "Town and Country",
+					"niceName": "town-and-country",
+					"years": [
+						{
+							"id": 2545,
+							"year": 1995
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": 200009788,
+			"name": "Dodge",
+			"niceName": "dodge",
+			"models": [
+				{
+					"id": "Dodge_Avenger",
+					"name": "Avenger",
+					"niceName": "avenger",
+					"years": [
+						{
+							"id": 2548,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Dodge_Caravan",
+					"name": "Caravan",
+					"niceName": "caravan",
+					"years": [
+						{
+							"id": 2557,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Dodge_Dakota",
+					"name": "Dakota",
+					"niceName": "dakota",
+					"years": [
+						{
+							"id": 2569,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Dodge_Grand_Caravan",
+					"name": "Grand Caravan",
+					"niceName": "grand-caravan",
+					"years": [
+						{
+							"id": 100503361,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Dodge_Intrepid",
+					"name": "Intrepid",
+					"niceName": "intrepid",
+					"years": [
+						{
+							"id": 2582,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Dodge_Neon",
+					"name": "Neon",
+					"niceName": "neon",
+					"years": [
+						{
+							"id": 2457,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Dodge_Ram_Pickup_1500",
+					"name": "Ram Pickup 1500",
+					"niceName": "ram-pickup-1500",
+					"years": [
+						{
+							"id": 2478,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Dodge_Ram_Pickup_2500",
+					"name": "Ram Pickup 2500",
+					"niceName": "ram-pickup-2500",
+					"years": [
+						{
+							"id": 2482,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Dodge_Ram_Pickup_3500",
+					"name": "Ram Pickup 3500",
+					"niceName": "ram-pickup-3500",
+					"years": [
+						{
+							"id": 2487,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Dodge_Ram_Van",
+					"name": "Ram Van",
+					"niceName": "ram-van",
+					"years": [
+						{
+							"id": 2502,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Dodge_Ram_Wagon",
+					"name": "Ram Wagon",
+					"niceName": "ram-wagon",
+					"years": [
+						{
+							"id": 2511,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Dodge_Spirit",
+					"name": "Spirit",
+					"niceName": "spirit",
+					"years": [
+						{
+							"id": 861,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Dodge_Stealth",
+					"name": "Stealth",
+					"niceName": "stealth",
+					"years": [
+						{
+							"id": 2395,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Dodge_Stratus",
+					"name": "Stratus",
+					"niceName": "stratus",
+					"years": [
+						{
+							"id": 2396,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Dodge_Viper",
+					"name": "Viper",
+					"niceName": "viper",
+					"years": [
+						{
+							"id": 2401,
+							"year": 1995
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": 200347865,
+			"name": "Eagle",
+			"niceName": "eagle",
+			"models": [
+				{
+					"id": "Eagle_Summit",
+					"name": "Summit",
+					"niceName": "summit",
+					"years": [
+						{
+							"id": 869,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Eagle_Talon",
+					"name": "Talon",
+					"niceName": "talon",
+					"years": [
+						{
+							"id": 2417,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Eagle_Vision",
+					"name": "Vision",
+					"niceName": "vision",
+					"years": [
+						{
+							"id": 2422,
+							"year": 1995
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": 200005143,
+			"name": "Ford",
+			"niceName": "ford",
+			"models": [
+				{
+					"id": "Ford_Aerostar",
+					"name": "Aerostar",
+					"niceName": "aerostar",
+					"years": [
+						{
+							"id": 875,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Ford_Aspire",
+					"name": "Aspire",
+					"niceName": "aspire",
+					"years": [
+						{
+							"id": 2431,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Ford_Bronco",
+					"name": "Bronco",
+					"niceName": "bronco",
+					"years": [
+						{
+							"id": 733,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Ford_Contour",
+					"name": "Contour",
+					"niceName": "contour",
+					"years": [
+						{
+							"id": 734,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Ford_Crown_Victoria",
+					"name": "Crown Victoria",
+					"niceName": "crown-victoria",
+					"years": [
+						{
+							"id": 2449,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Ford_E_150",
+					"name": "E-150",
+					"niceName": "e-150",
+					"years": [
+						{
+							"id": 2322,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Ford_E_250",
+					"name": "E-250",
+					"niceName": "e-250",
+					"years": [
+						{
+							"id": 2332,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Ford_E_350",
+					"name": "E-350",
+					"niceName": "e-350",
+					"years": [
+						{
+							"id": 2340,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Ford_Escort",
+					"name": "Escort",
+					"niceName": "escort",
+					"years": [
+						{
+							"id": 2350,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Ford_Explorer",
+					"name": "Explorer",
+					"niceName": "explorer",
+					"years": [
+						{
+							"id": 2357,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Ford_F_150",
+					"name": "F-150",
+					"niceName": "f-150",
+					"years": [
+						{
+							"id": 2366,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Ford_F_150_SVT_Lightning",
+					"name": "F-150 SVT Lightning",
+					"niceName": "f-150-svt-lightning",
+					"years": [
+						{
+							"id": 100504002,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Ford_F_250",
+					"name": "F-250",
+					"niceName": "f-250",
+					"years": [
+						{
+							"id": 2376,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Ford_F_350",
+					"name": "F-350",
+					"niceName": "f-350",
+					"years": [
+						{
+							"id": 2250,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Ford_Mustang",
+					"name": "Mustang",
+					"niceName": "mustang",
+					"years": [
+						{
+							"id": 745,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Ford_Mustang_SVT_Cobra",
+					"name": "Mustang SVT Cobra",
+					"niceName": "mustang-svt-cobra",
+					"years": [
+						{
+							"id": 100504014,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Ford_Probe",
+					"name": "Probe",
+					"niceName": "probe",
+					"years": [
+						{
+							"id": 2270,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Ford_Ranger",
+					"name": "Ranger",
+					"niceName": "ranger",
+					"years": [
+						{
+							"id": 2276,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Ford_Taurus",
+					"name": "Taurus",
+					"niceName": "taurus",
+					"years": [
+						{
+							"id": 2284,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Ford_Thunderbird",
+					"name": "Thunderbird",
+					"niceName": "thunderbird",
+					"years": [
+						{
+							"id": 2295,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Ford_Windstar",
+					"name": "Windstar",
+					"niceName": "windstar",
+					"years": [
+						{
+							"id": 2298,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Ford_Windstar_Cargo",
+					"name": "Windstar Cargo",
+					"niceName": "windstar-cargo",
+					"years": [
+						{
+							"id": 100503362,
+							"year": 1995
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": 200007302,
+			"name": "GMC",
+			"niceName": "gmc",
+			"models": [
+				{
+					"id": "GMC_Jimmy",
+					"name": "Jimmy",
+					"niceName": "jimmy",
+					"years": [
+						{
+							"id": 2305,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "GMC_Rally_Wagon",
+					"name": "Rally Wagon",
+					"niceName": "rally-wagon",
+					"years": [
+						{
+							"id": 2176,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "GMC_Safari",
+					"name": "Safari",
+					"niceName": "safari",
+					"years": [
+						{
+							"id": 2188,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "GMC_Safari_Cargo",
+					"name": "Safari Cargo",
+					"niceName": "safari-cargo",
+					"years": [
+						{
+							"id": 100503363,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "GMC_Sierra_1500",
+					"name": "Sierra 1500",
+					"niceName": "sierra-1500",
+					"years": [
+						{
+							"id": 2200,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "GMC_Sierra_2500",
+					"name": "Sierra 2500",
+					"niceName": "sierra-2500",
+					"years": [
+						{
+							"id": 2209,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "GMC_Sierra_3500",
+					"name": "Sierra 3500",
+					"niceName": "sierra-3500",
+					"years": [
+						{
+							"id": 2219,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "GMC_Sonoma",
+					"name": "Sonoma",
+					"niceName": "sonoma",
+					"years": [
+						{
+							"id": 2226,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "GMC_Suburban",
+					"name": "Suburban",
+					"niceName": "suburban",
+					"years": [
+						{
+							"id": 2234,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "GMC_Vandura",
+					"name": "Vandura",
+					"niceName": "vandura",
+					"years": [
+						{
+							"id": 2106,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "GMC_Yukon",
+					"name": "Yukon",
+					"niceName": "yukon",
+					"years": [
+						{
+							"id": 2111,
+							"year": 1995
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": 200347866,
+			"name": "Geo",
+			"niceName": "geo",
+			"models": [
+				{
+					"id": "Geo_Metro",
+					"name": "Metro",
+					"niceName": "metro",
+					"years": [
+						{
+							"id": 2118,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Geo_Prizm",
+					"name": "Prizm",
+					"niceName": "prizm",
+					"years": [
+						{
+							"id": 2126,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Geo_Tracker",
+					"name": "Tracker",
+					"niceName": "tracker",
+					"years": [
+						{
+							"id": 2136,
+							"year": 1995
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": 200001444,
+			"name": "Honda",
+			"niceName": "honda",
+			"models": [
+				{
+					"id": "Honda_Accord",
+					"name": "Accord",
+					"niceName": "accord",
+					"years": [
+						{
+							"id": 783,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Honda_Civic",
+					"name": "Civic",
+					"niceName": "civic",
+					"years": [
+						{
+							"id": 2152,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Honda_Civic_del_Sol",
+					"name": "Civic del Sol",
+					"niceName": "civic-del-sol",
+					"years": [
+						{
+							"id": 2161,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Honda_Odyssey",
+					"name": "Odyssey",
+					"niceName": "odyssey",
+					"years": [
+						{
+							"id": 787,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Honda_Passport",
+					"name": "Passport",
+					"niceName": "passport",
+					"years": [
+						{
+							"id": 2166,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Honda_Prelude",
+					"name": "Prelude",
+					"niceName": "prelude",
+					"years": [
+						{
+							"id": 791,
+							"year": 1995
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": 200001398,
+			"name": "Hyundai",
+			"niceName": "hyundai",
+			"models": [
+				{
+					"id": "Hyundai_Accent",
+					"name": "Accent",
+					"niceName": "accent",
+					"years": [
+						{
+							"id": 2031,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Hyundai_Elantra",
+					"name": "Elantra",
+					"niceName": "elantra",
+					"years": [
+						{
+							"id": 2036,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Hyundai_Scoupe",
+					"name": "Scoupe",
+					"niceName": "scoupe",
+					"years": [
+						{
+							"id": 2047,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Hyundai_Sonata",
+					"name": "Sonata",
+					"niceName": "sonata",
+					"years": [
+						{
+							"id": 2052,
+							"year": 1995
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": 200000089,
+			"name": "Infiniti",
+			"niceName": "infiniti",
+			"models": [
+				{
+					"id": "Infiniti_G20",
+					"name": "G20",
+					"niceName": "g20",
+					"years": [
+						{
+							"id": 2060,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Infiniti_J30",
+					"name": "J30",
+					"niceName": "j30",
+					"years": [
+						{
+							"id": 2065,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Infiniti_Q45",
+					"name": "Q45",
+					"niceName": "q45",
+					"years": [
+						{
+							"id": 2074,
+							"year": 1995
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": 200110731,
+			"name": "Isuzu",
+			"niceName": "isuzu",
+			"models": [
+				{
+					"id": "Isuzu_Pickup",
+					"name": "Pickup",
+					"niceName": "pickup",
+					"years": [
+						{
+							"id": 2088,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Isuzu_Rodeo",
+					"name": "Rodeo",
+					"niceName": "rodeo",
+					"years": [
+						{
+							"id": 2103,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Isuzu_Trooper",
+					"name": "Trooper",
+					"niceName": "trooper",
+					"years": [
+						{
+							"id": 1968,
+							"year": 1995
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": 200003196,
+			"name": "Jaguar",
+			"niceName": "jaguar",
+			"models": [
+				{
+					"id": "Jaguar_XJ_Series",
+					"name": "XJ-Series",
+					"niceName": "xj-series",
+					"years": [
+						{
+							"id": 1976,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Jaguar_XJR",
+					"name": "XJR",
+					"niceName": "xjr",
+					"years": [
+						{
+							"id": 100504025,
+							"year": 1995
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": 200001510,
+			"name": "Jeep",
+			"niceName": "jeep",
+			"models": [
+				{
+					"id": "Jeep_Cherokee",
+					"name": "Cherokee",
+					"niceName": "cherokee",
+					"years": [
+						{
+							"id": 1985,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Jeep_Grand_Cherokee",
+					"name": "Grand Cherokee",
+					"niceName": "grand-cherokee",
+					"years": [
+						{
+							"id": 1992,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Jeep_Wrangler",
+					"name": "Wrangler",
+					"niceName": "wrangler",
+					"years": [
+						{
+							"id": 2005,
+							"year": 1995
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": 200003063,
+			"name": "Kia",
+			"niceName": "kia",
+			"models": [
+				{
+					"id": "Kia_Sephia",
+					"name": "Sephia",
+					"niceName": "sephia",
+					"years": [
+						{
+							"id": 687,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Kia_Sportage",
+					"name": "Sportage",
+					"niceName": "sportage",
+					"years": [
+						{
+							"id": 2010,
+							"year": 1995
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": 200006582,
+			"name": "Land Rover",
+			"niceName": "land-rover",
+			"models": [
+				{
+					"id": "Land_Rover_Defender",
+					"name": "Defender",
+					"niceName": "defender",
+					"years": [
+						{
+							"id": 2016,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Land_Rover_Discovery",
+					"name": "Discovery",
+					"niceName": "discovery",
+					"years": [
+						{
+							"id": 2018,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Land_Rover_Range_Rover",
+					"name": "Range Rover",
+					"niceName": "range-rover",
+					"years": [
+						{
+							"id": 2025,
+							"year": 1995
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": 200001623,
+			"name": "Lexus",
+			"niceName": "lexus",
+			"models": [
+				{
+					"id": "Lexus_ES_300",
+					"name": "ES 300",
+					"niceName": "es-300",
+					"years": [
+						{
+							"id": 1889,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Lexus_GS_300",
+					"name": "GS 300",
+					"niceName": "gs-300",
+					"years": [
+						{
+							"id": 1893,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Lexus_LS_400",
+					"name": "LS 400",
+					"niceName": "ls-400",
+					"years": [
+						{
+							"id": 1898,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Lexus_SC_300",
+					"name": "SC 300",
+					"niceName": "sc-300",
+					"years": [
+						{
+							"id": 1907,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Lexus_SC_400",
+					"name": "SC 400",
+					"niceName": "sc-400",
+					"years": [
+						{
+							"id": 100503364,
+							"year": 1995
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": 200001777,
+			"name": "Lincoln",
+			"niceName": "lincoln",
+			"models": [
+				{
+					"id": "Lincoln_Continental",
+					"name": "Continental",
+					"niceName": "continental",
+					"years": [
+						{
+							"id": 1914,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Lincoln_Mark_VIII",
+					"name": "Mark VIII",
+					"niceName": "mark-viii",
+					"years": [
+						{
+							"id": 1922,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Lincoln_Town_Car",
+					"name": "Town Car",
+					"niceName": "town-car",
+					"years": [
+						{
+							"id": 703,
+							"year": 1995
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": 200004100,
+			"name": "Mazda",
+			"niceName": "mazda",
+			"models": [
+				{
+					"id": "Mazda_626",
+					"name": "626",
+					"niceName": "626",
+					"years": [
+						{
+							"id": 707,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Mazda_929",
+					"name": "929",
+					"niceName": "929",
+					"years": [
+						{
+							"id": 710,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Mazda_B_Series_Pickup",
+					"name": "B-Series Pickup",
+					"niceName": "b-series-pickup",
+					"years": [
+						{
+							"id": 1954,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Mazda_MPV",
+					"name": "MPV",
+					"niceName": "mpv",
+					"years": [
+						{
+							"id": 1816,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Mazda_MX_3",
+					"name": "MX-3",
+					"niceName": "mx-3",
+					"years": [
+						{
+							"id": 1821,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Mazda_MX_5_Miata",
+					"name": "MX-5 Miata",
+					"niceName": "mx-5-miata",
+					"years": [
+						{
+							"id": 719,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Mazda_MX_6",
+					"name": "MX-6",
+					"niceName": "mx-6",
+					"years": [
+						{
+							"id": 1828,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Mazda_Millenia",
+					"name": "Millenia",
+					"niceName": "millenia",
+					"years": [
+						{
+							"id": 720,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Mazda_Protege",
+					"name": "Protege",
+					"niceName": "protege",
+					"years": [
+						{
+							"id": 1845,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Mazda_RX_7",
+					"name": "RX-7",
+					"niceName": "rx-7",
+					"years": [
+						{
+							"id": 725,
+							"year": 1995
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": 200000130,
+			"name": "Mercedes-Benz",
+			"niceName": "mercedes-benz",
+			"models": [
+				{
+					"id": "Mercedes_Benz_C_Class",
+					"name": "C-Class",
+					"niceName": "c-class",
+					"years": [
+						{
+							"id": 1882,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Mercedes_Benz_C36_AMG",
+					"name": "C36 AMG",
+					"niceName": "c36-amg",
+					"years": [
+						{
+							"id": 100503365,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Mercedes_Benz_E_Class",
+					"name": "E-Class",
+					"niceName": "e-class",
+					"years": [
+						{
+							"id": 1744,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Mercedes_Benz_S_Class",
+					"name": "S-Class",
+					"niceName": "s-class",
+					"years": [
+						{
+							"id": 1753,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Mercedes_Benz_SL_Class",
+					"name": "SL-Class",
+					"niceName": "sl-class",
+					"years": [
+						{
+							"id": 595,
+							"year": 1995
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": 200007711,
+			"name": "Mercury",
+			"niceName": "mercury",
+			"models": [
+				{
+					"id": "Mercury_Cougar",
+					"name": "Cougar",
+					"niceName": "cougar",
+					"years": [
+						{
+							"id": 597,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Mercury_Grand_Marquis",
+					"name": "Grand Marquis",
+					"niceName": "grand-marquis",
+					"years": [
+						{
+							"id": 1774,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Mercury_Mystique",
+					"name": "Mystique",
+					"niceName": "mystique",
+					"years": [
+						{
+							"id": 1780,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Mercury_Sable",
+					"name": "Sable",
+					"niceName": "sable",
+					"years": [
+						{
+							"id": 1787,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Mercury_Tracer",
+					"name": "Tracer",
+					"niceName": "tracer",
+					"years": [
+						{
+							"id": 1798,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Mercury_Villager",
+					"name": "Villager",
+					"niceName": "villager",
+					"years": [
+						{
+							"id": 608,
+							"year": 1995
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": 200002915,
+			"name": "Mitsubishi",
+			"niceName": "mitsubishi",
+			"models": [
+				{
+					"id": "Mitsubishi_3000GT",
+					"name": "3000GT",
+					"niceName": "3000gt",
+					"years": [
+						{
+							"id": 1808,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Mitsubishi_Diamante",
+					"name": "Diamante",
+					"niceName": "diamante",
+					"years": [
+						{
+							"id": 1675,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Mitsubishi_Eclipse",
+					"name": "Eclipse",
+					"niceName": "eclipse",
+					"years": [
+						{
+							"id": 1681,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Mitsubishi_Expo",
+					"name": "Expo",
+					"niceName": "expo",
+					"years": [
+						{
+							"id": 1687,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Mitsubishi_Galant",
+					"name": "Galant",
+					"niceName": "galant",
+					"years": [
+						{
+							"id": 1692,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Mitsubishi_Mighty_Max_Pickup",
+					"name": "Mighty Max Pickup",
+					"niceName": "mighty-max-pickup",
+					"years": [
+						{
+							"id": 1699,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Mitsubishi_Mirage",
+					"name": "Mirage",
+					"niceName": "mirage",
+					"years": [
+						{
+							"id": 1706,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Mitsubishi_Montero",
+					"name": "Montero",
+					"niceName": "montero",
+					"years": [
+						{
+							"id": 1713,
+							"year": 1995
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": 200000201,
+			"name": "Nissan",
+			"niceName": "nissan",
+			"models": [
+				{
+					"id": "Nissan_200SX",
+					"name": "200SX",
+					"niceName": "200sx",
+					"years": [
+						{
+							"id": 629,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Nissan_240SX",
+					"name": "240SX",
+					"niceName": "240sx",
+					"years": [
+						{
+							"id": 1738,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Nissan_300ZX",
+					"name": "300ZX",
+					"niceName": "300zx",
+					"years": [
+						{
+							"id": 1605,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Nissan_Altima",
+					"name": "Altima",
+					"niceName": "altima",
+					"years": [
+						{
+							"id": 1608,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Nissan_Maxima",
+					"name": "Maxima",
+					"niceName": "maxima",
+					"years": [
+						{
+							"id": 638,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Nissan_Pathfinder",
+					"name": "Pathfinder",
+					"niceName": "pathfinder",
+					"years": [
+						{
+							"id": 1644,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Nissan_Quest",
+					"name": "Quest",
+					"niceName": "quest",
+					"years": [
+						{
+							"id": 643,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Nissan_Sentra",
+					"name": "Sentra",
+					"niceName": "sentra",
+					"years": [
+						{
+							"id": 1658,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Nissan_Truck",
+					"name": "Truck",
+					"niceName": "truck",
+					"years": [
+						{
+							"id": 888,
+							"year": 1995
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": 200249342,
+			"name": "Oldsmobile",
+			"niceName": "oldsmobile",
+			"models": [
+				{
+					"id": "Oldsmobile_Achieva",
+					"name": "Achieva",
+					"niceName": "achieva",
+					"years": [
+						{
+							"id": 649,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Oldsmobile_Aurora",
+					"name": "Aurora",
+					"niceName": "aurora",
+					"years": [
+						{
+							"id": 650,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Oldsmobile_Ciera",
+					"name": "Ciera",
+					"niceName": "ciera",
+					"years": [
+						{
+							"id": 1542,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Oldsmobile_Cutlass_Supreme",
+					"name": "Cutlass Supreme",
+					"niceName": "cutlass-supreme",
+					"years": [
+						{
+							"id": 1560,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Oldsmobile_Eighty_Eight_Royale",
+					"name": "Eighty-Eight Royale",
+					"niceName": "eighty-eight-royale",
+					"years": [
+						{
+							"id": 1569,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Oldsmobile_Ninety_Eight",
+					"name": "Ninety-Eight",
+					"niceName": "ninety-eight",
+					"years": [
+						{
+							"id": 1577,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Oldsmobile_Silhouette",
+					"name": "Silhouette",
+					"niceName": "silhouette",
+					"years": [
+						{
+							"id": 1584,
+							"year": 1995
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": 200339126,
+			"name": "Plymouth",
+			"niceName": "plymouth",
+			"models": [
+				{
+					"id": "Plymouth_Acclaim",
+					"name": "Acclaim",
+					"niceName": "acclaim",
+					"years": [
+						{
+							"id": 1595,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Plymouth_Grand_Voyager",
+					"name": "Grand Voyager",
+					"niceName": "grand-voyager",
+					"years": [
+						{
+							"id": 100503366,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Plymouth_Neon",
+					"name": "Neon",
+					"niceName": "neon",
+					"years": [
+						{
+							"id": 1471,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Plymouth_Voyager",
+					"name": "Voyager",
+					"niceName": "voyager",
+					"years": [
+						{
+							"id": 1485,
+							"year": 1995
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": 200002634,
+			"name": "Pontiac",
+			"niceName": "pontiac",
+			"models": [
+				{
+					"id": "Pontiac_Bonneville",
+					"name": "Bonneville",
+					"niceName": "bonneville",
+					"years": [
+						{
+							"id": 1494,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Pontiac_Firebird",
+					"name": "Firebird",
+					"niceName": "firebird",
+					"years": [
+						{
+							"id": 1502,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Pontiac_Grand_Am",
+					"name": "Grand Am",
+					"niceName": "grand-am",
+					"years": [
+						{
+							"id": 1509,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Pontiac_Grand_Prix",
+					"name": "Grand Prix",
+					"niceName": "grand-prix",
+					"years": [
+						{
+							"id": 543,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Pontiac_Sunfire",
+					"name": "Sunfire",
+					"niceName": "sunfire",
+					"years": [
+						{
+							"id": 1530,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Pontiac_Trans_Sport",
+					"name": "Trans Sport",
+					"niceName": "trans-sport",
+					"years": [
+						{
+							"id": 1536,
+							"year": 1995
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": 200000886,
+			"name": "Porsche",
+			"niceName": "porsche",
+			"models": [
+				{
+					"id": "Porsche_911",
+					"name": "911",
+					"niceName": "911",
+					"years": [
+						{
+							"id": 1396,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Porsche_928",
+					"name": "928",
+					"niceName": "928",
+					"years": [
+						{
+							"id": 555,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Porsche_968",
+					"name": "968",
+					"niceName": "968",
+					"years": [
+						{
+							"id": 1408,
+							"year": 1995
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": 200074504,
+			"name": "Saab",
+			"niceName": "saab",
+			"models": [
+				{
+					"id": "Saab_900",
+					"name": "900",
+					"niceName": "900",
+					"years": [
+						{
+							"id": 1415,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Saab_9000",
+					"name": "9000",
+					"niceName": "9000",
+					"years": [
+						{
+							"id": 1422,
+							"year": 1995
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": 200004446,
+			"name": "Saturn",
+			"niceName": "saturn",
+			"models": [
+				{
+					"id": "Saturn_S_Series",
+					"name": "S-Series",
+					"niceName": "s-series",
+					"years": [
+						{
+							"id": 1427,
+							"year": 1995
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": 200004491,
+			"name": "Subaru",
+			"niceName": "subaru",
+			"models": [
+				{
+					"id": "Subaru_Impreza",
+					"name": "Impreza",
+					"niceName": "impreza",
+					"years": [
+						{
+							"id": 1444,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Subaru_Legacy",
+					"name": "Legacy",
+					"niceName": "legacy",
+					"years": [
+						{
+							"id": 577,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Subaru_SVX",
+					"name": "SVX",
+					"niceName": "svx",
+					"years": [
+						{
+							"id": 1465,
+							"year": 1995
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": 200001853,
+			"name": "Suzuki",
+			"niceName": "suzuki",
+			"models": [
+				{
+					"id": "Suzuki_Esteem",
+					"name": "Esteem",
+					"niceName": "esteem",
+					"years": [
+						{
+							"id": 582,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Suzuki_Samurai",
+					"name": "Samurai",
+					"niceName": "samurai",
+					"years": [
+						{
+							"id": 1328,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Suzuki_Sidekick",
+					"name": "Sidekick",
+					"niceName": "sidekick",
+					"years": [
+						{
+							"id": 1334,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Suzuki_Swift",
+					"name": "Swift",
+					"niceName": "swift",
+					"years": [
+						{
+							"id": 1341,
+							"year": 1995
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": 200003381,
+			"name": "Toyota",
+			"niceName": "toyota",
+			"models": [
+				{
+					"id": "Toyota_4Runner",
+					"name": "4Runner",
+					"niceName": "4runner",
+					"years": [
+						{
+							"id": 1351,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Toyota_Avalon",
+					"name": "Avalon",
+					"niceName": "avalon",
+					"years": [
+						{
+							"id": 1354,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Toyota_Camry",
+					"name": "Camry",
+					"niceName": "camry",
+					"years": [
+						{
+							"id": 1361,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Toyota_Celica",
+					"name": "Celica",
+					"niceName": "celica",
+					"years": [
+						{
+							"id": 1370,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Toyota_Corolla",
+					"name": "Corolla",
+					"niceName": "corolla",
+					"years": [
+						{
+							"id": 1377,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Toyota_Land_Cruiser",
+					"name": "Land Cruiser",
+					"niceName": "land-cruiser",
+					"years": [
+						{
+							"id": 1250,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Toyota_MR2",
+					"name": "MR2",
+					"niceName": "mr2",
+					"years": [
+						{
+							"id": 1258,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Toyota_Paseo",
+					"name": "Paseo",
+					"niceName": "paseo",
+					"years": [
+						{
+							"id": 1264,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Toyota_Pickup",
+					"name": "Pickup",
+					"niceName": "pickup",
+					"years": [
+						{
+							"id": 1389,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Toyota_Previa",
+					"name": "Previa",
+					"niceName": "previa",
+					"years": [
+						{
+							"id": 1269,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Toyota_Supra",
+					"name": "Supra",
+					"niceName": "supra",
+					"years": [
+						{
+							"id": 1279,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Toyota_T100",
+					"name": "T100",
+					"niceName": "t100",
+					"years": [
+						{
+							"id": 1283,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Toyota_Tacoma",
+					"name": "Tacoma",
+					"niceName": "tacoma",
+					"years": [
+						{
+							"id": 1286,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Toyota_Tercel",
+					"name": "Tercel",
+					"niceName": "tercel",
+					"years": [
+						{
+							"id": 1295,
+							"year": 1995
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": 200000238,
+			"name": "Volkswagen",
+			"niceName": "volkswagen",
+			"models": [
+				{
+					"id": "Volkswagen_Cabrio",
+					"name": "Cabrio",
+					"niceName": "cabrio",
+					"years": [
+						{
+							"id": 1298,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Volkswagen_EuroVan",
+					"name": "EuroVan",
+					"niceName": "eurovan",
+					"years": [
+						{
+							"id": 1311,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Volkswagen_GTI",
+					"name": "GTI",
+					"niceName": "gti",
+					"years": [
+						{
+							"id": 100503367,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Volkswagen_Golf",
+					"name": "Golf",
+					"niceName": "golf",
+					"years": [
+						{
+							"id": 1176,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Volkswagen_Jetta",
+					"name": "Jetta",
+					"niceName": "jetta",
+					"years": [
+						{
+							"id": 1184,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Volkswagen_Passat",
+					"name": "Passat",
+					"niceName": "passat",
+					"years": [
+						{
+							"id": 1191,
+							"year": 1995
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": 200010382,
+			"name": "Volvo",
+			"niceName": "volvo",
+			"models": [
+				{
+					"id": "Volvo_850",
+					"name": "850",
+					"niceName": "850",
+					"years": [
+						{
+							"id": 1208,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Volvo_940",
+					"name": "940",
+					"niceName": "940",
+					"years": [
+						{
+							"id": 487,
+							"year": 1995
+						}
+					]
+				},
+				{
+					"id": "Volvo_960",
+					"name": "960",
+					"niceName": "960",
+					"years": [
+						{
+							"id": 1216,
+							"year": 1995
+						}
+					]
+				}
+			]
+		}
+	],
+	"makesCount": 38
+}

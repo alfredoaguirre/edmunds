@@ -9,3 +9,14 @@ C:\Users\Alfredo Aguirre\Documents\Visual Studio 2013\Projects\edmunds\edmunds.T
 C:\Users\Alfredo Aguirre\Documents\Visual Studio 2013\Projects\edmunds\edmunds.Test\bin\Debug\Newtonsoft.Json.xml
 C:\Users\Alfredo Aguirre\Documents\Visual Studio 2013\Projects\edmunds\edmunds.Test\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
 C:\Users\Alfredo Aguirre\Documents\Visual Studio 2013\Projects\edmunds\edmunds.Test\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.xml
+C:\Users\Alfredo Aguirre\Documents\Visual Studio 2015\Projects\edmunds\edmunds.Test\bin\Debug\edmunds.Test.dll
+C:\Users\Alfredo Aguirre\Documents\Visual Studio 2015\Projects\edmunds\edmunds.Test\bin\Debug\edmunds.Test.pdb
+C:\Users\Alfredo Aguirre\Documents\Visual Studio 2015\Projects\edmunds\edmunds.Test\bin\Debug\edmunds.dll
+C:\Users\Alfredo Aguirre\Documents\Visual Studio 2015\Projects\edmunds\edmunds.Test\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\Alfredo Aguirre\Documents\Visual Studio 2015\Projects\edmunds\edmunds.Test\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Alfredo Aguirre\Documents\Visual Studio 2015\Projects\edmunds\edmunds.Test\bin\Debug\edmunds.pdb
+C:\Users\Alfredo Aguirre\Documents\Visual Studio 2015\Projects\edmunds\edmunds.Test\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.xml
+C:\Users\Alfredo Aguirre\Documents\Visual Studio 2015\Projects\edmunds\edmunds.Test\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Alfredo Aguirre\Documents\Visual Studio 2015\Projects\edmunds\edmunds.Test\obj\Debug\edmunds.Test.csprojResolveAssemblyReference.cache
+C:\Users\Alfredo Aguirre\Documents\Visual Studio 2015\Projects\edmunds\edmunds.Test\obj\Debug\edmunds.Test.dll
+C:\Users\Alfredo Aguirre\Documents\Visual Studio 2015\Projects\edmunds\edmunds.Test\obj\Debug\edmunds.Test.pdb
