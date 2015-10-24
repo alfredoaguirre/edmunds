@@ -96,7 +96,6 @@
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AlexaController.cs" />
-    <Compile Include="Controllers\Paths.cs" />
     <Compile Include="Controllers\SampleSessionSpeechlet.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

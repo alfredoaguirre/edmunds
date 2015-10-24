@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Text.RegularExpressions;
 
 namespace EdmundsService
@@ -22,10 +24,24 @@ namespace EdmundsService
                 var endPoint = new EndPoint(path);
                 EndPoints.Add(endPoint);
             }
+            EndPoints.Sort();
+        }
+        static public  EndPoint GetEndPoint(Dictionary<string, string> InputArgs)
+        {
+            return GetEndPoint(new List<string>(InputArgs.Keys));
+        }
+        static public EndPoint GetEndPoint(List<string> argNames)
+        {
+            int hashCode = 0;
+            foreach (var arg in new List<string>(argNames))
+            {
+                hashCode +=( arg.GetHashCode() * 17);
+            }
+            return EndPoints.FirstOrDefault(x => x.GetHashCode() == hashCode);
         }
     }
 
-    public class EndPoint
+    public class EndPoint : IComparable<EndPoint>
     {
         public List<string> argNames = new List<string>();
         public string path;
@@ -35,8 +51,25 @@ namespace EdmundsService
             var matches = Regex.Matches(path, @"\{(\w+)\}");
             foreach (var match in matches)
             {
-                argNames.Add(((Match)match).Value);
+                argNames.Add(((Match)match).Value.TrimStart('{').TrimEnd('}'));
             }
+            argNames.Sort();
+        }
+
+        public int CompareTo(EndPoint other)
+        {
+            return this.GetHashCode() - other.GetHashCode();
+        }
+
+        public override int GetHashCode()
+        {
+            int hashCode = 0;
+
+            foreach (var arg in argNames)
+            {
+                hashCode +=( arg.GetHashCode() * 17);
+            }
+            return hashCode;
         }
     }
 

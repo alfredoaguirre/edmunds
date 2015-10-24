@@ -14,6 +14,10 @@ namespace EdmundsService
     {
         public static String GetRequest(Dictionary<string, string> InputArgs)
         {
+            var argsNames = new List<string>( InputArgs.Keys);
+            argsNames.Sort();
+
+
             WebRequest webRequest = WebRequest.Create(GetEndPointPath(InputArgs));
                   
             Stream requestStream = webRequest.GetResponse().GetResponseStream();
@@ -30,7 +34,7 @@ namespace EdmundsService
         public static string GetEndPointPath(Dictionary<string, string> InputArgs)
         {
             StringBuilder endPoint = new StringBuilder();
-            endPoint.Append(Paths.url);
+            endPoint.Append(Args.url);
 
 
             endPoint.Append(Args.jsonFormat);
