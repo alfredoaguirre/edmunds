@@ -7,8 +7,8 @@
     <ProjectGuid>{0E9E5CAB-58F6-4689-8AD9-E88EEB092CD1}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>EdmundsService</RootNamespace>
-    <AssemblyName>EdmundsService</AssemblyName>
+    <RootNamespace>EdmundsClient</RootNamespace>
+    <AssemblyName>EdmundsClient</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -45,11 +45,12 @@
   <ItemGroup>
     <Compile Include="Caller.cs" />
     <Compile Include="Class1.cs" />
+    <Compile Include="EndPoint.cs" />
+    <Compile Include="EndPointsManager.cs" />
     <Compile Include="Paths.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="JSON.json" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

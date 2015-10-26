@@ -54,9 +54,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\edmunds\EdmundsService.csproj">
+    <ProjectReference Include="..\edmunds\EdmundsClient.csproj">
       <Project>{0e9e5cab-58f6-4689-8ad9-e88eeb092cd1}</Project>
-      <Name>EdmundsService</Name>
+      <Name>EdmundsClient</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

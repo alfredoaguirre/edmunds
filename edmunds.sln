@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EdmundsService", "edmunds\EdmundsService.csproj", "{0E9E5CAB-58F6-4689-8AD9-E88EEB092CD1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EdmundsClient", "edmunds\EdmundsClient.csproj", "{0E9E5CAB-58F6-4689-8AD9-E88EEB092CD1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EdmundsService.Test", "edmunds.Test\EdmundsService.Test.csproj", "{C8AEEC80-3DF0-4F49-A240-B842AE86B0B9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EdmundsClientTest", "edmunds.Test\EdmundsClientTest.csproj", "{C8AEEC80-3DF0-4F49-A240-B842AE86B0B9}"
 EndProject
 Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "NodejsConsoleApp13", "NodejsConsoleApp13\NodejsConsoleApp13.njsproj", "{3AA1BAB1-039A-4088-8BCA-AD794F320D65}"
 EndProject

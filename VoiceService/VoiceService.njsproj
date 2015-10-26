@@ -41,11 +41,13 @@
     <Content Include="AlexaSkillDesign\Schema.json" />
     <Content Include="AlexaSkillDesign\Utterance.txt" />
     <Content Include="event.json" />
+    <Content Include="JSON.json" />
     <Content Include="package.json" />
     <Content Include="README.md" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="index.js" />
+    <Compile Include="resend.js" />
     <Compile Include="Schema.json" />
   </ItemGroup>
   <ItemGroup>
