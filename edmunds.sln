@@ -13,6 +13,8 @@ Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "VoiceService", "VoiceServic
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlexaService", "AlexaService\AlexaService.csproj", "{FAE9A509-DAB3-4BD9-81B6-CB69E3EF9BBE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlexaService.Test", "AlexaService.Test\AlexaService.Test.csproj", "{F82B892E-FF14-4FC7-B8C9-1358A146CC85}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -93,6 +95,22 @@ Global
 		{FAE9A509-DAB3-4BD9-81B6-CB69E3EF9BBE}.Release|x64.Build.0 = Release|Any CPU
 		{FAE9A509-DAB3-4BD9-81B6-CB69E3EF9BBE}.Release|x86.ActiveCfg = Release|Any CPU
 		{FAE9A509-DAB3-4BD9-81B6-CB69E3EF9BBE}.Release|x86.Build.0 = Release|Any CPU
+		{F82B892E-FF14-4FC7-B8C9-1358A146CC85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F82B892E-FF14-4FC7-B8C9-1358A146CC85}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F82B892E-FF14-4FC7-B8C9-1358A146CC85}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{F82B892E-FF14-4FC7-B8C9-1358A146CC85}.Debug|ARM.Build.0 = Debug|Any CPU
+		{F82B892E-FF14-4FC7-B8C9-1358A146CC85}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{F82B892E-FF14-4FC7-B8C9-1358A146CC85}.Debug|x64.Build.0 = Debug|Any CPU
+		{F82B892E-FF14-4FC7-B8C9-1358A146CC85}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{F82B892E-FF14-4FC7-B8C9-1358A146CC85}.Debug|x86.Build.0 = Debug|Any CPU
+		{F82B892E-FF14-4FC7-B8C9-1358A146CC85}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F82B892E-FF14-4FC7-B8C9-1358A146CC85}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F82B892E-FF14-4FC7-B8C9-1358A146CC85}.Release|ARM.ActiveCfg = Release|Any CPU
+		{F82B892E-FF14-4FC7-B8C9-1358A146CC85}.Release|ARM.Build.0 = Release|Any CPU
+		{F82B892E-FF14-4FC7-B8C9-1358A146CC85}.Release|x64.ActiveCfg = Release|Any CPU
+		{F82B892E-FF14-4FC7-B8C9-1358A146CC85}.Release|x64.Build.0 = Release|Any CPU
+		{F82B892E-FF14-4FC7-B8C9-1358A146CC85}.Release|x86.ActiveCfg = Release|Any CPU
+		{F82B892E-FF14-4FC7-B8C9-1358A146CC85}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

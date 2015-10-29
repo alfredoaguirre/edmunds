@@ -2,7 +2,6 @@
 
 using System;
 using System.Collections.Generic;
-//using NLog;
 using AlexaSkillsKit.Speechlet;
 using AlexaSkillsKit.Slu;
 using AlexaSkillsKit.UI;

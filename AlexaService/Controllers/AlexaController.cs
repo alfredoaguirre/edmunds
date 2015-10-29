@@ -18,10 +18,9 @@ namespace AlexaService.Controllers
         [HttpPost]
         public async Task<String> Post()
         {
-            var payload =  await this.Request.Content.ReadAsByteArrayAsync();
+            var payload =  await Request.Content.ReadAsByteArrayAsync();
             string result = System.Text.Encoding.UTF8.GetString(payload);
             Console.WriteLine(result);
-            //AlexaSkillsKit.Json.SpeechletRequestEnvelope m = JsonConvert.DeserializeObject<AlexaSkillsKit.Json.SpeechletRequestEnvelope>(result);
             return "hola";
         }
         [Route("alexa/sample-session")]
