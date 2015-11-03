@@ -44,7 +44,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Caller.cs" />
-    <Compile Include="Class1.cs" />
     <Compile Include="EndPoint.cs" />
     <Compile Include="EndPointsManager.cs" />
     <Compile Include="Paths.cs" />

@@ -1,8 +1,14 @@
 ﻿using Newtonsoft.Json;
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web.Http;
+using Newtonsoft.Json.Linq;
+
+//using AlexaSkillsKit.Json;
+//using AlexaSkillsKit.Speechlet;
 
 namespace AlexaService.Controllers
 {
@@ -16,21 +22,22 @@ namespace AlexaService.Controllers
         }
         [Route("Alexa")]
         [HttpPost]
-        public async Task<String> Post()
+        public async Task<string> Post(Json.SpeechletRequestEnvelope requestBody)
         {
-            var payload =  await Request.Content.ReadAsByteArrayAsync();
-            string result = System.Text.Encoding.UTF8.GetString(payload);
-            Console.WriteLine(result);
-            return "hola";
+            var intentName = requestBody.Request.Intent.Name;
+
+            var Slots = requestBody.Request.Intent.Slots.Children()
+                .Select(x =>(JProperty) x)
+                .ToDictionary(x => x.Name, x => x.ToString());
+            var request = EdmundsClient.Caller.GetRequest(Slots, intentName);
+            return request;
         }
         [Route("alexa/sample-session")]
         [HttpPost]
         public HttpResponseMessage SampleSession()
         {
-            var speechlet = new SampleSessionSpeechlet();
-            var re = speechlet.GetResponse(Request);
             return null;
         }
     }
+
 }
- 

@@ -24,12 +24,12 @@ namespace EdmundsClient
             EndPoints.Sort();
         }
 
-        static public string GetPath(Dictionary<string, string> InputArgs)
+        public static string GetPath(Dictionary<string, string> inputArgs, string intentName)
         {
-            var endPoint = GetEndPoint(new List<string>(InputArgs.Keys));
+            var endPoint = GetEndPoint(new List<string>(inputArgs.Keys));
             StringBuilder fullePath = new StringBuilder();
             fullePath.Append(url);
-            fullePath.Append(endPoint.GetPath(InputArgs));
+            fullePath.Append(endPoint.GetPath(inputArgs));
             fullePath.Append("?");
             fullePath.Append(jsonFormat);
             fullePath.Append("&");

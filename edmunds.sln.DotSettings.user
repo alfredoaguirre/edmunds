@@ -6,6 +6,15 @@
 	<s:Int64 x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestSessionPersistentData/=19469551567A463BB191653A24794B3C/GroupingIndex/@EntryValue">4</s:Int64>
 	<s:String x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestSessionPersistentData/=19469551567A463BB191653A24794B3C/Name/@EntryValue">TestMethod1</s:String>
 	<s:String x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestSessionPersistentData/=19469551567A463BB191653A24794B3C/XmlSerializedElements/@EntryValue">&lt;Session&gt;&lt;e Id="edmunds.Test.UnitTest1.TestMethod1" Project="C8AEEC80-3DF0-4F49-A240-B842AE86B0B9" Provider="MSTest" /&gt;&lt;e Id="edmunds.Test.UnitTest1" Project="C8AEEC80-3DF0-4F49-A240-B842AE86B0B9" Provider="MSTest" /&gt;&lt;/Session&gt;</s:String>
+	
+	
+	
+	
+	
+	<s:Boolean x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestSessionPersistentData/=51C52982A5AE4A77A3EE1334A03F376E/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestSessionPersistentData/=51C52982A5AE4A77A3EE1334A03F376E/GroupingIndex/@EntryValue">4</s:Int64>
+	<s:String x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestSessionPersistentData/=51C52982A5AE4A77A3EE1334A03F376E/Name/@EntryValue">Getjsone</s:String>
+	<s:String x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestSessionPersistentData/=51C52982A5AE4A77A3EE1334A03F376E/XmlSerializedElements/@EntryValue">&lt;Session&gt;&lt;/Session&gt;</s:String>
 	<s:Boolean x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestSessionPersistentData/=96243091AC6C4128AD1A4E7FE86F9249/@KeyIndexDefined">True</s:Boolean>
 	<s:Int64 x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestSessionPersistentData/=96243091AC6C4128AD1A4E7FE86F9249/GroupingIndex/@EntryValue">4</s:Int64>
 	<s:String x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestSessionPersistentData/=96243091AC6C4128AD1A4E7FE86F9249/Name/@EntryValue">TestMethod1</s:String>

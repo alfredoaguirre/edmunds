@@ -13,9 +13,9 @@ namespace EdmundsClient
 {
     public static class Caller
     {
-        public static string GetRequest(Dictionary<string, string> InputArgs)
+        public static string GetRequest(Dictionary<string, string> inputArgs, string intentName = "")
         {
-            WebRequest webRequest = WebRequest.Create(EndPointsManager.GetPath(InputArgs));
+            WebRequest webRequest = WebRequest.Create(EndPointsManager.GetPath(inputArgs, intentName));
             Stream responseStream = webRequest.GetResponse().GetResponseStream();
             JObject o2;
             using (StreamReader stream = new StreamReader(responseStream))

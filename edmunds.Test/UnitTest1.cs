@@ -44,7 +44,7 @@ namespace EdmundsClient.Test
                 { "make", "toyota" },
                 { "model", "corolla" }
             };
-            var s = EndPointsManager.GetPath(argNames);
+            var s = EndPointsManager.GetPath(argNames, "");
             Assert.IsNotNull(s);
         }
 
@@ -56,7 +56,7 @@ namespace EdmundsClient.Test
                 { "make", "toyota" },
                 { "model", "corolla" }
             };
-            var s = Caller.GetRequest(argNames);
+            var s = Caller.GetRequest(argNames, "");
             Assert.IsNotNull(s);
         }
     }
