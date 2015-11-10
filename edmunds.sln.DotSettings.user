@@ -6,6 +6,11 @@
 	<s:Int64 x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestSessionPersistentData/=19469551567A463BB191653A24794B3C/GroupingIndex/@EntryValue">4</s:Int64>
 	<s:String x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestSessionPersistentData/=19469551567A463BB191653A24794B3C/Name/@EntryValue">TestMethod1</s:String>
 	<s:String x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestSessionPersistentData/=19469551567A463BB191653A24794B3C/XmlSerializedElements/@EntryValue">&lt;Session&gt;&lt;e Id="edmunds.Test.UnitTest1.TestMethod1" Project="C8AEEC80-3DF0-4F49-A240-B842AE86B0B9" Provider="MSTest" /&gt;&lt;e Id="edmunds.Test.UnitTest1" Project="C8AEEC80-3DF0-4F49-A240-B842AE86B0B9" Provider="MSTest" /&gt;&lt;/Session&gt;</s:String>
+	<s:Boolean x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestSessionPersistentData/=1DA1F674F95B4E99855A7E3AA5CF5227/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestSessionPersistentData/=1DA1F674F95B4E99855A7E3AA5CF5227/Filter/@EntryValue">Success</s:String>
+	<s:Int64 x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestSessionPersistentData/=1DA1F674F95B4E99855A7E3AA5CF5227/GroupingIndex/@EntryValue">4</s:Int64>
+	<s:String x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestSessionPersistentData/=1DA1F674F95B4E99855A7E3AA5CF5227/Name/@EntryValue">GetSlotTest</s:String>
+	<s:String x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestSessionPersistentData/=1DA1F674F95B4E99855A7E3AA5CF5227/XmlSerializedElements/@EntryValue">&lt;Session&gt;&lt;/Session&gt;</s:String>
 	
 	
 	

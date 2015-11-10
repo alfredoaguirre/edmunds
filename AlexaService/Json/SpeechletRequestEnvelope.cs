@@ -33,11 +33,20 @@ namespace AlexaService.Json
     {
         public string Name { get; set; }
         public JObject Slots { get; set; }
+        public Dictionary<string, string> GetSlots
+        {
+            get
+            {
+                return Slots.Children()
+                    .Select(x => (JProperty) x)
+                    .ToDictionary(x => x.Name, x => x.Value["value"].ToString());
+            }
+        }
 
     }
 
     public class Slot
     {
-        
+
     }
 }
