@@ -1,112 +1,58 @@
 exports.handler = function (event, context) {
-    console.log("event", event.request);
-    console.log("Running index.handler");
-    if (event.request.type === "LaunchRequest") {
-        onLaunch(event.request,
-			 event.session,
-			 function (sessionAttributes, speechletResponse) {
-            context.succeed(buildResponse(sessionAttributes, speechletResponse));
-        });
-        return;
-    }
+    console.log("Called onIntent intent=" + event.request + ", intentName=" + event.request.intent.name);
     
-    var arg = event.request.intent.slots;
-    console.log("==================================");
-    console.log("event", arg);
-    console.log("==================================");
-    console.log("Stopping index.handler");
+    var intent = event.request.intent,
+        intentName = event.request.name;
     
+    var jsonIntent = JSON.stringify(intent);
+    var url = "https://alfredodejesus.azurewebsites.net/"; //+ escape(jsonIntent);
     
+    var post_data = JSON.stringify(event)
     
-    var http = require('http');
-    this.context = context;
-    this.model = arg.model.value;
-    this.make = arg.make.value;
-    this.year = arg.year.value;
-    
-    var options = {
-        host: 'api.edmunds.com',
-        path: '/api/vehicle/v2/' + make + '/' + model + '/' + year + '/styles?view=full&fmt=json&api_key=67t7jtrnvz8wyzgfpwgcqa3y'
+    var post_options = {
+        host: 'closure-compiler.appspot.com',
+        port: '80',
+        path: '/Alexa',
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'Content-Length': Buffer.byteLength(post_data)
+        }
     };
     
-    callback = function (response) {
-        var str = '';
+    console.log(post_options);
+    var http = require('http');
+    
+    var post_req = http.request(post_options, function (res) {
+        res.setEncoding('utf8');
+        var responseString = '';
         
-        //another chunk of data has been recieved, so append it to `str`
-        response.on('data', function (chunk) {
-            str += chunk;
+        res.on('data', function (data) {
+            responseString += data;
         });
         
-        //the whole response has been recieved, so we just print it out here
-        response.on('end', function () {
-            console.log(str);
-            var resp = JSON.parse(str);
-            var respString = "";
-            if (resp.styles[0])
-                respString = make + " " + model + " " + year + " highway: " + resp.styles[0].MPG.highway + "mpg city: " + resp.styles[0].MPG.city + "mpg";
-            else
-                respString = "No data for " + make + " " + model + " " + year;
-            var response = {
-                "version": "1.0",
-                "sessionAttributes": {},
-                "response": {
-                    "outputSpeech": {
-                        "type": "PlainText",
-                        "text": respString,
-                    },
-                    "card": {
-                        "type": "Simple",
-                        "title": "SessionSpeechlet - Welcome",
-                        "content": respString
-                    },
-                    "reprompt": {
-                        "outputSpeech": {
-                            "type": "PlainText",
-                            "text": respString + ";  do need another one?",
-                        }
-                    },
-                    "shouldEndSession": false
-                }
-            };
-            console.log("==================================");
-            console.log(response.response);
+        res.on('end', function () {
+            var repromptText = "";
+            
+            var cardTitle = "Alexa HA Request";
+            var sessionAttributes = {};
+            console.log(responseString);
+            var response = JSON.parse(responseString);
+            var speechOutput = response.text;
+            var shouldEndSession = response.shouldEndSession;
+            console.log(responseString);
             context.succeed(response);
+
+           // callback(sessionAttributes, buildSpeechletResponse(cardTitle, speechOutput, repromptText, shouldEndSession));
         });
-    }
+    });
     
-    http.request(options, callback).end();
-}
-/**
- * Called when the user launches the skill without specifying what they want.
- */
-function onLaunch(launchRequest, session, callback) {
-    console.log("onLaunch requestId=" + launchRequest.requestId 
-                + ", sessionId=" + session.sessionId);
-    
-    // Dispatch to your skill's launch.
-    getWelcomeResponse(callback);
-}
+    // post the data
+    post_req.write(post_data);
+    post_req.end();
 
 
-function getWelcomeResponse(callback) {
-    // If we wanted to initialize the session to have some attributes we could add those here.
-    var sessionAttributes = {};
-    var cardTitle = "Welcome";
-    var speechOutput = "Welcome to the Home Key Studios - Car Deets Test, " 
-                + "Please tell me your favorite car by saying, " 
-                + "my favorite car is a Honda Civic";
-    // If the user either does not reply to the welcome message or says something that is not
-    // understood, they will be prompted again with this text.
-    var repromptText = "Please tell me your favorite car by saying, " 
-                + "my favorite color is a Honda Civic";
-    var shouldEndSession = false;
-    
-    callback(sessionAttributes,
-             buildSpeechletResponse(cardTitle, speechOutput, repromptText, shouldEndSession));
-             
 }
-
-// --------------- Helpers that build all of the responses -----------------------
 
 function buildSpeechletResponse(title, output, repromptText, shouldEndSession) {
     return {
@@ -126,13 +72,13 @@ function buildSpeechletResponse(title, output, repromptText, shouldEndSession) {
             }
         },
         shouldEndSession: shouldEndSession
-    }
+    };
 }
+
 function buildResponse(sessionAttributes, speechletResponse) {
     return {
         version: "1.0",
         sessionAttributes: sessionAttributes,
         response: speechletResponse
-    }
+    };
 }
-

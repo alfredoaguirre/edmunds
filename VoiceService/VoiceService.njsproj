@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="index.js" />
+    <Compile Include="JavaScript.js" />
     <Compile Include="resend.js" />
     <Compile Include="Schema.json" />
   </ItemGroup>

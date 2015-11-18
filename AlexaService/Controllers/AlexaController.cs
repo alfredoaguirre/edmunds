@@ -4,6 +4,7 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web.Http;
 using Newtonsoft.Json.Linq;
+using Newtonsoft.Json;
 
 namespace AlexaService.Controllers
 {
@@ -16,14 +17,22 @@ namespace AlexaService.Controllers
             return "alfredo";
         }
 
+
         [Route("Alexa")]
         [HttpPost]
-        public static string Post(Json.SpeechletRequestEnvelope requestBody)
+        public string Post()
         {
-            var intentName = requestBody.Request.Intent.Name;
-            var slots = requestBody.Request.Intent.GetSlots;
-            var request = EdmundsClient.Caller.GetRequest(slots, intentName);
-            return request;
+            Json.SpeechletRequestEnvelope requestBody =
+            JsonConvert.DeserializeObject<Json.SpeechletRequestEnvelope>(Request.Content.ReadAsStringAsync().Result);
+            var intentName = requestBody?.Request?.Intent?.Name;
+            if (!string.IsNullOrEmpty(intentName))
+            {
+                var slots = requestBody.Request.Intent.GetSlots;
+                var request = EdmundsClient.Caller.GetRequest(slots, intentName);
+                request = request.Replace("\n", "").Replace("\r", "");
+                return request;
+            }
+            return null;
         }
 
         [Route("alexa/sample-session")]
@@ -33,6 +42,6 @@ namespace AlexaService.Controllers
             return null;
         }
 
-      
+
     }
 }

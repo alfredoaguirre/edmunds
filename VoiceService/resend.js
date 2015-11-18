@@ -1,18 +1,33 @@
-﻿function onIntent(intentRequest, session, callback) {
-    console.log("Called onIntent intent=" + intentRequest.intent + ", intentName=" + intentRequest.intent.name);
+﻿exports.handler = function (event, context) {
+    console.log("Called onIntent intent=" + event.request + ", intentName=" + event.request.intent.name);
     
-    var intent = intentRequest.intent,
-        intentName = intentRequest.intent.name;
+    var intent = event.request.intent,
+        intentName = event.request.name;
     
     var jsonIntent = JSON.stringify(intent);
-    var url = "http://your.url.here:port/<your reference>?json=" + escape(jsonIntent);
+    var url = "https://alfredodejesus.azurewebsites.net/alexa"; //+ escape(jsonIntent);
     
-    http.get(url, function (res) {
+    var post_data = JSON.stringify(event.request)
+    
+    var post_options = {
+        host: 'closure-compiler.appspot.com',
+        port: '80',
+        path: '/compile',
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+            'Content-Length': Buffer.byteLength(post_data)
+        }
+    };
+    var http = require('http');
+    
+    var post_req = http.request(post_options, function (res) {
+        res.setEncoding('utf8');
         var responseString = '';
         
         res.on('data', function (data) {
             responseString += data;
-        })
+        });
         
         res.on('end', function () {
             var repromptText = "";
@@ -23,10 +38,18 @@
             var response = JSON.parse(responseString);
             var speechOutput = response.text;
             var shouldEndSession = response.shouldEndSession;
-            
-            callback(sessionAttributes, buildSpeechletResponse(cardTitle, speechOutput, repromptText, shouldEndSession));
+            console.log(responseString);
+            context.succeed(response);
+
+           // callback(sessionAttributes, buildSpeechletResponse(cardTitle, speechOutput, repromptText, shouldEndSession));
         });
     });
+    
+    // post the data
+    post_req.write(post_data);
+    post_req.end();
+
+
 }
 
 function buildSpeechletResponse(title, output, repromptText, shouldEndSession) {
@@ -47,7 +70,7 @@ function buildSpeechletResponse(title, output, repromptText, shouldEndSession) {
             }
         },
         shouldEndSession: shouldEndSession
-    }
+    };
 }
 
 function buildResponse(sessionAttributes, speechletResponse) {
@@ -55,5 +78,6 @@ function buildResponse(sessionAttributes, speechletResponse) {
         version: "1.0",
         sessionAttributes: sessionAttributes,
         response: speechletResponse
-    }
+    };
 }
+       
