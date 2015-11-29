@@ -1,0 +1,249 @@
+{\rtf1\ansi\deff0\deflang2057\plain\fs24\fet1
+{\fonttbl
+{\f0\froman Arial;}
+}
+{\info
+{\createim\yr2015\mo11\dy29\hr1\min29}
+}
+{\stylesheet{\s1\ql \li0\fs28\outlinelevel0 \sbasedon0 \snext0 heading 1;}{\s2\ql \li200\fs26\outlinelevel1 \sbasedon0 \snext0 heading 2;}{\s3\ql \li400\fs24\outlinelevel2 \sbasedon0 \snext0 heading 3;}{\s4\ql \li600\fs22\outlinelevel3 \sbasedon0 \snext0 heading 4;}{\s5\ql \li800\fs20\outlinelevel4 \sbasedon0 \snext0 heading 5;}{\s6\ql \li1000\fs18\outlinelevel5 \sbasedon0 \snext0 heading 6;}{\s7\ql \li1200\fs16\outlinelevel6 \sbasedon0 \snext0 heading 7;}{\s8\ql \li1400\fs14\outlinelevel7 \sbasedon0 \snext0 heading 8;}}
+\paperw11907\paperh16840\margl1800\margr1800\margt1440\margb1440
+{\pard\ql\s1
+{\b\fs28
+Ask Car Details
+}
+\par}
+{\pard\ql\li200\s2
+{\fs26
+Help
+}
+\par}
+{\pard\ql\li400
+{\fs24
+INTENT: Help
+}
+\par}
+{\pard\ql\li400
+{\fs24
+}
+\par}
+{\pard\ql\li400\s3
+{\fs24
+These are the things you can do....
+}
+\par}
+{\pard\ql\li200\s2
+{\fs26
+What car would you like to know more about?
+}
+\par}
+{\pard\ql\li400\s3
+{\fs24
+"Corvette" "2016 Corvette"
+}
+\par}
+{\pard\ql\li200\s2
+{\fs26
+Select a Car - Model "Tell me about a Corvette"
+}
+\par}
+{\pard\ql\li400
+{\fs24
+INTENT: SelectCar
+}
+\par}
+{\pard\ql\li400
+{\fs24
+}
+\par}
+{\pard\ql\li400\s3
+{\fs24
+Maker, First Year of prod, last year of prod
+}
+\par}
+{\pard\ql\li600\s4
+{\fs22
+Mileage "what is the mileage" or "what is the mileage on 2015" or "what is the mileage on camry or what is the mileage on 2015 camry
+}
+\par}
+{\pard\ql\li800
+{\fs24
+1. Implied it is about a corvette2. it will retrieve the highest why available, it will state the city / hwy
+}
+\par}
+{\pard\ql\li800
+{\fs24
+OPTIONAL PARAMETERS: Year / ModelINTENT: Mileage
+}
+\par}
+{\pard\ql\li800
+{\fs24
+}
+\par}
+{\pard\ql\li800\s5
+{\fs20
+This the city and highway
+}
+\par}
+{\pard\ql\li600\s4
+{\fs22
+Price "what is the price [corvette]
+}
+\par}
+{\pard\ql\li800
+{\fs24
+INTENT: Price
+}
+\par}
+{\pard\ql\li800
+{\fs24
+}
+\par}
+{\pard\ql\li800\s5
+{\fs20
+the starting price of the newest
+}
+\par}
+{\pard\ql\li600\s4
+{\fs22
+Colors "what are the available colors"
+}
+\par}
+{\pard\ql\li800
+{\fs24
+INTENT: Price
+}
+\par}
+{\pard\ql\li800
+{\fs24
+}
+\par}
+{\pard\ql\li800\s5
+{\fs20
+the top 3
+}
+\par}
+{\pard\ql\li1000
+{\fs24
+defined by edmunds
+}
+\par}
+{\pard\ql\li1000
+{\fs24
+}
+\par}
+{\pard\ql\li1000\s6
+{\fs18
+Would you like to hear  more?
+}
+\par}
+{\pard\ql\li1200\s7
+{\fs16
+list the remaining colors
+}
+\par}
+{\pard\ql\li600\s4
+{\fs22
+Switch to a different car "What about a [Model] and/or [Year]
+}
+\par}
+{\pard\ql\li800
+{\fs24
+Repeat this option, at each level of question. Always retain in memory the LAST (and only the last) car chosen
+}
+\par}
+{\pard\ql\li800
+{\fs24
+Can loop on itself
+}
+\par}
+{\pard\ql\li800
+{\fs24
+}
+\par}
+{\pard\ql\li800\s5
+{\fs20
+[ANSWER the PREVIOUS ASKED QUESTION for the new model or year or both
+}
+\par}
+{\pard\ql\li600\s4
+{\fs22
+Some question we don't have an intent for "How many cup holders are there?"
+}
+\par}
+{\pard\ql\li800\s5
+{\fs20
+I am not sure at the moment. Do you want to know mileage, price or color?
+}
+\par}
+{\pard\ql\li1000
+{\fs24
+INTENT: No Car but an car object in memory. Return to the available intents of mileage, price, color
+}
+\par}
+{\pard\ql\li1000
+{\fs24
+}
+\par}
+{\pard\ql\li1000\s6
+{\fs18
+Mileage
+}
+\par}
+{\pard\ql\li1000\s6
+{\fs18
+Price
+}
+\par}
+{\pard\ql\li1000\s6
+{\fs18
+Color
+}
+\par}
+{\pard\ql\li200\s2
+{\fs26
+"I didn't understand your response. What car would you like to know more about"
+}
+\par}
+{\pard\ql\li400
+{\fs24
+INTENT: TroubleAND you don't previously know the car
+}
+\par}
+{\pard\ql\li400
+{\fs24
+}
+\par}
+{\pard\ql\li200\s2
+{\fs26
+Exit Statement if invoked by "Thank you or whatever"
+}
+\par}
+{\pard\ql\li400
+{\fs24
+Intent: Exit
+}
+\par}
+{\pard\ql\li400
+{\fs24
+}
+\par}
+{\pard\ql\li200\s2
+{\fs26
+What is the mileage / price / color?
+}
+\par}
+{\pard\ql\li400\s3
+{\fs24
+For what car?
+}
+\par}
+{\pard\ql\li600
+{\fs24
+INTENT: SelectCar
+}
+\par}
+{\pard\ql\li600
+{\fs24
+}
+\par}
+}
