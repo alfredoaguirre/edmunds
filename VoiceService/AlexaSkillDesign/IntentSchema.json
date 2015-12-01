@@ -1,0 +1,90 @@
+
+{
+    "intents": [
+    {
+        "intent": "SelectCar",
+        "slots": [
+        {
+           "name": "make",
+           "type": "makes"
+        },
+        {
+          "name": "model",
+          "type": "models"
+        },
+        {
+          "name": "year",
+          "type": "AMAZON.NUMBER"
+        }
+      ]
+    },
+    
+     {
+        "intent": "GetMileage",
+        "slots": [
+        {
+           "name": "make",
+           "type": "makes"
+        },
+        {
+          "name": "model",
+          "type": "models"
+        },
+        {
+          "name": "year",
+          "type": "AMAZON.NUMBER"
+        }
+      ]
+    },
+    
+     {
+        "intent": "GetPrice",
+        "slots": [
+        {
+           "name": "make",
+           "type": "makes"
+        },
+        {
+          "name": "model",
+          "type": "models"
+        },
+        {
+          "name": "year",
+          "type": "AMAZON.NUMBER"
+        }
+      ]
+    },
+     {
+        "intent": "GetColors",
+        "slots": [
+        {
+           "name": "make",
+           "type": "makes"
+        },
+        {
+          "name": "model",
+          "type": "models"
+        },
+        {
+          "name": "year",
+          "type": "AMAZON.NUMBER"
+        }
+      ]
+    },
+     {
+        "intent": "Trouble"
+    },
+     {
+        "intent": "AMAZON.HelpIntent"
+    },
+     {
+        "intent": "AMAZON.CancelIntent"
+    },
+     {
+        "intent": "AMAZON.StopIntent"
+    }
+  ]
+  
+  
+  
+}
