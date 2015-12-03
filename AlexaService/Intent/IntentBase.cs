@@ -109,6 +109,6 @@ namespace AlexaService.Intent
         }
         virtual public string GetErrorResponse()
         {
-            return
+            return ErrorSlotResponse[MissingSlot];
         }
     }
