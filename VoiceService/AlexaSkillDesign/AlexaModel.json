@@ -1,0 +1,67 @@
+﻿{
+	"intents": [
+		{
+			"intent": "SelectCar",
+			"slots": [
+				{
+					"name": "Year",
+					"type": "AMAZON.NUMBER"
+				},
+				{
+					"name": "Make",
+					"type": "Make"
+				},
+				{
+					"name": "Model",
+					"type": "Model"
+				}
+			]
+		},
+		{
+			"intent": "GetMileage",
+			"slots": [
+				{
+					"name": "Year",
+					"type": "AMAZON.NUMBER"
+				},
+				{
+					"name": "Make",
+					"type": "Make"
+				},
+				{
+					"name": "Model",
+					"type": "Model"
+				}
+			]
+		},
+		{
+			"intent": "GetPrice",
+			"slots": [
+				{
+					"name": "Year",
+					"type": "AMAZON.NUMBER"
+				},
+				{
+					"name": "Make",
+					"type": "Make"
+				},
+				{
+					"name": "Model",
+					"type": "Model"
+				}
+			]
+		},
+		{
+			"intent": "Trouble"
+		},
+		{
+			"intent": "AMAZON.HelpIntent"
+		},
+		{
+			"intent": "AMAZON.CancelIntent"
+		},
+		{
+			"intent": "AMAZON.StopIntent"
+		}
+	]
+}

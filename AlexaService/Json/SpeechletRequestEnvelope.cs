@@ -39,7 +39,7 @@ namespace AlexaService.Json
             {
                 return Slots.Children()
                     .Select(x => (JProperty) x)
-                    .ToDictionary(x => x.Name, x => x.Value["value"].ToString());
+                    .ToDictionary(x => x.Name, x => x.Value["value"]?.ToString());
             }
         }
 

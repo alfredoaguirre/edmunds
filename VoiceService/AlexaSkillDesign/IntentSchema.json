@@ -1,4 +1,3 @@
-
 {
     "intents": [
     {
@@ -84,7 +83,4 @@
         "intent": "AMAZON.StopIntent"
     }
   ]
-  
-  
-  
 }

@@ -26,7 +26,7 @@ namespace AlexaService.Test
             StreamReader file = new StreamReader(@"payload\event.json");
 
             var clas = JsonConvert.DeserializeObject<Json.SpeechletRequestEnvelope>(file.ReadToEnd());
-            var responce = controller.Post(clas);
+            var responce = controller.Post();
             // Assert
         }
         [TestMethod]

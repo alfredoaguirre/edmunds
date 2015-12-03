@@ -1,37 +1,31 @@
 {
 	"session": {
-		"sessionId": "SessionId.9c6cdbab-d8c6-4635-9e96-d22ac0bf62bc",
+		"sessionId": "SessionId.499a77dd-4796-4f1a-91c6-4493ad55f1fd",
 		"application": {
 			"applicationId": "amzn1.echo-sdk-ams.app.8de72717-a87d-4503-93d8-6dc3bc5b7789"
 		},
-		"attributes": null,
 		"user": {
-			"userId": "amzn1.account.AGQMN5GPWT45VKPIUEH3SHSXM34Q",
-			"accessToken": null
+			"userId": "amzn1.account.AGQMN5GPWT45VKPIUEH3SHSXM34Q"
 		},
 		"new": true
 	},
 	"request": {
 		"type": "IntentRequest",
-		"requestId": "EdwRequestId.f40a87c7-28a4-475a-8cf0-098df4ec9bc3",
-		"timestamp": 1444709621291,
+		"requestId": "EdwRequestId.b5db1382-97e7-41ca-ad36-856a650d5539",
+		"timestamp": 1449021634165,
 		"intent": {
-			"name": "GetMPGByModel",
+			"name": "GetMileage",
 			"slots": {
-				"model": {
-					"name": "model",
-					"value": "Integra"
+				"Year": {
+					"name": "Year"
 				},
-				"make": {
-					"name": "make",
-					"value": "Acura"
+				"Model": {
+					"name": "Model"
 				},
-				"year": {
-					"name": "make",
-					"value": "2001"
+				"Make": {
+					"name": "Make"
 				}
 			}
-		},
-		"reason": null
+		}
 	}
 }

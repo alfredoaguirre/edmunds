@@ -1,6 +1,6 @@
 General Car Information
-SelectCar to  tell me about a {Make} {Model}
-SelectCar to  tell me about a {Model}
+SelectCar to tell me about a {Make} {Model}
+SelectCar to tell me about a {Model}
 SelectCar about a {Make} {Model}
 SelectCar about a {Model}
 SelectCar for information about a {Make} {Model}
@@ -28,24 +28,24 @@ GetMileage for gas mileage for {Make} {Model}
 GetMileage for Miles Per Gallon for {Model}
 GetMileage for MPG for {Model}
 GetMileage for gas mileage for {Model}
-GetMileage what’s the  Miles Per Gallon for {Year} {Make} {Model}
-GetMileage what’s the MPG for {Year} {Make} {Model}
-GetMileage what’s the gas mileage for {Year} {Make} {Model}
-GetMileage what’s the  Miles Per Gallon for {Make} {Model}
-GetMileage what’s the  MPG for {Make} {Model}
-GetMileage what’s the gas mileage for {Make} {Model}
-GetMileage what’s the Miles Per Gallon for {Model}
-GetMileage what’s the MPG for {Model}
-GetMileage what’s the gas mileage for {Model}
-GetMileage what’s the  Miles Per Gallon for {Year} {Make} {Model}
-GetMileage what’s the MPG for {Year} {Make} {Model}
-GetMileage what’s the gas mileage for {Year} {Make} {Model}
-GetMileage what’s the  Miles Per Gallon for {Make} {Model}
-GetMileage what’s the  MPG for {Make} {Model}
-GetMileage what’s the gas mileage for {Make} {Model}
-GetMileage what’s the Miles Per Gallon for {Model}
-GetMileage what’s the MPG for {Model}
-GetMileage what’s the gas mileage for {Model}
+GetMileage what is the  Miles Per Gallon for {Year} {Make} {Model}
+GetMileage what is the MPG for {Year} {Make} {Model}
+GetMileage what is the gas mileage for {Year} {Make} {Model}
+GetMileage what is the  Miles Per Gallon for {Make} {Model}
+GetMileage what is the  MPG for {Make} {Model}
+GetMileage what is the gas mileage for {Make} {Model}
+GetMileage what is the Miles Per Gallon for {Model}
+GetMileage what is the MPG for {Model}
+GetMileage what is the gas mileage for {Model}
+GetMileage what is the  Miles Per Gallon for {Year} {Make} {Model}
+GetMileage what is the MPG for {Year} {Make} {Model}
+GetMileage what is the gas mileage for {Year} {Make} {Model}
+GetMileage what is the  Miles Per Gallon for {Make} {Model}
+GetMileage what is the  MPG for {Make} {Model}
+GetMileage what is the gas mileage for {Make} {Model}
+GetMileage what is the Miles Per Gallon for {Model}
+GetMileage what is the MPG for {Model}
+GetMileage what is the gas mileage for {Model}
 
 Price
 GetPrice for Price for 2014 Toyota Camry
@@ -85,24 +85,24 @@ GetPrice what is the Cost for a {Model}
 GetPrice what is the Value of a {Model}
 GetPrice what is the Price of a {Model}
 GetPrice what is the Cost of a {Model}
-GetPrice what’s the Value for a {Year} {Make} {Model}
-GetPrice what’s the Price for a {Year} {Make} {Model}
-GetPrice what’s the Cost for a {Year} {Make} {Model}
-GetPrice what’s the Value of a {Year} {Make} {Model}
-GetPrice what’s the Price of a {Year} {Make} {Model}
-GetPrice what’s the Cost of a {Year} {Make} {Model}
-GetPrice what’s the Value for a {Make} {Model}
-GetPrice what’s the Price for a {Make} {Model}
-GetPrice what’s the Cost for a {Make} {Model}
-GetPrice what’s the Value of a {Make} {Model}
-GetPrice what’s the Price of a  {Make} {Model}
-GetPrice what’s the Cost of a  {Make} {Model}
-GetPrice what’s the Value for a {Model}
-GetPrice what’s the Price for a {Model}
-GetPrice what’s the Cost for a {Model}
-GetPrice what’s the Value of a {Model}
-GetPrice what’s the Price of a {Model}
-GetPrice what’s the Cost of a {Model}
+GetPrice what is the Value for a {Year} {Make} {Model}
+GetPrice what is the Price for a {Year} {Make} {Model}
+GetPrice what is the Cost for a {Year} {Make} {Model}
+GetPrice what is the Value of a {Year} {Make} {Model}
+GetPrice what is the Price of a {Year} {Make} {Model}
+GetPrice what is the Cost of a {Year} {Make} {Model}
+GetPrice what is the Value for a {Make} {Model}
+GetPrice what is the Price for a {Make} {Model}
+GetPrice what is the Cost for a {Make} {Model}
+GetPrice what is the Value of a {Make} {Model}
+GetPrice what is the Price of a  {Make} {Model}
+GetPrice what is the Cost of a  {Make} {Model}
+GetPrice what is the Value for a {Model}
+GetPrice what is the Price for a {Model}
+GetPrice what is the Cost for a {Model}
+GetPrice what is the Value of a {Model}
+GetPrice what is the Price of a {Model}
+GetPrice what is the Cost of a {Model}
 
 Colors
 GetColors what colors the  {Year} {Make} {Model} comes in
