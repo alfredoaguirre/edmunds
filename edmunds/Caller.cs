@@ -26,6 +26,18 @@ namespace EdmundsClient
                 }
             }
             return o2.ToString();
+
+        }
+        public static string GetRequest(string url)
+        {
+            WebRequest webRequest = WebRequest.Create(url);
+            Stream responseStream = webRequest.GetResponse().GetResponseStream();
+
+            using (StreamReader stream = new StreamReader(responseStream))
+            {
+                return stream.ReadToEnd();
+            }
+
         }
     }
 }

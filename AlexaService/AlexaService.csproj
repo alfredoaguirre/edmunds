@@ -89,6 +89,8 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Intent\GetPrice.cs" />
+    <Compile Include="Intent\GetMileage.cs" />
     <Compile Include="Intent\IntentBase.cs" />
     <Compile Include="Intent\IntentManager.cs" />
     <Compile Include="Intent\SelectCar.cs" />

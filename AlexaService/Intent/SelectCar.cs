@@ -11,19 +11,12 @@ namespace AlexaService.Intent
         public SelectCar()
         {
             Name = "SelectCar";
-            ResponseTemplate = new List<string>()
-            {
-                "Got it",
-                "Ok"
-            };
-            ResponceSlots = new Dictionary<string, string>()
-            {
-                {"name", "" }
-            };
-        }
-        public override string GetResponse()
-        {
-            return base.GetResponse();
+            PositiveResponseTemplate.Add("Got it {slot:Name}");
+            PositiveResponseTemplate.Add("Got it {slot:Make} {slot:Name}");
+            PositiveResponseTemplate.Add("Ok");
+
+            Response["name"] = "";
+
         }
     }
 }
