@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,11 +11,20 @@ namespace AlexaService.Intent
         public SelectCar()
         {
             Name = "SelectCar";
-            PositiveResponseTemplate.Add("Got it {slot:Name}");
-            PositiveResponseTemplate.Add("Got it {slot:Make} {slot:Name}");
-            PositiveResponseTemplate.Add("Ok");
+            PositiveResponseTemplate.Add("The {slot:Model} manufactured by {slot:Make} was first made in {yearStart}. The last year the {slot:Model} was made was in {yearLast}.");
+            PositiveResponseTemplate.Add("The {slot:Make} {slot:Model} was first introduced in {yearStart}. The last time a {slot:Model} was rolled out was in {yearLast}.");
+            
+            //Encountered in the URL fails or car combo is unknown. Not prompting the user for further information
+            NegativeResponseTemplate.Add("I don't have that car in my records. Hm try again later.");
 
-            Response["name"] = "";
+            Response["yearStart"] = "styles[0].Year Start";
+            Response["yearLast"] = "styles[0].Year Last Proceed";
+            
+            //Encountered if the user starts app without declaring both make and model
+            ErrorSlotResponse["Make"] = "Who manufacturer of the car?";
+            ErrorSlotResponse["Model"] = "Which model are you interested in?";
+
+
 
             FollowingQuestiestionMissingSlot["slot:Name"] = "pleace tell me ";
         }
