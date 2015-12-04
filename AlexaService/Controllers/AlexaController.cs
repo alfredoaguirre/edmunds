@@ -7,6 +7,7 @@ using Newtonsoft.Json.Linq;
 using Newtonsoft.Json;
 using AlexaService.Intent;
 using AlexaService.Cache;
+using AlexaService.Json;
 
 namespace AlexaService.Controllers
 {
@@ -21,7 +22,7 @@ namespace AlexaService.Controllers
 
         [Route("Alexa")]
         [HttpPost]
-        public string Post()
+        public SpeechletResponse Post()
         {
             Json.SpeechletRequestEnvelope requestBody =
             JsonConvert.DeserializeObject<Json.SpeechletRequestEnvelope>(Request.Content.ReadAsStringAsync().Result);
@@ -33,7 +34,7 @@ namespace AlexaService.Controllers
             }
             CacheManager.AddSlots(requestBody.Request.Intent.GetSlots);
             IntentBase intent = IntentManager.GetIntent(intentName);
-            return intent.GetEdmundsResponse();
+            return intent.getAlexaResponse();
         }
 
         [Route("alexa/sample-session")]
