@@ -27,6 +27,8 @@ namespace AlexaService.Intent
 
 
             FollowingQuestiestionMissingSlot["slot:Name"] = "pleace tell me ";
+
+            EdmundsUrlTemplate = https://api.edmunds.com/api/vehicle/v2/{slot:Make}/{slot:Model}?view=basic&fmt=json&api_key=67t7jtrnvz8wyzgfpwgcqa3y
         }
     }
 }

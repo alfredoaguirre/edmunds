@@ -81,7 +81,7 @@ namespace AlexaService.Intent
             else
             {
                 var fullResponce = GetEdmundsFullResponse();
-                if (string.IsNullOrWhiteSpace(MissingSlot))
+                if (!string.IsNullOrWhiteSpace(MissingSlot))
                 {
                     return GetErrorResponse();
                 }
@@ -113,7 +113,7 @@ namespace AlexaService.Intent
         }
         public string getReprompt()
         {
-            if (string.IsNullOrEmpty(MissingSlot))
+            if (!string.IsNullOrEmpty(MissingSlot))
                 return FollowingQuestiestionMissingSlot[MissingSlot];
             else
                 return "";
