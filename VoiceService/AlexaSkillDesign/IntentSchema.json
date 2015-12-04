@@ -4,15 +4,15 @@
         "intent": "SelectCar",
         "slots": [
         {
-           "name": "make",
+           "name": "Make",
            "type": "makes"
         },
         {
-          "name": "model",
+          "name": "Model",
           "type": "models"
         },
         {
-          "name": "year",
+          "name": "Year",
           "type": "AMAZON.NUMBER"
         }
       ]
@@ -22,15 +22,15 @@
         "intent": "GetMileage",
         "slots": [
         {
-           "name": "make",
+           "name": "Make",
            "type": "makes"
         },
         {
-          "name": "model",
+          "name": "Model",
           "type": "models"
         },
         {
-          "name": "year",
+          "name": "Year",
           "type": "AMAZON.NUMBER"
         }
       ]
@@ -40,15 +40,15 @@
         "intent": "GetPrice",
         "slots": [
         {
-           "name": "make",
+           "name": "Make",
            "type": "makes"
         },
         {
-          "name": "model",
+          "name": "Model",
           "type": "models"
         },
         {
-          "name": "year",
+          "name": "Year",
           "type": "AMAZON.NUMBER"
         }
       ]
@@ -57,15 +57,15 @@
         "intent": "GetColors",
         "slots": [
         {
-           "name": "make",
+           "name": "Make",
            "type": "makes"
         },
         {
-          "name": "model",
+          "name": "Model",
           "type": "models"
         },
         {
-          "name": "year",
+          "name": "Year",
           "type": "AMAZON.NUMBER"
         }
       ]
