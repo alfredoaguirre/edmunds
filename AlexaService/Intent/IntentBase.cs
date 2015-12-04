@@ -29,6 +29,7 @@ namespace AlexaService.Intent
             Response = new Dictionary<string, string>();
             ErrorSlotResponse = new Dictionary<string, string>();
             NegativeResponseTemplate = new List<string>();
+            FollowingQuestiestionMissingSlot = new Dictionary<string, string>();
         }
         virtual public string GenEdmundsURL()
         {
@@ -67,6 +68,8 @@ namespace AlexaService.Intent
         virtual public string GetEdmundsFullResponse()
         {
             var url = GenEdmundsURL();
+            if (string.IsNullOrWhiteSpace(url))
+                return "";
 
             return EdmundsClient.Caller.GetRequest(url);
         }
@@ -81,8 +84,9 @@ namespace AlexaService.Intent
             else
             {
                 var fullResponce = GetEdmundsFullResponse();
-                if (!string.IsNullOrWhiteSpace(MissingSlot))
+                if (!string.IsNullOrWhiteSpace(MissingSlot) || string.IsNullOrWhiteSpace(fullResponce))
                 {
+
                     return GetErrorResponse();
                 }
                 o = JObject.Parse(fullResponce);
