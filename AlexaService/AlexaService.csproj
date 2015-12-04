@@ -95,6 +95,7 @@
     <Compile Include="Intent\IntentManager.cs" />
     <Compile Include="Intent\SelectCar.cs" />
     <Compile Include="Json\SpeechletRequestEnvelope.cs" />
+    <Compile Include="Json\SpeechletResponse.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

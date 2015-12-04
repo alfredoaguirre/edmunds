@@ -17,6 +17,7 @@ namespace AlexaService.Intent
 
             Response["name"] = "";
 
+            FollowingQuestiestionMissingSlot["slot:Name"] = "pleace tell me ";
         }
     }
 }

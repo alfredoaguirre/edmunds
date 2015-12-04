@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using AlexaService.Cache;
 using System.Text.RegularExpressions;
 using Newtonsoft.Json.Linq;
+using AlexaService.Json;
 
 namespace AlexaService.Intent
 {
@@ -15,6 +15,7 @@ namespace AlexaService.Intent
         public string MissingSlot { get; set; }
 
         public string EdmundsUrlTemplate { get; set; }
+        public Dictionary<string, string> FollowingQuestiestionMissingSlot { get; set; }
         static Random random = new Random();
         public List<string> PositiveResponseTemplate { get; private set; }
         public List<string> NegativeResponseTemplate { get; private set; }
@@ -105,10 +106,35 @@ namespace AlexaService.Intent
             var positiveResponse = r.Replace(positiveResponseTemplate, x => "{" + count++ + "}");
             positiveResponse = String.Format(positiveResponse, arg.ToArray());
             return positiveResponse;
-
         }
         virtual public string GetErrorResponse()
         {
             return ErrorSlotResponse[MissingSlot];
         }
+        public string getReprompt()
+        {
+            if (string.IsNullOrEmpty(MissingSlot))
+                return FollowingQuestiestionMissingSlot[MissingSlot];
+            else
+                return "";
+        }
+        public AlexaService.Json.SpeechletResponse getAlexaResponse()
+        {
+            return new SpeechletResponse()
+            {
+                outputSpeech = new OutputSpeech()
+                {
+                    text = GetEdmundsResponse(),
+                },
+                reprompt = new Reprompt()
+                {
+                    outputSpeech = new OutputSpeech()
+                    {
+                        text = getReprompt()
+                    }
+                }
+            };
+
+        }
     }
+}
