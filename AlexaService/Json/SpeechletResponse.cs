@@ -10,7 +10,7 @@ namespace AlexaService.Json
         public string version { get; set; }
         public string SpeechletResponse { get; set; }
         public SpeechletResponse response { get; set; }
-        response: speechletResponse
+      
     }
 
     public class SpeechletResponse
