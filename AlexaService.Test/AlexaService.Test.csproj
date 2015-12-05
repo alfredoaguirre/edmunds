@@ -68,6 +68,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="AlexaServiceInteraction.cs" />
     <Compile Include="AlexaServiceTest.cs" />
     <Compile Include="Cache\CacheManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
