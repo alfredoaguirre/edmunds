@@ -38,7 +38,7 @@ namespace AlexaService.Test
         }
         */
         
-        //Get Price - all 3 parameters provided (Year, Make, Model)
+        //Get Price - all 3 parameters provided (Year, Make, Model) - //SHOULD WE STATE "A new" instead of The 2002..etc. Cuz old cars look expensive
         [TestMethod]
         public void getCarPriceTest_3good()
         {
@@ -55,7 +55,7 @@ namespace AlexaService.Test
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse=  intent.getAlexaResponse();
             
-            Assert.AreEqual(AlexaResponse.outputSpeech.text, "The 2015 BMW 5 Series has a starting price of 58900");
+            Assert.AreEqual(AlexaResponse.outputSpeech.text, "A new 2015 BMW 5 Series has a starting price of 58900");
 
         }
         //Get Price - all 3 parameters provided - bad year (Year, Make, Model). ILX started in 2013.
@@ -135,10 +135,107 @@ namespace AlexaService.Test
 
         }
         //Get Price - all 3 parameters provided - make not found (Year, Make, Model)
+        public void getCarPriceTest_3badmake()
+        {
+            
+            AlexaService.Cache.CacheManager.AddSlots(new Dictionary<string, string>()
+                {
+                    {"Make", "Mazda" },
+                    {"Name", "Camry" },
+                    {"Year", "1995" }
+                }
+            );
+            var intent = new GetPrice();
+            var edmundsURL = intent.GenEdmundsURL();
+            var edmundsResponse = intent.GetEdmundsResponse();
+            var AlexaResponse=  intent.getAlexaResponse();
+            
+            Assert.AreEqual(AlexaResponse.outputSpeech.text, "Hmm. I can't seem to find the price at this time.");
+
+        }
+
         //Get Price - all 3 parameters provided - model not found (Year, Make, Model)
-        //Get Price - all 3 parameters provided - missing full model info (Year, Make, Model)
-        //Get Price - all 3 parameters provided - missing full year (Year, Make, Model)
+        public void getCarPriceTest_3nomodel()
+        {
+            
+            AlexaService.Cache.CacheManager.AddSlots(new Dictionary<string, string>()
+                {
+                    {"Make", "Mazda" },
+                    {"Name", "Amazon" },
+                    {"Year", "1995" }
+                }
+            );
+            var intent = new GetPrice();
+            var edmundsURL = intent.GenEdmundsURL();
+            var edmundsResponse = intent.GetEdmundsResponse();
+            var AlexaResponse=  intent.getAlexaResponse();
+            
+            Assert.AreEqual(AlexaResponse.outputSpeech.text, "Hmm. I can't seem to find the price at this time.");
+
+        }
+
+        //Get Price - all 3 parameters provided - missing full model info (Year, Make, Model) - //SHOULD WE ASK FOR MODIFIED MODELS?
+        public void getCarPriceTest_3notfullmodel()
+        {
+            
+            AlexaService.Cache.CacheManager.AddSlots(new Dictionary<string, string>()
+                {
+                    {"Make", "Mazda" },
+                    {"Name", "CX" },
+                    {"Year", "2014" }
+                }
+            );
+            var intent = new GetPrice();
+            var edmundsURL = intent.GenEdmundsURL();
+            var edmundsResponse = intent.GetEdmundsResponse();
+            var AlexaResponse=  intent.getAlexaResponse();
+            
+            Assert.AreEqual(AlexaResponse.outputSpeech.text, "Hmm. I can't seem to find the price at this time.");
+
+        }
+
+
+        //Get Price - all 3 parameters provided - missing full year (Year, Make, Model) - 2002
+        public void getCarPriceTest_3notfullyear()
+        {
+            
+            AlexaService.Cache.CacheManager.AddSlots(new Dictionary<string, string>()
+                {
+                    {"Make", "Toyota" },
+                    {"Name", "Camry" },
+                    {"Year", "02" }
+                }
+            );
+            var intent = new GetPrice();
+            var edmundsURL = intent.GenEdmundsURL();
+            var edmundsResponse = intent.GetEdmundsResponse();
+            var AlexaResponse=  intent.getAlexaResponse();
+            
+            Assert.AreEqual(AlexaResponse.outputSpeech.text, "The 2002 Toyota Camry has a starting price of 23700.");
+
+        }
+
+
         //Get Price - all 2 mandatory parameters provided (Make, Model)
+        public void getCarPriceTest_2makemodel()
+        {
+            
+            AlexaService.Cache.CacheManager.AddSlots(new Dictionary<string, string>()
+                {
+                    {"Make", "Toyota" },
+                    {"Name", "Camry" },
+                }
+            );
+            var intent = new GetPrice();
+            var edmundsURL = intent.GenEdmundsURL();
+            var edmundsResponse = intent.GetEdmundsResponse();
+            var AlexaResponse=  intent.getAlexaResponse();
+            
+            Assert.AreEqual(AlexaResponse.outputSpeech.text, "A new 2002 Toyota Camry has a starting price of 23700.");
+
+        }
+
+
         //Get Price - 2 non mandatory parameters provided (Year, Make)
         //Get Price - 2 other non mandatory parameters provided (Year, Model)
         //Get Price - only year provided
