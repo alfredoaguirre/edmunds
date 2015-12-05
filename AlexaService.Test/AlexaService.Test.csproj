@@ -85,6 +85,7 @@
     <Content Include="payload\event.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="payload\GetPrice for Price for 2013 Toyota Camry.json" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

@@ -86,7 +86,6 @@ namespace AlexaService.Intent
                 var fullResponce = GetEdmundsFullResponse();
                 if (!string.IsNullOrWhiteSpace(MissingSlot) || string.IsNullOrWhiteSpace(fullResponce))
                 {
-
                     return GetErrorResponse();
                 }
                 o = JObject.Parse(fullResponce);

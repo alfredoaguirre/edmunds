@@ -5,6 +5,14 @@ using System.Web;
 
 namespace AlexaService.Json
 {
+    public class buildResponse
+    {
+        public string version { get; set; }
+        public string SpeechletResponse { get; set; }
+        public SpeechletResponse response { get; set; }
+      
+    }
+
     public class SpeechletResponse
     {
         public OutputSpeech outputSpeech { get; set; }
@@ -19,7 +27,7 @@ namespace AlexaService.Json
         {
             type = "PlainText";
         }
-            }
+    }
     public class Reprompt
     {
         public OutputSpeech outputSpeech { get; set; }

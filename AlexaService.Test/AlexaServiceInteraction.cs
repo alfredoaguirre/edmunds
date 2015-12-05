@@ -13,7 +13,7 @@ using AlexaService.Intent;
 namespace AlexaService.Test
 {
     [TestClass]
-    public class AlexaServiceTest
+    public class AlexaServiceInteraction
     {
     
        /* MODEL
