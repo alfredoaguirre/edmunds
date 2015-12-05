@@ -1,4 +1,3 @@
-General Car Information
 SelectCar to tell me about a {Make} {Model}
 SelectCar to tell me about a {Model}
 SelectCar about a {Make} {Model}
@@ -15,10 +14,6 @@ SelectCar for information about a {Year} {Make} {Model}
 SelectCar for information about a {Year} {Model}
 SelectCar for details about a {Year} {Make} {Model}
 SelectCar for details about a {Year} {Model}
-
-
-Miles Per Gallon
-GetMileage for Miles Per Gallon for 2014 Toyota Camry
 GetMileage for Miles Per Gallon for {Year} {Make} {Model}
 GetMileage for MPG for {Year} {Make} {Model}
 GetMileage for gas mileage for {Year} {Make} {Model}
@@ -28,6 +23,10 @@ GetMileage for gas mileage for {Make} {Model}
 GetMileage for Miles Per Gallon for {Model}
 GetMileage for MPG for {Model}
 GetMileage for gas mileage for {Model}
+GetMileage get gas mileage
+GetMileage get MPGs
+GetMileage get MPG
+GetMileage get Miles Per Gallon
 GetMileage what is the  Miles Per Gallon for {Year} {Make} {Model}
 GetMileage what is the MPG for {Year} {Make} {Model}
 GetMileage what is the gas mileage for {Year} {Make} {Model}
@@ -46,9 +45,11 @@ GetMileage what is the gas mileage for {Make} {Model}
 GetMileage what is the Miles Per Gallon for {Model}
 GetMileage what is the MPG for {Model}
 GetMileage what is the gas mileage for {Model}
-
-Price
-GetPrice for Price for 2014 Toyota Camry
+GetMileage what is the gas mileage
+GetMileage what is the MPG
+GetMileage what is the MPGs
+GetMileage what are the Miles Per Gallon
+GetMileage what is the Miles Per Gallon
 GetPrice for Value for a {Year} {Make} {Model}
 GetPrice for Price for a {Year} {Make} {Model}
 GetPrice for Cost for a {Year} {Make} {Model}
@@ -67,6 +68,9 @@ GetPrice for Cost for a {Model}
 GetPrice for Value of a {Model}
 GetPrice for Price of a {Model}
 GetPrice for Cost of a {Model}
+GetPrice get the price
+GetPrice get the cost
+GetPrice get the value
 GetPrice what is the Value for a {Year} {Make} {Model}
 GetPrice what is the Price for a {Year} {Make} {Model}
 GetPrice what is the Cost for a {Year} {Make} {Model}
@@ -103,16 +107,20 @@ GetPrice what is the Cost for a {Model}
 GetPrice what is the Value of a {Model}
 GetPrice what is the Price of a {Model}
 GetPrice what is the Cost of a {Model}
-
-Colors
+GetPrice what is the price
+GetPrice what is the cost
+GetPrice what is the value
+GetColors get the colors
+GetColors get the colors that are available
 GetColors what colors the  {Year} {Make} {Model} comes in
 GetColors what colors are available for the  {Year} {Make} {Model}
 GetColors what colors the  {Make} {Model} comes in
 GetColors what colors are available for the  {Make} {Model} 
 GetColors what colors the  {Model} comes in
-GetColors what colors are available for the {Model} 
-
-Ask Car Details - No Parameters
+GetColors what colors are available for the {Model}
+GetColors what colors are available
+GetColors what colors does it come in
+GetColors what colors are available
 {Model} 
 {Year} {Model}
 {Year} {Make} {Model}

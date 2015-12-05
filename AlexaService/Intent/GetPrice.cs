@@ -11,8 +11,8 @@ namespace AlexaService.Intent
         public GetPrice()
         {
             Name = "GetPrice";
-            PositiveResponseTemplate.Add("The {slot:Year} {slot:Make} {slot:Model} has a starting price of {price}");
-            PositiveResponseTemplate.Add("The {slot:Year} {slot:Make} {slot:Model} starts at {price} dollars");
+            PositiveResponseTemplate.Add("A new {slot:Year} {slot:Make} {slot:Model} has a starting price of {price}");
+            PositiveResponseTemplate.Add("A new {slot:Year} {slot:Make} {slot:Model} starts at {price} dollars");
             
             //Encountered in the URL fails or Price is unknown. Not prompting the user for further information
             NegativeResponseTemplate.Add("Hmm. I can't seem to find the price at this time.");
