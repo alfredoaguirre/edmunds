@@ -94,7 +94,11 @@
   </Choose>
   <ItemGroup>
     <Compile Include="AlexaPostTest.cs" />
+    <Compile Include="AlexaServiceColor.cs" />
     <Compile Include="AlexaServiceInteraction.cs" />
+    <Compile Include="AlexaServiceMileage.cs" />
+    <Compile Include="AlexaServicePrice.cs" />
+    <Compile Include="AlexaServiceSelectCar.cs" />
     <Compile Include="AlexaServiceTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

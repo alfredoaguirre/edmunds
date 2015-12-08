@@ -15,35 +15,48 @@ using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using Newtonsoft.Json;
 using AlexaService.Intent;
+using Microsoft.Owin.Testing;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Owin;
+using System;
+using System.Linq;
+using System.Net.Http;
+using System.Threading.Tasks;
+using System.Web.Http;
+using System.Web.Http.Dispatcher;
 
 namespace OwinApplicationTesting
 {
     [TestClass]
-    public class OwinApplicationTests
+    public class SelfHostingTest
     {
-        [TestMethod]
-        public void OwinAppTest()
-        {
-            using (var server = TestServer.Create<MyStartup>())
-            {
-                HttpResponseMessage response =  server.HttpClient.GetAsync("/Alexa").Result;
+        protected TestServer server;
 
-                //Execute necessary tests
-                Assert.Equals("Hello world using OWIN TestServer",  response.Content.ReadAsStringAsync().Result);
-            }
-        }
-    }
-
-    public class MyStartup
-    {
-        public void Configuration(IAppBuilder app)
+        [TestInitialize]
+        public void Setup()
         {
-           // app.UseErrorPage(); // See Microsoft.Owin.Diagnostics
-            //app.UseWelcomePage("/Welcome"); // See Microsoft.Owin.Diagnostics 
-            app.Run(async context =>
+            server = TestServer.Create(app =>
             {
-                await context.Response.WriteAsync("Hello world using OWIN TestServer");
+                HttpConfiguration config = new HttpConfiguration();
+                WebApp.WebApiConfig.Register(config);
+                app.UseWebApi(config);
             });
         }
+
+        [TestCleanup]
+        public void TearDown()
+        {
+            if (server != null)
+                server.Dispose();
+        }
+
+        [TestMethod]
+        public async Task TestODataMetaData()
+        {
+            HttpResponseMessage response = await server.CreateRequest("/odata/?$metadata").GetAsync();
+
+           // var result = await response.Content.ReadAsAsync<ODataMetaData>();
+
+          //  Assert.IsTrue(result.value.Count > 0, "Unable to obtain meta data");
+        }
     }
-}

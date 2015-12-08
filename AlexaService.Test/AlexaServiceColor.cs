@@ -235,7 +235,7 @@ namespace AlexaService.Test
 
 
         //Get Color - 2 other non mandatory parameters provided (Year, Model)
-        public void getCarColorTest_2nonmandatory()
+        public void getCarColorTest_2nonmandatory2()
         {
             
             AlexaService.Cache.CacheManager.AddSlots(new Dictionary<string, string>()

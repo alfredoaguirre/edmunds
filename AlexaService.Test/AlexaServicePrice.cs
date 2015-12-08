@@ -257,7 +257,7 @@ namespace AlexaService.Test
 
 
         //Get Price - 2 other non mandatory parameters provided (Year, Model)
-        public void getCarPriceTest_2nonmandatory()
+        public void getCarPriceTest_2nonmandatory2()
         {
             
             AlexaService.Cache.CacheManager.AddSlots(new Dictionary<string, string>()

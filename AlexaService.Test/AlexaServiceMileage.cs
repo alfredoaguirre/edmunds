@@ -235,7 +235,7 @@ namespace AlexaService.Test
 
 
         //Get MPG - 2 other non mandatory parameters provided (Year, Model)
-        public void getCarMPGTest_2nonmandatory()
+        public void getCarMPGTest_2nonmandatory2()
         {
             
             AlexaService.Cache.CacheManager.AddSlots(new Dictionary<string, string>()
