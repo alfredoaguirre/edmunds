@@ -332,7 +332,7 @@ namespace AlexaService.Test
             
             AlexaService.Cache.CacheManager.AddSlots(new Dictionary<string, string>()
                 {
-                    {"University of the Texas at Arlington" },
+                    {"m","University of the Texas at Arlington" },
                 }
             );
             var intent = new SelectCar();

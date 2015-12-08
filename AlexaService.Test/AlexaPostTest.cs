@@ -55,8 +55,9 @@ namespace OwinApplicationTesting
         {
             HttpResponseMessage response = await server.CreateRequest("/odata/?$metadata").GetAsync();
 
-           // var result = await response.Content.ReadAsAsync<ODataMetaData>();
+            // var result = await response.Content.ReadAsAsync<ODataMetaData>();
 
-          //  Assert.IsTrue(result.value.Count > 0, "Unable to obtain meta data");
+            //  Assert.IsTrue(result.value.Count > 0, "Unable to obtain meta data");
         }
     }
+}
