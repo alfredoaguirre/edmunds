@@ -77,7 +77,7 @@ namespace AlexaService.Test
             AlexaService.Cache.CacheManager.AddSlots(new Dictionary<string, string>()
                 {
                     {"Make", "Dodge" },
-                    {"Name", "Dart" },
+                    {"Model", "Dart" },
                     {"Year", "2013" }
                 }
             );
@@ -101,7 +101,7 @@ namespace AlexaService.Test
             AlexaService.Cache.CacheManager.AddSlots(new Dictionary<string, string>()
                 {
                     {"Make", "Dodge" },
-                    {"Name", "Dart" },
+                    {"Model", "Dart" },
                     {"Year", "2013" }
                 }
             );
