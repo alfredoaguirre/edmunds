@@ -99,7 +99,7 @@
     <Compile Include="Intent\AlexaServiceMileage.cs" />
     <Compile Include="Intent\AlexaServicePrice.cs" />
     <Compile Include="Intent\AlexaServiceSelectCar.cs" />
-    <Compile Include="Controllers\AlexaServiceTest.cs" />
+    <Compile Include="Intent\AlexaServiceTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

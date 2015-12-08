@@ -60,23 +60,25 @@ namespace OwinApplicationTesting
 
             var result = await response.Content.ReadAsAsync<string>();
 
-              Assert.AreEqual(result, "alfredo");
+            Assert.AreEqual(result, "alfredo");
         }
 
+        public async Task<SpeechletResponse> GetPostRequest(SpeechletRequestEnvelope requestMsg)
+        {
+            HttpResponseMessage response = await server.CreateRequest("/Alexa")
+                .And(request => request.Content = new ObjectContent(typeof(SpeechletRequestEnvelope), requestMsg, new JsonMediaTypeFormatter()))
+                .PostAsync();
+
+            return await response.Content.ReadAsAsync<SpeechletResponse>();
+        }
 
 
         [TestMethod]
         public async Task AlexaPostTest()
         {
             StreamReader file = new StreamReader(@"payload\GetPrice for Price for 2013 Toyota Camry.json");
-
-            var clas = JsonConvert.DeserializeObject<AlexaService.Json.SpeechletRequestEnvelope>(file.ReadToEnd());
-            HttpResponseMessage response = await server.CreateRequest("/Alexa")
-                .And(request => request.Content = new ObjectContent(typeof(SpeechletRequestEnvelope) , clas, new JsonMediaTypeFormatter()))
-                 .PostAsync();
-
-
-            var result = await response.Content.ReadAsAsync<SpeechletResponse>();
+            var clas = JsonConvert.DeserializeObject<SpeechletRequestEnvelope>(file.ReadToEnd());
+            var result = await GetPostRequest(clas);
 
             Assert.AreEqual(result.outputSpeech.text, "A new 2015 Toyota Camry starts at 23840 dollars");
         }
