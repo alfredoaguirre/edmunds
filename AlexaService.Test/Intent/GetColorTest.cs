@@ -12,37 +12,14 @@ using AlexaService.Intent;
 
 namespace AlexaService.Test
 {
-    [TestClass]
-    public class GetPrice
+    [TestClass] [Ignore]
+    public class GetColorTest
     {
     
-       /* MODEL
-       [TestMethod]
-        public void getCarPriceTest()
-        {
-            // Arrange
-            AlexaService.Cache.CacheManager.AddSlots(new Dictionary<string, string>()
-                {
-                   // {"Make", "Dodge" },
-                //    {"Name", "Dart" },
-                  //  {"Year", "2013" }
-                }
-            );
-            var intent = new GetPrice();
-            var edmundsURL = intent.GenEdmundsURL();
-            var edmundsResponse = intent.GetEdmundsResponse();
-            var AlexaResponse=  intent.getAlexaResponse();
-            
-            Assert.AreEqual(AlexaResponse.outputSpeech.text, "What's the make of the car?");
-
-        }
-        */
-        
-        //Get Price - all 3 parameters provided (Year, Make, Model) - //SHOULD WE STATE "A new" instead of The 2002..etc. Cuz old cars look expensive
+        //Get Color - all 3 parameters provided (Year, Make, Model)
         [TestMethod]
-        public void getCarPriceTest_3good()
+        public void getCarColorTest_3good()
         {
-            // Arrange
             AlexaService.Cache.CacheManager.AddSlots(new Dictionary<string, string>()
                 {
                     {"Make", "BMW" },
@@ -50,16 +27,17 @@ namespace AlexaService.Test
                     {"Year", "2014" }
                 }
             );
-            var intent = new GetPrice();
+            var intent = new GetColor();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse=  intent.getAlexaResponse();
             
-            Assert.AreEqual(AlexaResponse.outputSpeech.text, "A new 2015 BMW 5 Series has a starting price of 58900");
+            Assert.AreEqual(AlexaResponse.outputSpeech.text, "The gas mileage of 2014 BMW 5 Series is 26 in the city and 37 on the highway");
 
         }
-        //Get Price - all 3 parameters provided - bad year (Year, Make, Model). ILX started in 2013.
-        public void getCarPriceTest_3badyr()
+        //Get Color - all 3 parameters provided - bad year (Year, Make, Model). ILX started in 2013.
+        [TestMethod]
+        public void getCarColorTest_3badyr()
         {
             // Arrange
             AlexaService.Cache.CacheManager.AddSlots(new Dictionary<string, string>()
@@ -69,17 +47,17 @@ namespace AlexaService.Test
                     {"Year", "2012" }
                 }
             );
-            var intent = new GetPrice();
+            var intent = new GetColor();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse=  intent.getAlexaResponse();
             
-            Assert.AreEqual(AlexaResponse.outputSpeech.text, "Hmm. I can't seem to find the price at this time.");
+            Assert.AreEqual(AlexaResponse.outputSpeech.text, "I don't know at this time.");
 
         }
-        //Get Price - all 3 parameters provided - mismatched make / model (Year, Make, Model)
+        //Get Color - all 3 parameters provided - mismatched make / model (Year, Make, Model)
         [TestMethod]
-        public void getCarPriceTest_3mismatch()
+        public void getCarColorTest_3mismatch()
         {
             // Arrange
             AlexaService.Cache.CacheManager.AddSlots(new Dictionary<string, string>()
@@ -89,17 +67,17 @@ namespace AlexaService.Test
                     {"Year", "2012" }
                 }
             );
-            var intent = new GetPrice();
+            var intent = new GetColor();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse=  intent.getAlexaResponse();
             
-            Assert.AreEqual(AlexaResponse.outputSpeech.text, "Hmm. I can't seem to find the price at this time.");
+            Assert.AreEqual(AlexaResponse.outputSpeech.text, "I don't know at this time.");
 
         }
-        //Get Price - all 3 parameters provided - hyphenated make (Year, Make, Model)
+        //Get Color - all 3 parameters provided - hyphenated make (Year, Make, Model)
         [TestMethod]
-        public void getCarPriceTest_3hyphen()
+        public void getCarColorTest_3hyphen()
         {
             // User says Mercedes Benz. Should match against mercedes-benz
             AlexaService.Cache.CacheManager.AddSlots(new Dictionary<string, string>()
@@ -109,17 +87,18 @@ namespace AlexaService.Test
                     {"Year", "2012" }
                 }
             );
-            var intent = new GetPrice();
+            var intent = new GetColor();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse=  intent.getAlexaResponse();
             
-            Assert.AreEqual(AlexaResponse.outputSpeech.text, "The 2012 Mercedes-Benz S Class has a starting price of 91850.");
+            Assert.AreEqual(AlexaResponse.outputSpeech.text, "The gas mileage of 2012 Mercedes Benz S Class is 25 in the city and 19 on the highway");
 
         }
-        //Get Price - all 3 parameters provided - price not found (Year, Make, Model)
+        //Get MPG - all 3 parameters provided - price not found (Year, Make, Model)
+        /* Couldn't find an example car
         [TestMethod]
-        public void getCarPriceTest_3noprice()
+        public void getCarMPGTest_3noprice()
         {
             
             AlexaService.Cache.CacheManager.AddSlots(new Dictionary<string, string>()
@@ -129,17 +108,17 @@ namespace AlexaService.Test
                     {"Year", "1995" }
                 }
             );
-            var intent = new GetPrice();
+            var intent = new GetMileage();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse=  intent.getAlexaResponse();
             
             Assert.AreEqual(AlexaResponse.outputSpeech.text, "Hmm. I can't seem to find the price at this time.");
 
-        }
-        //Get Price - all 3 parameters provided - make not found (Year, Make, Model)
+        }*/
+        //Get Color - all 3 parameters provided - make not found (Year, Make, Model)
         [TestMethod]
-        public void getCarPriceTest_3badmake()
+        public void getCarColorTest_3badmake()
         {
             
             AlexaService.Cache.CacheManager.AddSlots(new Dictionary<string, string>()
@@ -149,18 +128,18 @@ namespace AlexaService.Test
                     {"Year", "1995" }
                 }
             );
-            var intent = new GetPrice();
+            var intent = new GetColor();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse=  intent.getAlexaResponse();
             
-            Assert.AreEqual(AlexaResponse.outputSpeech.text, "Hmm. I can't seem to find the price at this time.");
+            Assert.AreEqual(AlexaResponse.outputSpeech.text, "I don't know at this time.");
 
         }
 
-        //Get Price - all 3 parameters provided - model not found (Year, Make, Model)
+        //Get Color - all 3 parameters provided - model not found (Year, Make, Model)
         [TestMethod]
-        public void getCarPriceTest_3nomodel()
+        public void getCarColorTest_3nomodel()
         {
             
             AlexaService.Cache.CacheManager.AddSlots(new Dictionary<string, string>()
@@ -170,18 +149,18 @@ namespace AlexaService.Test
                     {"Year", "1995" }
                 }
             );
-            var intent = new GetPrice();
+            var intent = new GetColor();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse=  intent.getAlexaResponse();
             
-            Assert.AreEqual(AlexaResponse.outputSpeech.text, "Hmm. I can't seem to find the price at this time.");
+            Assert.AreEqual(AlexaResponse.outputSpeech.text, "I don't know at this time.");
 
         }
 
-        //Get Price - all 3 parameters provided - missing full model info (Year, Make, Model) - //SHOULD WE ASK FOR MODIFIED MODELS?
+        //Get Color - all 3 parameters provided - missing full model info (Year, Make, Model) - //SHOULD WE ASK FOR MODIFIED MODELS? - maybe, in a future phase
         [TestMethod]
-        public void getCarPriceTest_3notfullmodel()
+        public void getCarColorTest_3notfullmodel()
         {
             
             AlexaService.Cache.CacheManager.AddSlots(new Dictionary<string, string>()
@@ -191,19 +170,19 @@ namespace AlexaService.Test
                     {"Year", "2014" }
                 }
             );
-            var intent = new GetPrice();
+            var intent = new GetColor();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse=  intent.getAlexaResponse();
             
-            Assert.AreEqual(AlexaResponse.outputSpeech.text, "Hmm. I can't seem to find the price at this time.");
+            Assert.AreEqual(AlexaResponse.outputSpeech.text, "I don't know at this time.");
 
         }
 
 
-        //Get Price - all 3 parameters provided - missing full year (Year, Make, Model) - 2002
+        //Get Color - all 3 parameters provided - missing full year (Year, Make, Model) - 2002
         [TestMethod]
-        public void getCarPriceTest_3notfullyear()
+        public void getCarColorTest_3notfullyear()
         {
             
             AlexaService.Cache.CacheManager.AddSlots(new Dictionary<string, string>()
@@ -213,18 +192,19 @@ namespace AlexaService.Test
                     {"Year", "02" }
                 }
             );
-            var intent = new GetPrice();
+            var intent = new GetColor();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse=  intent.getAlexaResponse();
             
-            Assert.AreEqual(AlexaResponse.outputSpeech.text, "The 2002 Toyota Camry has a starting price of 23700.");
+            Assert.AreEqual(AlexaResponse.outputSpeech.text, "The gas mileage of 2002 Toyota Camry is 26 in the city and 18 on the highway");
 
         }
 
 
-        //Get Price - all 2 mandatory parameters provided (Make, Model) - THIS TEST IS ON HOLD UNTIL TECHNICAL IMPLEMENTATION CAN BE DETERMINED
-        /*public void getCarPriceTest_2makemodel()
+        //Get MPG - all 2 mandatory parameters provided (Make, Model) - THIS TEST IS ON HOLD UNTIL TECHNICAL IMPLEMENTATION CAN BE DETERMINED
+        /*[TestMethod]
+        public void getCarMPGTest_2makemodel()
         {
             
             AlexaService.Cache.CacheManager.AddSlots(new Dictionary<string, string>()
@@ -233,7 +213,7 @@ namespace AlexaService.Test
                     {"Model", "Camry" },
                 }
             );
-            var intent = new GetPrice();
+            var intent = new GetMileage();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse=  intent.getAlexaResponse();
@@ -243,9 +223,9 @@ namespace AlexaService.Test
         }*/
 
 
-        //Get Price - 2 non mandatory parameters provided (Year, Make)
+        //Get Color - 2 non mandatory parameters provided (Year, Make)
         [TestMethod]
-        public void getCarPriceTest_2nonmandatory()
+        public void getCarColorTest_2nonmandatory()
         {
             
             AlexaService.Cache.CacheManager.AddSlots(new Dictionary<string, string>()
@@ -254,7 +234,7 @@ namespace AlexaService.Test
                     {"Year", "2012" },
                 }
             );
-            var intent = new GetPrice();
+            var intent = new GetColor();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse=  intent.getAlexaResponse();
@@ -264,9 +244,9 @@ namespace AlexaService.Test
         }
 
 
-        //Get Price - 2 other non mandatory parameters provided (Year, Model)
+        //Get Color - 2 other non mandatory parameters provided (Year, Model)
         [TestMethod]
-        public void getCarPriceTest_2nonmandatory2()
+        public void getCarColorTest_2nonmandatory2()
         {
             
             AlexaService.Cache.CacheManager.AddSlots(new Dictionary<string, string>()
@@ -275,7 +255,7 @@ namespace AlexaService.Test
                     {"Year", "2012" },
                 }
             );
-            var intent = new GetPrice();
+            var intent = new GetColor();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse=  intent.getAlexaResponse();
@@ -284,9 +264,9 @@ namespace AlexaService.Test
 
         }
 
-        //Get Price - only year provided
+        //Get Color - only year provided
         [TestMethod]
-        public void getCarPriceTest_onlyyear()
+        public void getCarColorTest_onlyyear()
         {
             
             AlexaService.Cache.CacheManager.AddSlots(new Dictionary<string, string>()
@@ -294,7 +274,7 @@ namespace AlexaService.Test
                     {"Year", "2012" },
                 }
             );
-            var intent = new GetPrice();
+            var intent = new GetColor();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse=  intent.getAlexaResponse();
@@ -304,9 +284,9 @@ namespace AlexaService.Test
         }
 
 
-        //Get Price - only make provided
+        //Get Color - only make provided
         [TestMethod]
-        public void getCarPriceTest_onlymake()
+        public void getCarColorTest_onlymake()
         {
             
             AlexaService.Cache.CacheManager.AddSlots(new Dictionary<string, string>()
@@ -314,7 +294,7 @@ namespace AlexaService.Test
                     {"Make", "Toyota" },
                 }
             );
-            var intent = new GetPrice();
+            var intent = new GetColor();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse=  intent.getAlexaResponse();
@@ -324,9 +304,9 @@ namespace AlexaService.Test
         }
 
 
-        //Get Price - only model provided
+        //Get Color - only model provided
         [TestMethod]
-        public void getCarPriceTest_onlymodel()
+        public void getCarColorTest_onlymodel()
         {
             
             AlexaService.Cache.CacheManager.AddSlots(new Dictionary<string, string>()
@@ -334,7 +314,7 @@ namespace AlexaService.Test
                     {"Model", "Camry" },
                 }
             );
-            var intent = new GetPrice();
+            var intent = new GetColor();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse=  intent.getAlexaResponse();
@@ -344,9 +324,9 @@ namespace AlexaService.Test
         }
 
 
-        //Get Price - no response - a car already in the memory
+        //Get Color - no response - a car already in the memory
         [TestMethod]
-        public void getCarPriceTest_noresponse()
+        public void getCarColorTest_noresponse()
         {
             
             AlexaService.Cache.CacheManager.AddSlots(new Dictionary<string, string>()
@@ -354,32 +334,32 @@ namespace AlexaService.Test
                    
                 }
             );
-            var intent = new GetPrice();
+            var intent = new GetColor();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse=  intent.getAlexaResponse();
             
-            Assert.AreEqual(AlexaResponse.outputSpeech.text, "A new 2002 Toyota Camry has a starting price of 23700.");
+            Assert.AreEqual(AlexaResponse.outputSpeech.text, "The gas mileage of 2002 Toyota Camry is 26 in the city and 18 on the highway.");
 
         }
 
 
-        //Get Price - nonsense 
+        //Get Color - nonsense 
         [TestMethod]
-        public void getCarPriceTest_nonsense()
+        public void getCarColorTest_nonsense()
         {
             
             AlexaService.Cache.CacheManager.AddSlots(new Dictionary<string, string>()
                 {
-                    {"jhgfjh","University of the Texas at Arlington" },
+                    {"l","University of the Texas at Arlington" },
                 }
             );
-            var intent = new GetPrice();
+            var intent = new GetColor();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse=  intent.getAlexaResponse();
             
-            Assert.AreEqual(AlexaResponse.outputSpeech.text, "Hmm. I can't seem to find the price at this time.");
+            Assert.AreEqual(AlexaResponse.outputSpeech.text, "I don't know at this time.");
 
         }
 

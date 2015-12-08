@@ -13,7 +13,7 @@ using AlexaService.Intent;
 namespace AlexaService.Test
 {
     [TestClass]
-    public class AlexaServicePrice
+    public class GetPriceTest
     {
     
        /* MODEL
@@ -50,7 +50,7 @@ namespace AlexaService.Test
                     {"Year", "2014" }
                 }
             );
-            var intent = new GetPrice();
+            var intent = new Intent.GetPrice();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse=  intent.getAlexaResponse();
@@ -69,7 +69,7 @@ namespace AlexaService.Test
                     {"Year", "2012" }
                 }
             );
-            var intent = new GetPrice();
+            var intent = new Intent.GetPrice();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse=  intent.getAlexaResponse();
@@ -78,6 +78,7 @@ namespace AlexaService.Test
 
         }
         //Get Price - all 3 parameters provided - mismatched make / model (Year, Make, Model)
+        [TestMethod]
         public void getCarPriceTest_3mismatch()
         {
             // Arrange
@@ -88,7 +89,7 @@ namespace AlexaService.Test
                     {"Year", "2012" }
                 }
             );
-            var intent = new GetPrice();
+            var intent = new Intent.GetPrice();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse=  intent.getAlexaResponse();
@@ -97,6 +98,7 @@ namespace AlexaService.Test
 
         }
         //Get Price - all 3 parameters provided - hyphenated make (Year, Make, Model)
+        [TestMethod]
         public void getCarPriceTest_3hyphen()
         {
             // User says Mercedes Benz. Should match against mercedes-benz
@@ -107,7 +109,7 @@ namespace AlexaService.Test
                     {"Year", "2012" }
                 }
             );
-            var intent = new GetPrice();
+            var intent = new Intent.GetPrice();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse=  intent.getAlexaResponse();
@@ -116,6 +118,7 @@ namespace AlexaService.Test
 
         }
         //Get Price - all 3 parameters provided - price not found (Year, Make, Model)
+        [TestMethod]
         public void getCarPriceTest_3noprice()
         {
             
@@ -126,7 +129,7 @@ namespace AlexaService.Test
                     {"Year", "1995" }
                 }
             );
-            var intent = new GetPrice();
+            var intent = new Intent.GetPrice();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse=  intent.getAlexaResponse();
@@ -135,6 +138,7 @@ namespace AlexaService.Test
 
         }
         //Get Price - all 3 parameters provided - make not found (Year, Make, Model)
+        [TestMethod]
         public void getCarPriceTest_3badmake()
         {
             
@@ -145,7 +149,7 @@ namespace AlexaService.Test
                     {"Year", "1995" }
                 }
             );
-            var intent = new GetPrice();
+            var intent = new Intent.GetPrice();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse=  intent.getAlexaResponse();
@@ -155,6 +159,7 @@ namespace AlexaService.Test
         }
 
         //Get Price - all 3 parameters provided - model not found (Year, Make, Model)
+        [TestMethod]
         public void getCarPriceTest_3nomodel()
         {
             
@@ -165,7 +170,7 @@ namespace AlexaService.Test
                     {"Year", "1995" }
                 }
             );
-            var intent = new GetPrice();
+            var intent = new Intent.GetPrice();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse=  intent.getAlexaResponse();
@@ -175,6 +180,7 @@ namespace AlexaService.Test
         }
 
         //Get Price - all 3 parameters provided - missing full model info (Year, Make, Model) - //SHOULD WE ASK FOR MODIFIED MODELS?
+        [TestMethod]
         public void getCarPriceTest_3notfullmodel()
         {
             
@@ -185,7 +191,7 @@ namespace AlexaService.Test
                     {"Year", "2014" }
                 }
             );
-            var intent = new GetPrice();
+            var intent = new Intent.GetPrice();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse=  intent.getAlexaResponse();
@@ -196,6 +202,7 @@ namespace AlexaService.Test
 
 
         //Get Price - all 3 parameters provided - missing full year (Year, Make, Model) - 2002
+        [TestMethod]
         public void getCarPriceTest_3notfullyear()
         {
             
@@ -206,7 +213,7 @@ namespace AlexaService.Test
                     {"Year", "02" }
                 }
             );
-            var intent = new GetPrice();
+            var intent = new Intent.GetPrice();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse=  intent.getAlexaResponse();
@@ -237,6 +244,7 @@ namespace AlexaService.Test
 
 
         //Get Price - 2 non mandatory parameters provided (Year, Make)
+        [TestMethod]
         public void getCarPriceTest_2nonmandatory()
         {
             
@@ -246,7 +254,7 @@ namespace AlexaService.Test
                     {"Year", "2012" },
                 }
             );
-            var intent = new GetPrice();
+            var intent = new Intent.GetPrice();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse=  intent.getAlexaResponse();
@@ -257,6 +265,7 @@ namespace AlexaService.Test
 
 
         //Get Price - 2 other non mandatory parameters provided (Year, Model)
+        [TestMethod]
         public void getCarPriceTest_2nonmandatory2()
         {
             
@@ -266,7 +275,7 @@ namespace AlexaService.Test
                     {"Year", "2012" },
                 }
             );
-            var intent = new GetPrice();
+            var intent = new Intent.GetPrice();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse=  intent.getAlexaResponse();
@@ -276,6 +285,7 @@ namespace AlexaService.Test
         }
 
         //Get Price - only year provided
+        [TestMethod]
         public void getCarPriceTest_onlyyear()
         {
             
@@ -284,7 +294,7 @@ namespace AlexaService.Test
                     {"Year", "2012" },
                 }
             );
-            var intent = new GetPrice();
+            var intent = new Intent.GetPrice();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse=  intent.getAlexaResponse();
@@ -295,6 +305,7 @@ namespace AlexaService.Test
 
 
         //Get Price - only make provided
+        [TestMethod]
         public void getCarPriceTest_onlymake()
         {
             
@@ -303,7 +314,7 @@ namespace AlexaService.Test
                     {"Make", "Toyota" },
                 }
             );
-            var intent = new GetPrice();
+            var intent = new Intent.GetPrice();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse=  intent.getAlexaResponse();
@@ -314,6 +325,7 @@ namespace AlexaService.Test
 
 
         //Get Price - only model provided
+        [TestMethod]
         public void getCarPriceTest_onlymodel()
         {
             
@@ -322,7 +334,7 @@ namespace AlexaService.Test
                     {"Model", "Camry" },
                 }
             );
-            var intent = new GetPrice();
+            var intent = new Intent.GetPrice();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse=  intent.getAlexaResponse();
@@ -333,6 +345,7 @@ namespace AlexaService.Test
 
 
         //Get Price - no response - a car already in the memory
+        [TestMethod]
         public void getCarPriceTest_noresponse()
         {
             
@@ -341,7 +354,7 @@ namespace AlexaService.Test
                    
                 }
             );
-            var intent = new GetPrice();
+            var intent = new Intent.GetPrice();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse=  intent.getAlexaResponse();
@@ -352,6 +365,7 @@ namespace AlexaService.Test
 
 
         //Get Price - nonsense 
+        [TestMethod]
         public void getCarPriceTest_nonsense()
         {
             
@@ -360,7 +374,7 @@ namespace AlexaService.Test
                     {"jhgfjh","University of the Texas at Arlington" },
                 }
             );
-            var intent = new GetPrice();
+            var intent = new Intent.GetPrice();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse=  intent.getAlexaResponse();

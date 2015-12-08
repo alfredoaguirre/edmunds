@@ -13,12 +13,12 @@ using AlexaService.Intent;
 namespace AlexaService.Test
 {
     [TestClass]
-    public class GetColor
+    public class SelectCarTest
     {
-    
-        //Get Color - all 3 parameters provided (Year, Make, Model)
+
+        //Get Car - all 3 parameters provided (Year, Make, Model)
         [TestMethod]
-        public void getCarColorTest_3good()
+        public void getCarTest_3good()
         {
             AlexaService.Cache.CacheManager.AddSlots(new Dictionary<string, string>()
                 {
@@ -27,19 +27,18 @@ namespace AlexaService.Test
                     {"Year", "2014" }
                 }
             );
-            var intent = new GetColor();
+            var intent = new Intent.SelectCar();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
-            var AlexaResponse=  intent.getAlexaResponse();
-            
-            Assert.AreEqual(AlexaResponse.outputSpeech.text, "The gas mileage of 2014 BMW 5 Series is 26 in the city and 37 on the highway");
+            var AlexaResponse = intent.getAlexaResponse();
+
+            Assert.AreEqual(AlexaResponse.outputSpeech.text, "The 5 Series manufactured by BMW was first made in 2014. The last year the 5 Series was made was in 2014.");
 
         }
-        //Get Color - all 3 parameters provided - bad year (Year, Make, Model). ILX started in 2013.
+        //Get Car - all 3 parameters provided - bad year (Year, Make, Model). ILX started in 2013.
         [TestMethod]
-        public void getCarColorTest_3badyr()
+        public void getCarTest_3badyr()
         {
-            // Arrange
             AlexaService.Cache.CacheManager.AddSlots(new Dictionary<string, string>()
                 {
                     {"Make", "Acura" },
@@ -47,17 +46,17 @@ namespace AlexaService.Test
                     {"Year", "2012" }
                 }
             );
-            var intent = new GetColor();
+            var intent = new Intent.SelectCar();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
-            var AlexaResponse=  intent.getAlexaResponse();
-            
-            Assert.AreEqual(AlexaResponse.outputSpeech.text, "I don't know at this time.");
+            var AlexaResponse = intent.getAlexaResponse();
+
+            Assert.AreEqual(AlexaResponse.outputSpeech.text, "I don't have that car in my records. Hm try again later.");
 
         }
-        //Get Color - all 3 parameters provided - mismatched make / model (Year, Make, Model)
+        //Get Car - all 3 parameters provided - mismatched make / model (Year, Make, Model)
         [TestMethod]
-        public void getCarColorTest_3mismatch()
+        public void getCarTest_3mismatch()
         {
             // Arrange
             AlexaService.Cache.CacheManager.AddSlots(new Dictionary<string, string>()
@@ -67,17 +66,17 @@ namespace AlexaService.Test
                     {"Year", "2012" }
                 }
             );
-            var intent = new GetColor();
+            var intent = new Intent.SelectCar();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
-            var AlexaResponse=  intent.getAlexaResponse();
-            
-            Assert.AreEqual(AlexaResponse.outputSpeech.text, "I don't know at this time.");
+            var AlexaResponse = intent.getAlexaResponse();
+
+            Assert.AreEqual(AlexaResponse.outputSpeech.text, "I don't have that car in my records. Hm try again later.");
 
         }
-        //Get Color - all 3 parameters provided - hyphenated make (Year, Make, Model)
+        //Get Car - all 3 parameters provided - hyphenated make (Year, Make, Model)
         [TestMethod]
-        public void getCarColorTest_3hyphen()
+        public void getCarTest_3hyphen()
         {
             // User says Mercedes Benz. Should match against mercedes-benz
             AlexaService.Cache.CacheManager.AddSlots(new Dictionary<string, string>()
@@ -87,18 +86,17 @@ namespace AlexaService.Test
                     {"Year", "2012" }
                 }
             );
-            var intent = new GetColor();
+            var intent = new Intent.SelectCar();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
-            var AlexaResponse=  intent.getAlexaResponse();
-            
-            Assert.AreEqual(AlexaResponse.outputSpeech.text, "The gas mileage of 2012 Mercedes Benz S Class is 25 in the city and 19 on the highway");
+            var AlexaResponse = intent.getAlexaResponse();
+
+            Assert.AreEqual(AlexaResponse.outputSpeech.text, "The 5 Series manufactured by BMW was first made in 2014. The last year the 5 Series was made was in 2012.");
 
         }
-        //Get MPG - all 3 parameters provided - price not found (Year, Make, Model)
+        //Get Car - all 3 parameters provided - price not found (Year, Make, Model)
         /* Couldn't find an example car
-        [TestMethod]
-        public void getCarMPGTest_3noprice()
+        public void getCarTest_3noprice()
         {
             
             AlexaService.Cache.CacheManager.AddSlots(new Dictionary<string, string>()
@@ -108,7 +106,7 @@ namespace AlexaService.Test
                     {"Year", "1995" }
                 }
             );
-            var intent = new GetMileage();
+            var intent = new GetCar();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse=  intent.getAlexaResponse();
@@ -116,11 +114,11 @@ namespace AlexaService.Test
             Assert.AreEqual(AlexaResponse.outputSpeech.text, "Hmm. I can't seem to find the price at this time.");
 
         }*/
-        //Get Color - all 3 parameters provided - make not found (Year, Make, Model)
+        //Get Car - all 3 parameters provided - make not found (Year, Make, Model)
         [TestMethod]
-        public void getCarColorTest_3badmake()
+        public void getCarTest_3badmake()
         {
-            
+
             AlexaService.Cache.CacheManager.AddSlots(new Dictionary<string, string>()
                 {
                     {"Make", "Mazda" },
@@ -128,20 +126,20 @@ namespace AlexaService.Test
                     {"Year", "1995" }
                 }
             );
-            var intent = new GetColor();
+            var intent = new Intent.SelectCar();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
-            var AlexaResponse=  intent.getAlexaResponse();
-            
-            Assert.AreEqual(AlexaResponse.outputSpeech.text, "I don't know at this time.");
+            var AlexaResponse = intent.getAlexaResponse();
+
+            Assert.AreEqual(AlexaResponse.outputSpeech.text, "I don't have that car in my records. Hm try again later.");
 
         }
 
-        //Get Color - all 3 parameters provided - model not found (Year, Make, Model)
+        //Get Car - all 3 parameters provided - model not found (Year, Make, Model)
         [TestMethod]
-        public void getCarColorTest_3nomodel()
+        public void getCarTest_3nomodel()
         {
-            
+
             AlexaService.Cache.CacheManager.AddSlots(new Dictionary<string, string>()
                 {
                     {"Make", "Mazda" },
@@ -149,20 +147,20 @@ namespace AlexaService.Test
                     {"Year", "1995" }
                 }
             );
-            var intent = new GetColor();
+            var intent = new Intent.SelectCar();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
-            var AlexaResponse=  intent.getAlexaResponse();
-            
-            Assert.AreEqual(AlexaResponse.outputSpeech.text, "I don't know at this time.");
+            var AlexaResponse = intent.getAlexaResponse();
+
+            Assert.AreEqual(AlexaResponse.outputSpeech.text, "I don't have that car in my records. Hm try again later.");
 
         }
 
-        //Get Color - all 3 parameters provided - missing full model info (Year, Make, Model) - //SHOULD WE ASK FOR MODIFIED MODELS? - maybe, in a future phase
+        //Get Car - all 3 parameters provided - missing full model info (Year, Make, Model) - //SHOULD WE ASK FOR MODIFIED MODELS? - maybe, in a future phase
         [TestMethod]
-        public void getCarColorTest_3notfullmodel()
+        public void getCarTest_3notfullmodel()
         {
-            
+
             AlexaService.Cache.CacheManager.AddSlots(new Dictionary<string, string>()
                 {
                     {"Make", "Mazda" },
@@ -170,21 +168,21 @@ namespace AlexaService.Test
                     {"Year", "2014" }
                 }
             );
-            var intent = new GetColor();
+            var intent = new Intent.SelectCar();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
-            var AlexaResponse=  intent.getAlexaResponse();
-            
-            Assert.AreEqual(AlexaResponse.outputSpeech.text, "I don't know at this time.");
+            var AlexaResponse = intent.getAlexaResponse();
+
+            Assert.AreEqual(AlexaResponse.outputSpeech.text, "I don't have that car in my records. Hm try again later.");
 
         }
 
 
-        //Get Color - all 3 parameters provided - missing full year (Year, Make, Model) - 2002
+        //Get Car - all 3 parameters provided - missing full year (Year, Make, Model) - 2002
         [TestMethod]
-        public void getCarColorTest_3notfullyear()
+        public void getCarTest_3notfullyear()
         {
-            
+
             AlexaService.Cache.CacheManager.AddSlots(new Dictionary<string, string>()
                 {
                     {"Make", "Toyota" },
@@ -192,19 +190,18 @@ namespace AlexaService.Test
                     {"Year", "02" }
                 }
             );
-            var intent = new GetColor();
+            var intent = new Intent.SelectCar();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
-            var AlexaResponse=  intent.getAlexaResponse();
-            
+            var AlexaResponse = intent.getAlexaResponse();
+
             Assert.AreEqual(AlexaResponse.outputSpeech.text, "The gas mileage of 2002 Toyota Camry is 26 in the city and 18 on the highway");
 
         }
 
 
-        //Get MPG - all 2 mandatory parameters provided (Make, Model) - THIS TEST IS ON HOLD UNTIL TECHNICAL IMPLEMENTATION CAN BE DETERMINED
-        /*[TestMethod]
-        public void getCarMPGTest_2makemodel()
+        //Get Car - all 2 mandatory parameters provided (Make, Model) - THIS TEST IS ON HOLD UNTIL TECHNICAL IMPLEMENTATION CAN BE DETERMINED
+        /*public void getCarTest_2makemodel()
         {
             
             AlexaService.Cache.CacheManager.AddSlots(new Dictionary<string, string>()
@@ -223,148 +220,137 @@ namespace AlexaService.Test
         }*/
 
 
-        //Get Color - 2 non mandatory parameters provided (Year, Make)
+        //Get Car - 2 non mandatory parameters provided (Year, Make)
         [TestMethod]
-        public void getCarColorTest_2nonmandatory()
+        public void getCarTest_2nonmandatorymakeyr()
         {
-            
+
             AlexaService.Cache.CacheManager.AddSlots(new Dictionary<string, string>()
                 {
                     {"Make", "Toyota" },
                     {"Year", "2012" },
                 }
             );
-            var intent = new GetColor();
+            var intent = new Intent.SelectCar();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
-            var AlexaResponse=  intent.getAlexaResponse();
-            
-            Assert.AreEqual(AlexaResponse.outputSpeech.text, "What's the model of the car?");
+            var AlexaResponse = intent.getAlexaResponse();
 
+            Assert.AreEqual(AlexaResponse.outputSpeech.text, "What's the model of the car?");
         }
 
 
-        //Get Color - 2 other non mandatory parameters provided (Year, Model)
+        //Get Car - 2 other non mandatory parameters provided (Year, Model)
         [TestMethod]
-        public void getCarColorTest_2nonmandatory2()
+        public void getCarTest_2nonmandatory()
         {
-            
             AlexaService.Cache.CacheManager.AddSlots(new Dictionary<string, string>()
                 {
                     {"Model", "Camry" },
                     {"Year", "2012" },
                 }
             );
-            var intent = new GetColor();
+            var intent = new Intent.SelectCar();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
-            var AlexaResponse=  intent.getAlexaResponse();
-            
+            var AlexaResponse = intent.getAlexaResponse();
+
             Assert.AreEqual(AlexaResponse.outputSpeech.text, "What's the make of the car?");
 
         }
 
-        //Get Color - only year provided
+        //Get Car - only year provided
         [TestMethod]
-        public void getCarColorTest_onlyyear()
+        public void getCarTest_onlyyear()
         {
-            
+
             AlexaService.Cache.CacheManager.AddSlots(new Dictionary<string, string>()
                 {
                     {"Year", "2012" },
                 }
             );
-            var intent = new GetColor();
+            var intent = new Intent.SelectCar();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
-            var AlexaResponse=  intent.getAlexaResponse();
-            
+            var AlexaResponse = intent.getAlexaResponse();
+
             Assert.AreEqual(AlexaResponse.outputSpeech.text, "What's the make of the car?");
 
         }
 
 
-        //Get Color - only make provided
+        //Get Car - only make provided
         [TestMethod]
-        public void getCarColorTest_onlymake()
+        public void getCarTest_onlymake()
         {
-            
+
             AlexaService.Cache.CacheManager.AddSlots(new Dictionary<string, string>()
                 {
                     {"Make", "Toyota" },
                 }
             );
-            var intent = new GetColor();
+            var intent = new Intent.SelectCar();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
-            var AlexaResponse=  intent.getAlexaResponse();
-            
+            var AlexaResponse = intent.getAlexaResponse();
+
             Assert.AreEqual(AlexaResponse.outputSpeech.text, "What's the model of the car?");
 
         }
 
 
-        //Get Color - only model provided
+        //Get Car - only model provided
         [TestMethod]
-        public void getCarColorTest_onlymodel()
+        public void getCarTest_onlymodel()
         {
-            
+
             AlexaService.Cache.CacheManager.AddSlots(new Dictionary<string, string>()
                 {
                     {"Model", "Camry" },
                 }
             );
-            var intent = new GetColor();
+            var intent = new SelectCar();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
-            var AlexaResponse=  intent.getAlexaResponse();
-            
+            var AlexaResponse = intent.getAlexaResponse();
+
             Assert.AreEqual(AlexaResponse.outputSpeech.text, "What's the make of the car?");
+                    }
 
-        }
 
-
-        //Get Color - no response - a car already in the memory
+        //Get Car - no response - a car already in the memory
         [TestMethod]
-        public void getCarColorTest_noresponse()
+        public void getCarTest_noresponse()
         {
-            
-            AlexaService.Cache.CacheManager.AddSlots(new Dictionary<string, string>()
-                {
-                   
-                }
-            );
-            var intent = new GetColor();
+
+            AlexaService.Cache.CacheManager.AddSlots(new Dictionary<string, string>());
+            var intent = new SelectCar();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
-            var AlexaResponse=  intent.getAlexaResponse();
-            
+            var AlexaResponse = intent.getAlexaResponse();
+
             Assert.AreEqual(AlexaResponse.outputSpeech.text, "The gas mileage of 2002 Toyota Camry is 26 in the city and 18 on the highway.");
 
         }
 
 
-        //Get Color - nonsense 
+        //Get Car - nonsense 
         [TestMethod]
-        public void getCarColorTest_nonsense()
+        public void getCarTest_nonsense()
         {
-            
+
             AlexaService.Cache.CacheManager.AddSlots(new Dictionary<string, string>()
                 {
-                    {"l","University of the Texas at Arlington" },
+                    {"m","University of the Texas at Arlington" },
                 }
             );
-            var intent = new GetColor();
+            var intent = new SelectCar();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
-            var AlexaResponse=  intent.getAlexaResponse();
-            
+            var AlexaResponse = intent.getAlexaResponse();
+
             Assert.AreEqual(AlexaResponse.outputSpeech.text, "I don't know at this time.");
 
         }
-
-
-        
-        
     }
 }
