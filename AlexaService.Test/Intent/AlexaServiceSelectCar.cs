@@ -297,7 +297,7 @@ namespace AlexaService.Test
                     {"Model", "Camry" },
                 }
             );
-            var intent = new SelectCars();
+            var intent = new SelectCar();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse=  intent.getAlexaResponse();
