@@ -15,6 +15,12 @@ namespace AlexaService.Test
     [TestClass]
     public class SelectCarTest
     {
+        [TestInitialize]
+        public void Setup()
+        {
+            IntentBase.UseResponseNumber = 0;
+            Cache.CacheManager.Clean();
+        }
 
         //Get Car - all 3 parameters provided (Year, Make, Model)
         [TestMethod]
@@ -315,7 +321,7 @@ namespace AlexaService.Test
             var AlexaResponse = intent.getAlexaResponse();
 
             Assert.AreEqual(AlexaResponse.outputSpeech.text, "What's the make of the car?");
-                    }
+        }
 
 
         //Get Car - no response - a car already in the memory

@@ -8,6 +8,7 @@ using Newtonsoft.Json;
 using System.Threading.Tasks;
 using AlexaService.Json;
 using System.Net.Http.Formatting;
+using AlexaService.Intent;
 
 namespace OwinApplicationTesting
 {
@@ -16,9 +17,10 @@ namespace OwinApplicationTesting
     {
         protected TestServer server;
 
+
         [TestInitialize]
         public void Setup()
-        {
+        {  IntentBase.UseResponseNumber = 1;
             server = TestServer.Create(app =>
             {
                 HttpConfiguration config = new HttpConfiguration();
@@ -58,6 +60,7 @@ namespace OwinApplicationTesting
         [TestMethod]
         public async Task AlexaPostTest()
         {
+            IntentBase.UseResponseNumber = 0;
             StreamReader file = new StreamReader(@"payload\GetPrice for Price for 2013 Toyota Camry.json");
             var clas = JsonConvert.DeserializeObject<SpeechletRequestEnvelope>(file.ReadToEnd());
             var result = await GetPostRequest(clas);

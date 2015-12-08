@@ -46,7 +46,7 @@ namespace AlexaService.Test
             AlexaService.Cache.CacheManager.AddSlots(new Dictionary<string, string>()
                 {
                     {"Make", "BMW" },
-                    {"Name", "5 Series" },
+                    {"Model", "5 Series" },
                     {"Year", "2014" }
                 }
             );
@@ -65,7 +65,7 @@ namespace AlexaService.Test
             AlexaService.Cache.CacheManager.AddSlots(new Dictionary<string, string>()
                 {
                     {"Make", "Acura" },
-                    {"Name", "ILX" },
+                    {"Model", "ILX" },
                     {"Year", "2012" }
                 }
             );
@@ -84,7 +84,7 @@ namespace AlexaService.Test
             AlexaService.Cache.CacheManager.AddSlots(new Dictionary<string, string>()
                 {
                     {"Make", "Acura" },
-                    {"Name", "Camry" },
+                    {"Model", "Camry" },
                     {"Year", "2012" }
                 }
             );
@@ -103,7 +103,7 @@ namespace AlexaService.Test
             AlexaService.Cache.CacheManager.AddSlots(new Dictionary<string, string>()
                 {
                     {"Make", "Mercedes Benz" },
-                    {"Name", "S Class" },
+                    {"Model", "S Class" },
                     {"Year", "2012" }
                 }
             );
@@ -122,7 +122,7 @@ namespace AlexaService.Test
             AlexaService.Cache.CacheManager.AddSlots(new Dictionary<string, string>()
                 {
                     {"Make", "Mazda" },
-                    {"Name", "MX-3" },
+                    {"Model", "MX-3" },
                     {"Year", "1995" }
                 }
             );
@@ -141,7 +141,7 @@ namespace AlexaService.Test
             AlexaService.Cache.CacheManager.AddSlots(new Dictionary<string, string>()
                 {
                     {"Make", "Mazda" },
-                    {"Name", "Camry" },
+                    {"Model", "Camry" },
                     {"Year", "1995" }
                 }
             );
@@ -161,7 +161,7 @@ namespace AlexaService.Test
             AlexaService.Cache.CacheManager.AddSlots(new Dictionary<string, string>()
                 {
                     {"Make", "Mazda" },
-                    {"Name", "Amazon" },
+                    {"Model", "Amazon" },
                     {"Year", "1995" }
                 }
             );
@@ -181,7 +181,7 @@ namespace AlexaService.Test
             AlexaService.Cache.CacheManager.AddSlots(new Dictionary<string, string>()
                 {
                     {"Make", "Mazda" },
-                    {"Name", "CX" },
+                    {"Model", "CX" },
                     {"Year", "2014" }
                 }
             );
@@ -202,7 +202,7 @@ namespace AlexaService.Test
             AlexaService.Cache.CacheManager.AddSlots(new Dictionary<string, string>()
                 {
                     {"Make", "Toyota" },
-                    {"Name", "Camry" },
+                    {"Model", "Camry" },
                     {"Year", "02" }
                 }
             );
@@ -223,7 +223,7 @@ namespace AlexaService.Test
             AlexaService.Cache.CacheManager.AddSlots(new Dictionary<string, string>()
                 {
                     {"Make", "Toyota" },
-                    {"Name", "Camry" },
+                    {"Model", "Camry" },
                 }
             );
             var intent = new GetPrice();

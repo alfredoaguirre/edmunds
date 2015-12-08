@@ -15,29 +15,35 @@ namespace AlexaService.Test
     [TestClass]
     public class GetPriceTest
     {
-    
-       /* MODEL
-       [TestMethod]
-        public void getCarPriceTest()
+        [TestInitialize]
+        public void Setup()
         {
-            // Arrange
-            AlexaService.Cache.CacheManager.AddSlots(new Dictionary<string, string>()
-                {
-                   // {"Make", "Dodge" },
-                //    {"Name", "Dart" },
-                  //  {"Year", "2013" }
-                }
-            );
-            var intent = new GetPrice();
-            var edmundsURL = intent.GenEdmundsURL();
-            var edmundsResponse = intent.GetEdmundsResponse();
-            var AlexaResponse=  intent.getAlexaResponse();
-            
-            Assert.AreEqual(AlexaResponse.outputSpeech.text, "What's the make of the car?");
-
+            IntentBase.UseResponseNumber = 0;
+            Cache.CacheManager.Clean();
         }
-        */
-        
+
+        /* MODEL
+        [TestMethod]
+         public void getCarPriceTest()
+         {
+             // Arrange
+             AlexaService.Cache.CacheManager.AddSlots(new Dictionary<string, string>()
+                 {
+                    // {"Make", "Dodge" },
+                 //    {"Name", "Dart" },
+                   //  {"Year", "2013" }
+                 }
+             );
+             var intent = new GetPrice();
+             var edmundsURL = intent.GenEdmundsURL();
+             var edmundsResponse = intent.GetEdmundsResponse();
+             var AlexaResponse=  intent.getAlexaResponse();
+
+             Assert.AreEqual(AlexaResponse.outputSpeech.text, "What's the make of the car?");
+
+         }
+         */
+
         //Get Price - all 3 parameters provided (Year, Make, Model) - //SHOULD WE STATE "A new" instead of The 2002..etc. Cuz old cars look expensive
         [TestMethod]
         public void getCarPriceTest_3good()
@@ -55,7 +61,7 @@ namespace AlexaService.Test
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse=  intent.getAlexaResponse();
             
-            Assert.AreEqual(AlexaResponse.outputSpeech.text, "A new 2015 BMW 5 Series has a starting price of 58900");
+            Assert.AreEqual(AlexaResponse.outputSpeech.text, "A new 2014 BMW 5 Series has a starting price of 58900");
 
         }
         //Get Price - all 3 parameters provided - bad year (Year, Make, Model). ILX started in 2013.
@@ -102,6 +108,8 @@ namespace AlexaService.Test
         public void getCarPriceTest_3hyphen()
         {
             // User says Mercedes Benz. Should match against mercedes-benz
+            IntentBase.UseResponseNumber = 1;
+
             AlexaService.Cache.CacheManager.AddSlots(new Dictionary<string, string>()
                 {
                     {"Make", "Mercedes Benz" },

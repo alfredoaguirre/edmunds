@@ -117,6 +117,7 @@
     <None Include="payload\GetPrice for Price for 2013 Toyota Camry.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Include="payload\JSON Data 120715.json" />
   </ItemGroup>
   <ItemGroup />
   <Choose>

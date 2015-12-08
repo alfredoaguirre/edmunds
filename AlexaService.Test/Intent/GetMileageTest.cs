@@ -15,7 +15,13 @@ namespace AlexaService.Test
     [TestClass]
     public class GetMileageTest
     {
-    
+        [TestInitialize]
+        public void Setup()
+        {
+            IntentBase.UseResponseNumber = 0;
+            Cache.CacheManager.Clean();
+        }
+
         //Get MPG - all 3 parameters provided (Year, Make, Model)
         [TestMethod]
         public void getCarMPGTest_3good()
@@ -35,7 +41,7 @@ namespace AlexaService.Test
             Assert.AreEqual(AlexaResponse.outputSpeech.text, "The gas mileage of 2014 BMW 5 Series is 26 in the city and 37 on the highway");
 
         }
-        //Get MPG - all 3 parameters provided - bad year (Year, Make, Model). ILX started in 2013.
+        ///Get MPG - all 3 parameters provided - bad year (Year, Make, Model). ILX started in 2013.
         [TestMethod]
         public void getCarMPGTest_3badyr()
         {

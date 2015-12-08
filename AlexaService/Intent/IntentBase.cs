@@ -13,7 +13,7 @@ namespace AlexaService.Intent
         public string Name { get; set; }
         public string BasePath { get; set; }
         public string MissingSlot { get; set; }
-        public int? UseResponseNumber { get; set; }
+        public static int? UseResponseNumber { get; set; }
         public string EdmundsUrlTemplate { get; set; }
         public Dictionary<string, string> FollowingQuestiestionMissingSlot { get; set; }
         static Random random = new Random();
@@ -60,10 +60,6 @@ namespace AlexaService.Intent
             url = String.Format(url, arg.ToArray());
             return url;
         }
-        virtual public string GetTextResponse()
-        {
-            return null;
-        }
 
         virtual public string GetEdmundsFullResponse()
         {
@@ -82,23 +78,27 @@ namespace AlexaService.Intent
             return PositiveResponseTemplate[random.Next(0, PositiveResponseTemplate.Count)];
         }
 
+        public string GetNegativeResponseTemplate()
+        {
+            if (UseResponseNumber != null)
+                return NegativeResponseTemplate[UseResponseNumber.Value];
+            return NegativeResponseTemplate[random.Next(0, PositiveResponseTemplate.Count)];
+        }
+
         virtual public string GetEdmundsResponse()
         {
-            JObject o;
             if (string.IsNullOrWhiteSpace(EdmundsUrlTemplate))
             {
-                o = new JObject();
+                return GetNegativeResponseTemplate();
             }
-            else
+            var fullResponce = GetEdmundsFullResponse();
+            if (!string.IsNullOrWhiteSpace(MissingSlot) || string.IsNullOrWhiteSpace(fullResponce))
             {
-                var fullResponce = GetEdmundsFullResponse();
-                if (!string.IsNullOrWhiteSpace(MissingSlot) || string.IsNullOrWhiteSpace(fullResponce))
-                {
-                    return GetErrorResponse();
-                }
-                o = JObject.Parse(fullResponce);
+                return GetErrorResponse();
             }
-            var positiveResponseTemplate = PositiveResponseTemplate[random.Next(0, PositiveResponseTemplate.Count)];
+            JObject o = JObject.Parse(fullResponce);
+
+            var positiveResponseTemplate = GetPositiveResponseTemplate();
 
             List<string> arg = new List<string>();
             var maches = Regex.Matches(positiveResponseTemplate, @"(\{(\w*):?(\w*)\})");
@@ -108,7 +108,12 @@ namespace AlexaService.Intent
                     arg.Add(CacheManager.Slots[mache.Groups[3].Value]);
                 else
                      if (mache.Groups[3].Value == "")
-                    arg.Add(o.SelectToken(Response[mache.Groups[2].Value]).ToString());
+                {
+                    var value = o.SelectToken(Response[mache.Groups[2].Value]);
+                    if (value == null)
+                        return GetNegativeResponseTemplate();
+                    arg.Add(value.ToString());
+                }
                 else
                     throw new Exception();
             }
@@ -129,7 +134,7 @@ namespace AlexaService.Intent
             else
                 return "";
         }
-        public AlexaService.Json.SpeechletResponse getAlexaResponse()
+        public SpeechletResponse getAlexaResponse()
         {
             return new SpeechletResponse()
             {
