@@ -17,8 +17,8 @@ namespace AlexaService.Intent
             //Encountered in the URL fails or car combo is unknown. Not prompting the user for further information
             NegativeResponseTemplate.Add("I don't have that car in my records. Hm try again later.");
 
-            Response["yearStart"] = "styles[0].Years[0].year";
-            Response["yearLast"] = "styles[0].Year[::Last()].year";
+            Response["yearStart"] = "years[0].year";
+            Response["yearLast"] = "years[-1].year";
             
             //Encountered if the user starts app without declaring both make and model
             ErrorSlotResponse["Make"] = "Who manufacturer of the car?";

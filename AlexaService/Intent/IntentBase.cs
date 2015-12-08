@@ -13,7 +13,7 @@ namespace AlexaService.Intent
         public string Name { get; set; }
         public string BasePath { get; set; }
         public string MissingSlot { get; set; }
-
+        public int? UseResponseNumber { get; set; }
         public string EdmundsUrlTemplate { get; set; }
         public Dictionary<string, string> FollowingQuestiestionMissingSlot { get; set; }
         static Random random = new Random();
@@ -72,6 +72,14 @@ namespace AlexaService.Intent
                 return "";
 
             return EdmundsClient.Caller.GetRequest(url);
+        }
+
+
+        public string GetPositiveResponseTemplate()
+        {
+            if (UseResponseNumber != null)
+                return PositiveResponseTemplate[UseResponseNumber.Value];
+            return PositiveResponseTemplate[random.Next(0, PositiveResponseTemplate.Count)];
         }
 
         virtual public string GetEdmundsResponse()
