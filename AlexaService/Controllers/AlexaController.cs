@@ -22,7 +22,7 @@ namespace AlexaService.Controllers
 
         [Route("Alexa")]
         [HttpPost]
-        public SpeechletResponse Post()
+        public SpeechletResponseEnvelope Post()
         {
             var requestBody = JsonConvert.DeserializeObject<SpeechletRequestEnvelope>(Request.Content.ReadAsStringAsync().Result);
             var intentName = requestBody?.Request?.Intent?.Name;

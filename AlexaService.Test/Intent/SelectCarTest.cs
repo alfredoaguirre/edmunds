@@ -38,7 +38,7 @@ namespace AlexaService.Test
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse = intent.getAlexaResponse();
 
-            Assert.AreEqual(AlexaResponse.outputSpeech.text, "The 5 Series manufactured by BMW was first made in 2014. The last year the 5 Series was made was in 2014.");
+            Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "The 5 Series manufactured by BMW was first made in 2014. The last year the 5 Series was made was in 2014.");
 
         }
         //Get Car - all 3 parameters provided - bad year (Year, Make, Model). ILX started in 2013.
@@ -57,7 +57,7 @@ namespace AlexaService.Test
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse = intent.getAlexaResponse();
 
-            Assert.AreEqual(AlexaResponse.outputSpeech.text, "I don't have that car in my records. Hm try again later.");
+            Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "I don't have that car in my records. Hm try again later.");
 
         }
         //Get Car - all 3 parameters provided - mismatched make / model (Year, Make, Model)
@@ -77,7 +77,7 @@ namespace AlexaService.Test
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse = intent.getAlexaResponse();
 
-            Assert.AreEqual(AlexaResponse.outputSpeech.text, "I don't have that car in my records. Hm try again later.");
+            Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "I don't have that car in my records. Hm try again later.");
 
         }
         //Get Car - all 3 parameters provided - hyphenated make (Year, Make, Model)
@@ -97,7 +97,7 @@ namespace AlexaService.Test
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse = intent.getAlexaResponse();
 
-            Assert.AreEqual(AlexaResponse.outputSpeech.text, "The 5 Series manufactured by BMW was first made in 2014. The last year the 5 Series was made was in 2012.");
+            Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "The 5 Series manufactured by BMW was first made in 2014. The last year the 5 Series was made was in 2012.");
 
         }
         //Get Car - all 3 parameters provided - price not found (Year, Make, Model)
@@ -117,7 +117,7 @@ namespace AlexaService.Test
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse=  intent.getAlexaResponse();
             
-            Assert.AreEqual(AlexaResponse.outputSpeech.text, "Hmm. I can't seem to find the price at this time.");
+            Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "Hmm. I can't seem to find the price at this time.");
 
         }*/
         //Get Car - all 3 parameters provided - make not found (Year, Make, Model)
@@ -137,7 +137,7 @@ namespace AlexaService.Test
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse = intent.getAlexaResponse();
 
-            Assert.AreEqual(AlexaResponse.outputSpeech.text, "I don't have that car in my records. Hm try again later.");
+            Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "I don't have that car in my records. Hm try again later.");
 
         }
 
@@ -158,7 +158,7 @@ namespace AlexaService.Test
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse = intent.getAlexaResponse();
 
-            Assert.AreEqual(AlexaResponse.outputSpeech.text, "I don't have that car in my records. Hm try again later.");
+            Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "I don't have that car in my records. Hm try again later.");
 
         }
 
@@ -179,7 +179,7 @@ namespace AlexaService.Test
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse = intent.getAlexaResponse();
 
-            Assert.AreEqual(AlexaResponse.outputSpeech.text, "I don't have that car in my records. Hm try again later.");
+            Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "I don't have that car in my records. Hm try again later.");
 
         }
 
@@ -201,7 +201,7 @@ namespace AlexaService.Test
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse = intent.getAlexaResponse();
 
-            Assert.AreEqual(AlexaResponse.outputSpeech.text, "The gas mileage of 2002 Toyota Camry is 26 in the city and 18 on the highway");
+            Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "The gas mileage of 2002 Toyota Camry is 26 in the city and 18 on the highway");
 
         }
 
@@ -221,7 +221,7 @@ namespace AlexaService.Test
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse=  intent.getAlexaResponse();
             
-            Assert.AreEqual(AlexaResponse.outputSpeech.text, "A new 2002 Toyota Camry has a starting price of 23700.");
+            Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "A new 2002 Toyota Camry has a starting price of 23700.");
 
         }*/
 
@@ -242,7 +242,7 @@ namespace AlexaService.Test
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse = intent.getAlexaResponse();
 
-            Assert.AreEqual(AlexaResponse.outputSpeech.text, "What's the model of the car?");
+            Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "What's the model of the car?");
         }
 
 
@@ -261,7 +261,7 @@ namespace AlexaService.Test
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse = intent.getAlexaResponse();
 
-            Assert.AreEqual(AlexaResponse.outputSpeech.text, "What's the make of the car?");
+            Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "What's the make of the car?");
 
         }
 
@@ -280,7 +280,7 @@ namespace AlexaService.Test
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse = intent.getAlexaResponse();
 
-            Assert.AreEqual(AlexaResponse.outputSpeech.text, "What's the make of the car?");
+            Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "What's the make of the car?");
 
         }
 
@@ -300,7 +300,7 @@ namespace AlexaService.Test
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse = intent.getAlexaResponse();
 
-            Assert.AreEqual(AlexaResponse.outputSpeech.text, "What's the model of the car?");
+            Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "What's the model of the car?");
 
         }
 
@@ -320,7 +320,7 @@ namespace AlexaService.Test
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse = intent.getAlexaResponse();
 
-            Assert.AreEqual(AlexaResponse.outputSpeech.text, "What's the make of the car?");
+            Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "What's the make of the car?");
         }
 
 
@@ -335,7 +335,7 @@ namespace AlexaService.Test
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse = intent.getAlexaResponse();
 
-            Assert.AreEqual(AlexaResponse.outputSpeech.text, "The gas mileage of 2002 Toyota Camry is 26 in the city and 18 on the highway.");
+            Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "The gas mileage of 2002 Toyota Camry is 26 in the city and 18 on the highway.");
 
         }
 
@@ -355,7 +355,7 @@ namespace AlexaService.Test
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse = intent.getAlexaResponse();
 
-            Assert.AreEqual(AlexaResponse.outputSpeech.text, "I don't know at this time.");
+            Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "I don't know at this time.");
 
         }
     }
