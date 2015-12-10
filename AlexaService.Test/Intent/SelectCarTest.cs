@@ -69,7 +69,7 @@ namespace AlexaService.Test
                 {
                     {"Make", "Acura" },
                     {"Model", "Camry" },
-                    {"Year", "2012" }
+                   // {"Year", "2012" }
                 }
             );
             var intent = new Intent.SelectCar();
@@ -89,7 +89,7 @@ namespace AlexaService.Test
                 {
                     {"Make", "Mercedes Benz" },
                     {"Model", "S Class" },
-                    {"Year", "2012" }
+                 //   {"Year", "2012" }
                 }
             );
             var intent = new Intent.SelectCar();

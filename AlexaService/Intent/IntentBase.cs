@@ -90,9 +90,14 @@ namespace AlexaService.Intent
                 return GetNegativeResponseTemplate();
             }
             var EdmundsResponse = GetEdmundsFullResponse();
-            if (!string.IsNullOrWhiteSpace(MissingSlot) || string.IsNullOrWhiteSpace(EdmundsResponse))
+            if (!string.IsNullOrWhiteSpace(MissingSlot) )
             {
-                return GetErrorResponse();
+                return GetErrorMissingSlotResponse();
+
+            }
+            if (string.IsNullOrWhiteSpace(EdmundsResponse))
+            {
+                return GetNegativeResponseTemplate();
             }
             JObject EdmundsJson = JObject.Parse(EdmundsResponse);
 
@@ -121,10 +126,11 @@ namespace AlexaService.Intent
             return positiveResponse;
         }
 
-        virtual public string GetErrorResponse()
+        virtual public string GetErrorMissingSlotResponse()
         {
             return ErrorSlotResponse[MissingSlot];
         }
+
 
         public string getReprompt()
         {
@@ -155,7 +161,6 @@ namespace AlexaService.Intent
                     card = new Card()
                 },
                 version = "1.0",
-              //  sessionAttributes = new JObject()
             };
         }
     }
