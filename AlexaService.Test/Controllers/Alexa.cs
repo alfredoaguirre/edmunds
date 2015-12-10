@@ -60,7 +60,7 @@ namespace OwinApplicationTesting
         [TestMethod]
         public async Task AlexaPostTest()
         {
-            IntentBase.UseResponseNumber = 0;
+            IntentBase.UseResponseNumber = 1;
             StreamReader file = new StreamReader(@"payload\GetPrice for Price for 2013 Toyota Camry.json");
             var clas = JsonConvert.DeserializeObject<SpeechletRequestEnvelope>(file.ReadToEnd());
             var result = await GetPostRequest(clas);

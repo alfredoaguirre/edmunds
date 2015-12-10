@@ -41,6 +41,7 @@
     <Content Include="AlexaSkillDesign\AlexaModel.json" />
     <Content Include="AlexaSkillDesign\Schema.json" />
     <Content Include="AlexaSkillDesign\Utterance.txt" />
+    <Content Include="event.json" />
     <Content Include="JSON.json" />
     <Content Include="package.json" />
     <Content Include="README.md" />

@@ -134,21 +134,25 @@ namespace AlexaService.Intent
                 return "";
         }
 
-        public SpeechletResponse getAlexaResponse()
+        public SpeechletResponseEnvelope getAlexaResponse()
         {
-            return new SpeechletResponse()
+           return new SpeechletResponseEnvelope()
             {
-                outputSpeech = new OutputSpeech()
-                {
-                    text = GetEdmundsResponse(),
-                },
-                reprompt = new Reprompt()
+                response = new SpeechletResponse()
                 {
                     outputSpeech = new OutputSpeech()
                     {
-                        text = getReprompt()
+                        text = GetEdmundsResponse(),
+                    },
+                    reprompt = new Reprompt()
+                    {
+                        outputSpeech = new OutputSpeech()
+                        {
+                            text = getReprompt()
+                        }
                     }
-                }
+                },
+                version = "1.0"
             };
         }
     }

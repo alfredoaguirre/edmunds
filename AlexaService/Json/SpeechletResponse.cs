@@ -5,12 +5,19 @@ using System.Web;
 
 namespace AlexaService.Json
 {
+    public class SpeechletResponseEnvelope
+    {
+        public string version { get; set; }
+        public SpeechletResponse response { get; set; }
+        // sessionAttributes
+    }
+
     public class buildResponse
     {
         public string version { get; set; }
         public string SpeechletResponse { get; set; }
         public SpeechletResponse response { get; set; }
-      
+
     }
 
     public class SpeechletResponse

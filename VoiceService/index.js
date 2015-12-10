@@ -5,22 +5,20 @@ exports.handler = function (event, context) {
         intentName = event.request.name;
     
     var jsonIntent = JSON.stringify(intent);
-    var url = "https://alfredodejesus.azurewebsites.net/"; //+ escape(jsonIntent);
+    var url = "https://alfredodejesus.azurewebsites.net/alexa";
     
     var post_data = JSON.stringify(event)
     
     var post_options = {
-        host: 'closure-compiler.appspot.com',
-        port: '80',
-        path: '/Alexa',
+        host: 'alfredodejesus.azurewebsites.net',
+        //port: '80',
+        path: '/alexa',
         method: 'POST',
         headers: {
-            'Content-Type': 'application/json',
+            'Content-Type': 'application/x-www-form-urlencoded',
             'Content-Length': Buffer.byteLength(post_data)
         }
     };
-    
-    console.log(post_options);
     var http = require('http');
     
     var post_req = http.request(post_options, function (res) {
@@ -36,18 +34,19 @@ exports.handler = function (event, context) {
             
             var cardTitle = "Alexa HA Request";
             var sessionAttributes = {};
-            console.log(responseString);
+            console.log("++<<" + responseString + ">>++");
             var response = JSON.parse(responseString);
             var speechOutput = response.text;
             var shouldEndSession = response.shouldEndSession;
-            console.log(responseString);
-            context.succeed(response);
+            
+            context.succeed(response); 
 
-           // callback(sessionAttributes, buildSpeechletResponse(cardTitle, speechOutput, repromptText, shouldEndSession));
+          //  callback(sessionAttributes, buildSpeechletResponse(cardTitle, speechOutput, repromptText, shouldEndSession));
         });
     });
     
     // post the data
+    console.log("++<<---" + post_data + "-->>++");
     post_req.write(post_data);
     post_req.end();
 
@@ -82,3 +81,4 @@ function buildResponse(sessionAttributes, speechletResponse) {
         response: speechletResponse
     };
 }
+       
