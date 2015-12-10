@@ -13,6 +13,10 @@ namespace AlexaService.Cache
         {
             Slots = new Dictionary<string, string>();
         }
+        public static void Clean()
+        {
+            Slots.Clear();
+        }
 
         public static void AddSlots(Dictionary<string, string> slots)
         {

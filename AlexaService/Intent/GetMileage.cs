@@ -24,8 +24,14 @@ namespace AlexaService.Intent
             //Encountered if the user starts app without declaring both make and model
             ErrorSlotResponse["Make"] = "What's the make of the car?";
             ErrorSlotResponse["Model"] = "What's the model of the car?";
+            ErrorSlotResponse["Year"] = "-";
 
-            EdmundsUrlTemplate = "https://api.edmunds.com/api/vehicle/v2/{slot:Make}/{slot:Name}/{slot:Year}/styles?view=full&fmt=json&api_key=67t7jtrnvz8wyzgfpwgcqa3y";
+
+            FollowingQuestiestionMissingSlot["Make"] = "pleace tell me ";
+            FollowingQuestiestionMissingSlot["Model"] = "pleace tell me ";
+            FollowingQuestiestionMissingSlot["Year"] = "pleace tell me ";
+
+            EdmundsUrlTemplate = "https://api.edmunds.com/api/vehicle/v2/{slot:Make}/{slot:Model}/{slot:Year}/styles?view=full&fmt=json&api_key=67t7jtrnvz8wyzgfpwgcqa3y";
 
         }
     }

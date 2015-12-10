@@ -13,9 +13,15 @@ using AlexaService.Intent;
 namespace AlexaService.Test
 {
     [TestClass]
-    public class GetMileage
+    public class GetMileageTest
     {
-    
+        [TestInitialize]
+        public void Setup()
+        {
+            IntentBase.UseResponseNumber = 0;
+            Cache.CacheManager.Clean();
+        }
+
         //Get MPG - all 3 parameters provided (Year, Make, Model)
         [TestMethod]
         public void getCarMPGTest_3good()
@@ -27,7 +33,7 @@ namespace AlexaService.Test
                     {"Year", "2014" }
                 }
             );
-            var intent = new GetMileage();
+            var intent = new Intent.GetMileage();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse=  intent.getAlexaResponse();
@@ -35,7 +41,7 @@ namespace AlexaService.Test
             Assert.AreEqual(AlexaResponse.outputSpeech.text, "The gas mileage of 2014 BMW 5 Series is 26 in the city and 37 on the highway");
 
         }
-        //Get MPG - all 3 parameters provided - bad year (Year, Make, Model). ILX started in 2013.
+        ///Get MPG - all 3 parameters provided - bad year (Year, Make, Model). ILX started in 2013.
         [TestMethod]
         public void getCarMPGTest_3badyr()
         {
@@ -47,7 +53,7 @@ namespace AlexaService.Test
                     {"Year", "2012" }
                 }
             );
-            var intent = new GetMileage();
+            var intent = new Intent.GetMileage();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse=  intent.getAlexaResponse();
@@ -67,7 +73,7 @@ namespace AlexaService.Test
                     {"Year", "2012" }
                 }
             );
-            var intent = new GetMileage();
+            var intent = new Intent.GetMileage();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse=  intent.getAlexaResponse();
@@ -87,7 +93,7 @@ namespace AlexaService.Test
                     {"Year", "2012" }
                 }
             );
-            var intent = new GetMileage();
+            var intent = new Intent.GetMileage();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse=  intent.getAlexaResponse();
@@ -129,7 +135,7 @@ namespace AlexaService.Test
                     {"Year", "1995" }
                 }
             );
-            var intent = new GetMileage();
+            var intent = new Intent.GetMileage();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse=  intent.getAlexaResponse();
@@ -150,7 +156,7 @@ namespace AlexaService.Test
                     {"Year", "1995" }
                 }
             );
-            var intent = new GetMileage();
+            var intent = new Intent.GetMileage();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse=  intent.getAlexaResponse();
@@ -171,7 +177,7 @@ namespace AlexaService.Test
                     {"Year", "2014" }
                 }
             );
-            var intent = new GetMileage();
+            var intent = new Intent.GetMileage();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse=  intent.getAlexaResponse();
@@ -193,7 +199,7 @@ namespace AlexaService.Test
                     {"Year", "02" }
                 }
             );
-            var intent = new GetMileage();
+            var intent = new Intent.GetMileage();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse=  intent.getAlexaResponse();
@@ -235,7 +241,7 @@ namespace AlexaService.Test
                     {"Year", "2012" },
                 }
             );
-            var intent = new GetMileage();
+            var intent = new Intent.GetMileage();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse=  intent.getAlexaResponse();
@@ -256,7 +262,7 @@ namespace AlexaService.Test
                     {"Year", "2012" },
                 }
             );
-            var intent = new GetMileage();
+            var intent = new Intent.GetMileage();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse=  intent.getAlexaResponse();
@@ -275,7 +281,7 @@ namespace AlexaService.Test
                     {"Year", "2012" },
                 }
             );
-            var intent = new GetMileage();
+            var intent = new Intent.GetMileage();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse=  intent.getAlexaResponse();
@@ -295,7 +301,7 @@ namespace AlexaService.Test
                     {"Make", "Toyota" },
                 }
             );
-            var intent = new GetMileage();
+            var intent = new Intent.GetMileage();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse=  intent.getAlexaResponse();
@@ -315,7 +321,7 @@ namespace AlexaService.Test
                     {"Model", "Camry" },
                 }
             );
-            var intent = new GetMileage();
+            var intent = new Intent.GetMileage();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse=  intent.getAlexaResponse();
@@ -335,7 +341,7 @@ namespace AlexaService.Test
                    
                 }
             );
-            var intent = new GetMileage();
+            var intent = new Intent.GetMileage();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse=  intent.getAlexaResponse();
@@ -355,7 +361,7 @@ namespace AlexaService.Test
                     {"m","University of the Texas at Arlington" },
                 }
             );
-            var intent = new GetMileage();
+            var intent = new Intent.GetMileage();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse=  intent.getAlexaResponse();

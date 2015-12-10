@@ -18,15 +18,17 @@ namespace AlexaService.Intent
             NegativeResponseTemplate.Add("I don't have that car in my records. Hm try again later.");
 
             Response["yearStart"] = "years[0].year";
-            Response["yearLast"] = "years[-1].year";
+            Response["yearLast"] = "years[?(@.Price >= 50)].year";
             
             //Encountered if the user starts app without declaring both make and model
             ErrorSlotResponse["Make"] = "Who manufacturer of the car?";
             ErrorSlotResponse["Model"] = "Which model are you interested in?";
+            ErrorSlotResponse["Year"] = "-";
 
 
-
-            FollowingQuestiestionMissingSlot["slot:Name"] = "pleace tell me ";
+            FollowingQuestiestionMissingSlot["Make"] = "pleace tell me ";
+            FollowingQuestiestionMissingSlot["Model"] = "pleace tell me ";
+            FollowingQuestiestionMissingSlot["Year"] = "pleace tell me ";
 
             EdmundsUrlTemplate = "https://api.edmunds.com/api/vehicle/v2/{slot:Make}/{slot:Model}?view=basic&fmt=json&api_key=67t7jtrnvz8wyzgfpwgcqa3y";
         }

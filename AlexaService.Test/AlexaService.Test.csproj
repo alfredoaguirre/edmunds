@@ -93,13 +93,13 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="Controllers\AlexaPostTest.cs" />
-    <Compile Include="Intent\AlexaServiceColor.cs" />
+    <Compile Include="Controllers\Alexa.cs" />
     <Compile Include="Intent\AlexaServiceInteraction.cs" />
-    <Compile Include="Intent\AlexaServiceMileage.cs" />
-    <Compile Include="Intent\AlexaServicePrice.cs" />
-    <Compile Include="Intent\AlexaServiceSelectCar.cs" />
     <Compile Include="Intent\AlexaServiceTest.cs" />
+    <Compile Include="Intent\GetColorTest.cs" />
+    <Compile Include="Intent\GetMileageTest.cs" />
+    <Compile Include="Intent\GetPriceTest.cs" />
+    <Compile Include="Intent\SelectCarTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -117,6 +117,7 @@
     <None Include="payload\GetPrice for Price for 2013 Toyota Camry.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Include="payload\JSON Data 120715.json" />
   </ItemGroup>
   <ItemGroup />
   <Choose>

@@ -1,42 +1,26 @@
-﻿using Microsoft.Owin.Hosting;
-using Microsoft.Owin.Testing;
+﻿using Microsoft.Owin.Testing;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Owin;
-using System;
-using System.Net.Http;
-using System;
-using System.Collections.Generic;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using AlexaService.Controllers;
 using System.Net.Http;
 using System.Web.Http;
 using System.IO;
-using System.Linq;
-using System.Security.Cryptography.X509Certificates;
 using Newtonsoft.Json;
-using AlexaService.Intent;
-using Microsoft.Owin.Testing;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Owin;
-using System;
-using System.Linq;
-using System.Net.Http;
 using System.Threading.Tasks;
-using System.Web.Http;
-using System.Web.Http.Dispatcher;
 using AlexaService.Json;
 using System.Net.Http.Formatting;
+using AlexaService.Intent;
 
 namespace OwinApplicationTesting
 {
     [TestClass]
-    public class SelfHostingTest
+    public class AlexaTest
     {
         protected TestServer server;
 
+
         [TestInitialize]
         public void Setup()
-        {
+        {  IntentBase.UseResponseNumber = 1;
             server = TestServer.Create(app =>
             {
                 HttpConfiguration config = new HttpConfiguration();
@@ -76,6 +60,7 @@ namespace OwinApplicationTesting
         [TestMethod]
         public async Task AlexaPostTest()
         {
+            IntentBase.UseResponseNumber = 0;
             StreamReader file = new StreamReader(@"payload\GetPrice for Price for 2013 Toyota Camry.json");
             var clas = JsonConvert.DeserializeObject<SpeechletRequestEnvelope>(file.ReadToEnd());
             var result = await GetPostRequest(clas);

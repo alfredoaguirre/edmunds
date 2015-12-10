@@ -15,6 +15,12 @@ namespace AlexaService.Test
     [TestClass]
     public class AlexaServiceTest
     {
+        [TestInitialize]
+        public void Setup()
+        {
+            IntentBase.UseResponseNumber = 0;
+            Cache.CacheManager.Clean();
+        }
         [TestMethod]
         public void GetMpg()
         {
@@ -70,30 +76,7 @@ namespace AlexaService.Test
                 Assert.AreEqual(slotPair.x.Value, slotPair.y.Value);
             }
         }
-        [TestMethod]
-        public void GetSlotTest2()
-        {
-            // Arrange
-            AlexaService.Cache.CacheManager.AddSlots(new Dictionary<string, string>()
-                {
-                    {"Make", "Dodge" },
-                    {"Model", "Dart" },
-                    {"Year", "2013" }
-                }
-            );
-            // Act
-            var intent = new GetMileage();
-            var edmundsURL = intent.GenEdmundsURL();
-            Assert.AreEqual("https://api.edmunds.com/api/vehicle/v2/Dodge/Dart/2013/styles?view=full&fmt=json&api_key=67t7jtrnvz8wyzgfpwgcqa3y", edmundsURL);
-
-            var edmundsResponse = intent.GetEdmundsResponse();
-            Assert.AreEqual("Dodge Dart have 36", edmundsResponse);
-
-
-
-            // Assert
-
-        }
+       
         [TestMethod]
         public void SelectCare2()
         {
