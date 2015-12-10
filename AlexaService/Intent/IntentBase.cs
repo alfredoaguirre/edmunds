@@ -136,7 +136,7 @@ namespace AlexaService.Intent
 
         public SpeechletResponseEnvelope getAlexaResponse()
         {
-           return new SpeechletResponseEnvelope()
+            return new SpeechletResponseEnvelope()
             {
                 response = new SpeechletResponse()
                 {
@@ -152,7 +152,8 @@ namespace AlexaService.Intent
                         }
                     }
                 },
-                version = "1.0"
+                version = "1.0",
+                sessionAttributes = new JObject()
             };
         }
     }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -9,7 +10,7 @@ namespace AlexaService.Json
     {
         public string version { get; set; }
         public SpeechletResponse response { get; set; }
-        // sessionAttributes
+        public JObject sessionAttributes { get; set; }
     }
 
     public class buildResponse
