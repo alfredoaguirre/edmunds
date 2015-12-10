@@ -66,12 +66,10 @@ namespace AlexaService.Intent
             var url = GenEdmundsURL();
             if (string.IsNullOrWhiteSpace(url))
                 return "";
-
             return EdmundsClient.Caller.GetRequest(url);
         }
 
-
-        public string GetPositiveResponseTemplate()
+        virtual public string GetPositiveResponseTemplate()
         {
             if (UseResponseNumber != null)
                 return PositiveResponseTemplate[UseResponseNumber.Value];
@@ -91,12 +89,12 @@ namespace AlexaService.Intent
             {
                 return GetNegativeResponseTemplate();
             }
-            var fullResponce = GetEdmundsFullResponse();
-            if (!string.IsNullOrWhiteSpace(MissingSlot) || string.IsNullOrWhiteSpace(fullResponce))
+            var EdmundsResponse = GetEdmundsFullResponse();
+            if (!string.IsNullOrWhiteSpace(MissingSlot) || string.IsNullOrWhiteSpace(EdmundsResponse))
             {
                 return GetErrorResponse();
             }
-            JObject o = JObject.Parse(fullResponce);
+            JObject EdmundsJson = JObject.Parse(EdmundsResponse);
 
             var positiveResponseTemplate = GetPositiveResponseTemplate();
 
@@ -106,10 +104,9 @@ namespace AlexaService.Intent
             {
                 if (mache.Groups[2].Value == "slot" && mache.Groups[3].Value != "")
                     arg.Add(CacheManager.Slots[mache.Groups[3].Value]);
-                else
-                     if (mache.Groups[3].Value == "")
+                else if (mache.Groups[3].Value == "")
                 {
-                    var value = o.SelectToken(Response[mache.Groups[2].Value]);
+                    var value = EdmundsJson.SelectToken(Response[mache.Groups[2].Value]);
                     if (value == null)
                         return GetNegativeResponseTemplate();
                     arg.Add(value.ToString());
@@ -123,10 +120,12 @@ namespace AlexaService.Intent
             positiveResponse = String.Format(positiveResponse, arg.ToArray());
             return positiveResponse;
         }
+
         virtual public string GetErrorResponse()
         {
             return ErrorSlotResponse[MissingSlot];
         }
+
         public string getReprompt()
         {
             if (!string.IsNullOrEmpty(MissingSlot))
@@ -134,6 +133,7 @@ namespace AlexaService.Intent
             else
                 return "";
         }
+
         public SpeechletResponse getAlexaResponse()
         {
             return new SpeechletResponse()
@@ -150,7 +150,6 @@ namespace AlexaService.Intent
                     }
                 }
             };
-
         }
     }
 }

@@ -33,7 +33,9 @@ namespace AlexaService.Controllers
             }
             CacheManager.AddSlots(requestBody.Request.Intent.GetSlots);
             IntentBase intent = IntentManager.GetIntent(intentName);
-            return intent.getAlexaResponse();
+            var alexaResponse = intent.getAlexaResponse();
+            CacheManager.Intent.Push(intent);
+            return alexaResponse;
         }
 
         [Route("alexa/sample-session")]

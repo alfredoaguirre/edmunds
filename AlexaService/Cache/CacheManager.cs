@@ -9,9 +9,11 @@ namespace AlexaService.Cache
     public static class CacheManager
     {
         public static Dictionary<string, string> Slots { get; private set; }
+        public static Stack<Intent.IntentBase> Intent { get; private set; }
         static CacheManager()
         {
             Slots = new Dictionary<string, string>();
+            Intent = new Stack<Intent.IntentBase>();
         }
         public static void Clean()
         {
