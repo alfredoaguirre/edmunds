@@ -36,12 +36,7 @@ exports.handler = function (event, context) {
             var sessionAttributes = {};
             console.log("++<<" + responseString + ">>++");
             var response = JSON.parse(responseString);
-            var speechOutput = response.text;
-            var shouldEndSession = response.shouldEndSession;
-            
-            context.succeed(response); 
-
-          //  callback(sessionAttributes, buildSpeechletResponse(cardTitle, speechOutput, repromptText, shouldEndSession));
+            context.succeed(response);
         });
     });
     
@@ -49,36 +44,4 @@ exports.handler = function (event, context) {
     console.log("++<<---" + post_data + "-->>++");
     post_req.write(post_data);
     post_req.end();
-
-
 }
-
-function buildSpeechletResponse(title, output, repromptText, shouldEndSession) {
-    return {
-        outputSpeech: {
-            type: "PlainText",
-            text: output
-        },
-        card: {
-            type: "Simple",
-            title: "SessionSpeechlet - " + title,
-            content: "SessionSpeechlet - " + output
-        },
-        reprompt: {
-            outputSpeech: {
-                type: "PlainText",
-                text: repromptText
-            }
-        },
-        shouldEndSession: shouldEndSession
-    };
-}
-
-function buildResponse(sessionAttributes, speechletResponse) {
-    return {
-        version: "1.0",
-        sessionAttributes: sessionAttributes,
-        response: speechletResponse
-    };
-}
-       
