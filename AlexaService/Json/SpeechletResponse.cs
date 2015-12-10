@@ -10,7 +10,7 @@ namespace AlexaService.Json
     {
         public string version { get; set; }
         public SpeechletResponse response { get; set; }
-        public JObject sessionAttributes { get; set; }
+       // public JObject sessionAttributes { get; set; }
     }
 
     public class buildResponse
@@ -18,11 +18,17 @@ namespace AlexaService.Json
         public string version { get; set; }
         public string SpeechletResponse { get; set; }
         public SpeechletResponse response { get; set; }
-
+     
     }
-
+    public class Card
+    {
+        public string type = "Simple";
+        public string title = "HelloWorld";
+        public string content = "Welcome to the Alexa Skills Kit, you can say hello";
+    }
     public class SpeechletResponse
     {
+        public Card card { get; set; }
         public OutputSpeech outputSpeech { get; set; }
         public Reprompt reprompt { get; set; }
         public bool shouldEndSession { get; set; }

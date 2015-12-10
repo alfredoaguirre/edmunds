@@ -150,10 +150,12 @@ namespace AlexaService.Intent
                         {
                             text = getReprompt()
                         }
-                    }
+                    },
+                    shouldEndSession = false,
+                    card = new Card()
                 },
                 version = "1.0",
-                sessionAttributes = new JObject()
+              //  sessionAttributes = new JObject()
             };
         }
     }
