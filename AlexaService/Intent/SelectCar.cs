@@ -21,7 +21,7 @@ namespace AlexaService.Intent
             Response["yearLast"] = "years[?(@.Price >= 50)].year";
             
             //Encountered if the user starts app without declaring both make and model
-            ErrorSlotResponse["Make"] = "Who manufacturer of the car?";
+            ErrorSlotResponse["Make"] = "Who manufactures the car?";
             ErrorSlotResponse["Model"] = "Which model are you interested in?";
             ErrorSlotResponse["Year"] = "-";
 
