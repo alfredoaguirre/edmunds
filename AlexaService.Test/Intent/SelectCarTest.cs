@@ -201,7 +201,7 @@ namespace AlexaService.Test
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse = intent.getAlexaResponse();
 
-            Assert.AreEqual(AlexaResponse.outputSpeech.text, "The gas mileage of 2002 Toyota Camry is 26 in the city and 18 on the highway");
+            Assert.AreEqual(AlexaResponse.outputSpeech.text, "The Camry manufactured by Toyota was first made in 1990. The last year the Camry was made was in 2016");
 
         }
 
@@ -261,7 +261,7 @@ namespace AlexaService.Test
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse = intent.getAlexaResponse();
 
-            Assert.AreEqual(AlexaResponse.outputSpeech.text, "What's the make of the car?");
+            Assert.AreEqual(AlexaResponse.outputSpeech.text, "Who manufactures the car?");
 
         }
 
@@ -280,7 +280,7 @@ namespace AlexaService.Test
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse = intent.getAlexaResponse();
 
-            Assert.AreEqual(AlexaResponse.outputSpeech.text, "What's the make of the car?");
+            Assert.AreEqual(AlexaResponse.outputSpeech.text, "Which model are you interested in?");
 
         }
 
@@ -300,7 +300,7 @@ namespace AlexaService.Test
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse = intent.getAlexaResponse();
 
-            Assert.AreEqual(AlexaResponse.outputSpeech.text, "What's the model of the car?");
+            Assert.AreEqual(AlexaResponse.outputSpeech.text, "Which model are you interested in?");
 
         }
 
@@ -335,13 +335,13 @@ namespace AlexaService.Test
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse = intent.getAlexaResponse();
 
-            Assert.AreEqual(AlexaResponse.outputSpeech.text, "The gas mileage of 2002 Toyota Camry is 26 in the city and 18 on the highway.");
+            Assert.AreEqual(AlexaResponse.outputSpeech.text, "The Camry manufactured by Toyota was first made in 1990. The last year the Camry was made was in 2016.");
 
         }
 
 
         //Get Car - nonsense 
-        [TestMethod]
+        [TestMethod][Ignore]
         public void getCarTest_nonsense()
         {
 
