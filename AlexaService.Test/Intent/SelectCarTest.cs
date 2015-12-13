@@ -33,7 +33,7 @@ namespace AlexaService.Test
                     {"Year", "2014" }
                 }
             );
-            var intent = new Intent.SelectCar();
+            var intent = new SelectCar();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse = intent.getAlexaResponse();
@@ -52,7 +52,7 @@ namespace AlexaService.Test
                     {"Year", "2012" }
                 }
             );
-            var intent = new Intent.SelectCar();
+            var intent = new SelectCar();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse = intent.getAlexaResponse();
@@ -72,7 +72,7 @@ namespace AlexaService.Test
                    // {"Year", "2012" }
                 }
             );
-            var intent = new Intent.SelectCar();
+            var intent = new SelectCar();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse = intent.getAlexaResponse();
@@ -92,7 +92,7 @@ namespace AlexaService.Test
                  //   {"Year", "2012" }
                 }
             );
-            var intent = new Intent.SelectCar();
+            var intent = new SelectCar();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse = intent.getAlexaResponse();
@@ -132,7 +132,7 @@ namespace AlexaService.Test
                     {"Year", "1995" }
                 }
             );
-            var intent = new Intent.SelectCar();
+            var intent = new SelectCar();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse = intent.getAlexaResponse();
@@ -153,7 +153,7 @@ namespace AlexaService.Test
                     {"Year", "1995" }
                 }
             );
-            var intent = new Intent.SelectCar();
+            var intent = new SelectCar();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse = intent.getAlexaResponse();
@@ -174,7 +174,7 @@ namespace AlexaService.Test
                     {"Year", "2014" }
                 }
             );
-            var intent = new Intent.SelectCar();
+            var intent = new SelectCar();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse = intent.getAlexaResponse();
@@ -196,7 +196,7 @@ namespace AlexaService.Test
                     {"Year", "02" }
                 }
             );
-            var intent = new Intent.SelectCar();
+            var intent = new SelectCar();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse = intent.getAlexaResponse();
@@ -237,7 +237,7 @@ namespace AlexaService.Test
                     {"Year", "2012" },
                 }
             );
-            var intent = new Intent.SelectCar();
+            var intent = new SelectCar();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse = intent.getAlexaResponse();
@@ -256,7 +256,7 @@ namespace AlexaService.Test
                     {"Year", "2012" },
                 }
             );
-            var intent = new Intent.SelectCar();
+            var intent = new SelectCar();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse = intent.getAlexaResponse();
@@ -275,7 +275,7 @@ namespace AlexaService.Test
                     {"Year", "2012" },
                 }
             );
-            var intent = new Intent.SelectCar();
+            var intent = new SelectCar();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse = intent.getAlexaResponse();
@@ -295,7 +295,7 @@ namespace AlexaService.Test
                     {"Make", "Toyota" },
                 }
             );
-            var intent = new Intent.SelectCar();
+            var intent = new SelectCar();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse = intent.getAlexaResponse();
@@ -341,7 +341,7 @@ namespace AlexaService.Test
 
 
         //Get Car - nonsense 
-        [TestMethod]
+        [TestMethod, Ignore]
         public void getCarTest_nonsense()
         {
 

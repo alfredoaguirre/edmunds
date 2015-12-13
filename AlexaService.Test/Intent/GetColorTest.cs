@@ -10,7 +10,7 @@ using System.Security.Cryptography.X509Certificates;
 using Newtonsoft.Json;
 using AlexaService.Intent;
 
-namespace AlexaService.Test
+namespace AlexaService.Test.Intent
 {
     [TestClass] [Ignore]
     public class GetColorTest

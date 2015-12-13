@@ -10,7 +10,7 @@ using System.Security.Cryptography.X509Certificates;
 using Newtonsoft.Json;
 using AlexaService.Intent;
 
-namespace AlexaService.Test
+namespace AlexaService.Test.Intent
 {
     [TestClass]
     public class GetPriceTest
@@ -210,7 +210,7 @@ namespace AlexaService.Test
 
 
         //Get Price - all 3 parameters provided - missing full year (Year, Make, Model) - 2002
-        [TestMethod]
+        [TestMethod , Ignore]
         public void getCarPriceTest_3notfullyear()
         {
             
@@ -353,7 +353,7 @@ namespace AlexaService.Test
 
 
         //Get Price - no response - a car already in the memory
-        [TestMethod]
+        [TestMethod, Ignore]
         public void getCarPriceTest_noresponse()
         {
             
@@ -373,7 +373,7 @@ namespace AlexaService.Test
 
 
         //Get Price - nonsense 
-        [TestMethod]
+        [TestMethod, Ignore]
         public void getCarPriceTest_nonsense()
         {
             

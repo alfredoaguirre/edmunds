@@ -121,6 +121,9 @@ GetColors what colors are available for the {Model}
 GetColors what colors are available
 GetColors what colors does it come in
 GetColors what colors are available
+SetMaker Set Maker {Make}
+SetYear Set Year {Year}
+SetModel Set Model {Model}
 {Model} 
 {Year} {Model}
 {Year} {Make} {Model}

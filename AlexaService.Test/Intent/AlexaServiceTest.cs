@@ -10,7 +10,7 @@ using System.Security.Cryptography.X509Certificates;
 using Newtonsoft.Json;
 using AlexaService.Intent;
 
-namespace AlexaService.Test
+namespace AlexaService.Test.Intent
 {
     [TestClass]
     public class AlexaServiceTest
@@ -21,21 +21,7 @@ namespace AlexaService.Test
             IntentBase.UseResponseNumber = 0;
             Cache.CacheManager.Clean();
         }
-        [TestMethod]
-        public void GetMpg()
-        {
-            // Arrange
-            var controller = new AlexaController();
-            controller.Request = new HttpRequestMessage();
-            controller.Configuration = new HttpConfiguration();
-
-            // Act
-            StreamReader file = new StreamReader(@"payload\event.json");
-
-            var clas = JsonConvert.DeserializeObject<Json.SpeechletRequestEnvelope>(file.ReadToEnd());
-            var responce = controller.Post();
-            // Assert
-        }
+     
         [TestMethod]
         public void Getjsone()
         {
