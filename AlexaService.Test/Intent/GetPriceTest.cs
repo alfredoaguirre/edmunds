@@ -122,7 +122,7 @@ namespace AlexaService.Test
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse=  intent.getAlexaResponse();
             
-            Assert.AreEqual(AlexaResponse.outputSpeech.text, "The 2012 Mercedes-Benz S Class has a starting price of 91850.");
+            Assert.AreEqual(AlexaResponse.outputSpeech.text, "A new 2012 Mercedes-Benz S Class has a starting price of 91850.");
 
         }
         //Get Price - all 3 parameters provided - price not found (Year, Make, Model)
@@ -373,7 +373,7 @@ namespace AlexaService.Test
 
 
         //Get Price - nonsense 
-        [TestMethod]
+        [TestMethod][Ignore]
         public void getCarPriceTest_nonsense()
         {
             

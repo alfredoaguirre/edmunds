@@ -98,7 +98,7 @@ namespace AlexaService.Test
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse=  intent.getAlexaResponse();
             
-            Assert.AreEqual(AlexaResponse.outputSpeech.text, "The gas mileage of 2012 Mercedes Benz S Class is 25 in the city and 19 on the highway");
+            Assert.AreEqual(AlexaResponse.outputSpeech.text, "The gas mileage of 2012 Mercedes Benz S Class is 19 in the city and 25 on the highway");
 
         }
         //Get MPG - all 3 parameters provided - price not found (Year, Make, Model)
@@ -237,7 +237,7 @@ namespace AlexaService.Test
             
             AlexaService.Cache.CacheManager.AddSlots(new Dictionary<string, string>()
                 {
-                    {"Model", "Toyota" },
+                    {"Make", "Toyota" },
                     {"Year", "2012" },
                 }
             );
@@ -352,7 +352,7 @@ namespace AlexaService.Test
 
 
         //Get MPG - nonsense 
-        [TestMethod]
+        [TestMethod][Ignore]
         public void getCarMPGTest_nonsense()
         {
             
