@@ -1,11 +1,5 @@
 exports.handler = function (event, context) {
-    console.log("Called onIntent intent=" + event.request + ", intentName=" + event.request.intent.name);
-    
-    var intent = event.request.intent,
-        intentName = event.request.name;
-    
-    var jsonIntent = JSON.stringify(intent);
-    var url = "https://alfredodejesus.azurewebsites.net/alexa";
+    console.log("Called onIntent intent=" , event.request);
     
     var post_data = JSON.stringify(event)
     
