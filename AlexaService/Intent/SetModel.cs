@@ -11,7 +11,7 @@ namespace AlexaService.Intent
         public SetModel()
         {
             Name = "SetModel";
-            PositiveResponseTemplate.Add("The selected year is {slot:Model} ");
+            PositiveResponseTemplate.Add("The selected model is {slot:Model} ");
 
             NegativeResponseTemplate.Add("There is no selected model");
         }

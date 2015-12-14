@@ -22,14 +22,14 @@ namespace AlexaService.Intent
             Response["yearLast"] = "years[-1:].year";
 
             //Encountered if the user starts app without declaring both make and model
-            ErrorSlotResponse["Make"] = "Who manufactures the car?";
-            ErrorSlotResponse["Model"] = "Which model are you interested in?";
-            ErrorSlotResponse["Year"] = "-";
+            ErrorSlotResponse["Make"] = "What's the make of the car?";
+            ErrorSlotResponse["Model"] = "What's the model of the car?";
+            ErrorSlotResponse["Year"] = "What's the year of the car?"; 
 
 
-            FollowingQuestiestionMissingSlot["Make"] = "pleace tell me ";
-            FollowingQuestiestionMissingSlot["Model"] = "pleace tell me ";
-            FollowingQuestiestionMissingSlot["Year"] = "pleace tell me ";
+            FollowingQuestiestionMissingSlot["Make"] = "Please tell me who manufactures the car.";
+            FollowingQuestiestionMissingSlot["Model"] = "Please tell me the model of the car.";
+            FollowingQuestiestionMissingSlot["Year"] = "Please tell me the year of the car.";
 
             EdmundsUrlTemplate = "https://api.edmunds.com/api/vehicle/v2/{slot:Make}/{slot:Model}?view=basic&fmt=json&api_key=67t7jtrnvz8wyzgfpwgcqa3y";
         }

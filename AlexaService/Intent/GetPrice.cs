@@ -24,9 +24,9 @@ namespace AlexaService.Intent
             ErrorSlotResponse["Model"] = "What's the model of the car?";
             ErrorSlotResponse["Year"] = "What's the year of the car?";
 
-            FollowingQuestiestionMissingSlot["Make"] = "Please tell me ";
-            FollowingQuestiestionMissingSlot["Model"] = "Please tell me ";
-            FollowingQuestiestionMissingSlot["Year"] = "Please tell me ";
+            FollowingQuestiestionMissingSlot["Make"] = "Please tell me the make of the car.";
+            FollowingQuestiestionMissingSlot["Model"] = "Please tell me the model of the car.";
+            FollowingQuestiestionMissingSlot["Year"] = "Please tell me the year of the car.";
 
             EdmundsUrlTemplate = "https://api.edmunds.com/api/vehicle/v2/{slot:Make}/{slot:Model}/{slot:Year}/styles?view=full&fmt=json&api_key=67t7jtrnvz8wyzgfpwgcqa3y";
 
