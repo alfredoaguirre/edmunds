@@ -13,7 +13,7 @@
         },
         {
           "name": "Year",
-          "type": "AMAZON.NUMBER"
+          "type": "AMAZON.FOUR_DIGIT_NUMBER"
         }
       ]
     },
@@ -31,7 +31,7 @@
         },
         {
           "name": "Year",
-          "type": "AMAZON.NUMBER"
+          "type": "AMAZON.FOUR_DIGIT_NUMBER"
         }
       ]
     },
@@ -49,7 +49,7 @@
         },
         {
           "name": "Year",
-          "type": "AMAZON.NUMBER"
+          "type": "AMAZON.FOUR_DIGIT_NUMBER"
         }
       ]
     },
@@ -66,10 +66,36 @@
         },
         {
           "name": "Year",
-          "type": "AMAZON.NUMBER"
+          "type": "AMAZON.FOUR_DIGIT_NUMBER"
         }
       ]
+    },{
+        "intent": "SetMake",
+        "slots": [
+        {
+           "name": "Make",
+           "type": "makes"
+        }
+        
+      ]
+    },{  "intent": "SetModel",
+        "slots": [
+        {
+           "name": "Model",
+           "type": "models"
+        }
+        
+      ]
+    },{  "intent": "SetYear",
+        "slots": [
+        {
+           "name": "Year",
+           "type": "AMAZON.FOUR_DIGIT_NUMBER"
+        }
+        
+      ]
     },
+    
      {
         "intent": "Trouble"
     },
