@@ -237,7 +237,7 @@ namespace AlexaService.Test
             
             AlexaService.Cache.CacheManager.AddSlots(new Dictionary<string, string>()
                 {
-                    {"Model", "Toyota" },
+                    {"Make", "Toyota" },
                     {"Year", "2012" },
                 }
             );

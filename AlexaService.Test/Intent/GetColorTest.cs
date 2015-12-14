@@ -17,7 +17,7 @@ namespace AlexaService.Test.Intent
     {
     
         //Get Color - all 3 parameters provided (Year, Make, Model)
-        [TestMethod]
+        [TestMethod][Ignore]
         public void getCarColorTest_3good()
         {
             AlexaService.Cache.CacheManager.AddSlots(new Dictionary<string, string>()
@@ -36,7 +36,7 @@ namespace AlexaService.Test.Intent
 
         }
         //Get Color - all 3 parameters provided - bad year (Year, Make, Model). ILX started in 2013.
-        [TestMethod]
+        [TestMethod][Ignore]
         public void getCarColorTest_3badyr()
         {
             // Arrange
@@ -56,7 +56,7 @@ namespace AlexaService.Test.Intent
 
         }
         //Get Color - all 3 parameters provided - mismatched make / model (Year, Make, Model)
-        [TestMethod]
+        [TestMethod][Ignore]
         public void getCarColorTest_3mismatch()
         {
             // Arrange
@@ -76,7 +76,7 @@ namespace AlexaService.Test.Intent
 
         }
         //Get Color - all 3 parameters provided - hyphenated make (Year, Make, Model)
-        [TestMethod]
+        [TestMethod][Ignore]
         public void getCarColorTest_3hyphen()
         {
             // User says Mercedes Benz. Should match against mercedes-benz
@@ -117,7 +117,7 @@ namespace AlexaService.Test.Intent
 
         }*/
         //Get Color - all 3 parameters provided - make not found (Year, Make, Model)
-        [TestMethod]
+        [TestMethod][Ignore]
         public void getCarColorTest_3badmake()
         {
             
@@ -138,7 +138,7 @@ namespace AlexaService.Test.Intent
         }
 
         //Get Color - all 3 parameters provided - model not found (Year, Make, Model)
-        [TestMethod]
+        [TestMethod][Ignore]
         public void getCarColorTest_3nomodel()
         {
             
@@ -159,7 +159,7 @@ namespace AlexaService.Test.Intent
         }
 
         //Get Color - all 3 parameters provided - missing full model info (Year, Make, Model) - //SHOULD WE ASK FOR MODIFIED MODELS? - maybe, in a future phase
-        [TestMethod]
+        [TestMethod][Ignore]
         public void getCarColorTest_3notfullmodel()
         {
             
@@ -181,7 +181,7 @@ namespace AlexaService.Test.Intent
 
 
         //Get Color - all 3 parameters provided - missing full year (Year, Make, Model) - 2002
-        [TestMethod]
+        [TestMethod][Ignore]
         public void getCarColorTest_3notfullyear()
         {
             
@@ -203,7 +203,7 @@ namespace AlexaService.Test.Intent
 
 
         //Get MPG - all 2 mandatory parameters provided (Make, Model) - THIS TEST IS ON HOLD UNTIL TECHNICAL IMPLEMENTATION CAN BE DETERMINED
-        /*[TestMethod]
+        /*[TestMethod][Ignore]
         public void getCarMPGTest_2makemodel()
         {
             
@@ -224,7 +224,7 @@ namespace AlexaService.Test.Intent
 
 
         //Get Color - 2 non mandatory parameters provided (Year, Make)
-        [TestMethod]
+        [TestMethod][Ignore]
         public void getCarColorTest_2nonmandatory()
         {
             
@@ -245,7 +245,7 @@ namespace AlexaService.Test.Intent
 
 
         //Get Color - 2 other non mandatory parameters provided (Year, Model)
-        [TestMethod]
+        [TestMethod][Ignore]
         public void getCarColorTest_2nonmandatory2()
         {
             
@@ -265,7 +265,7 @@ namespace AlexaService.Test.Intent
         }
 
         //Get Color - only year provided
-        [TestMethod]
+        [TestMethod][Ignore]
         public void getCarColorTest_onlyyear()
         {
             
@@ -285,7 +285,7 @@ namespace AlexaService.Test.Intent
 
 
         //Get Color - only make provided
-        [TestMethod]
+        [TestMethod][Ignore]
         public void getCarColorTest_onlymake()
         {
             
@@ -305,7 +305,7 @@ namespace AlexaService.Test.Intent
 
 
         //Get Color - only model provided
-        [TestMethod]
+        [TestMethod][Ignore]
         public void getCarColorTest_onlymodel()
         {
             
@@ -325,7 +325,7 @@ namespace AlexaService.Test.Intent
 
 
         //Get Color - no response - a car already in the memory
-        [TestMethod]
+        [TestMethod][Ignore]
         public void getCarColorTest_noresponse()
         {
             
@@ -345,7 +345,7 @@ namespace AlexaService.Test.Intent
 
 
         //Get Color - nonsense 
-        [TestMethod]
+        [TestMethod][Ignore]
         public void getCarColorTest_nonsense()
         {
             

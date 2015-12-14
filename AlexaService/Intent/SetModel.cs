@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,9 +11,9 @@ namespace AlexaService.Intent
         public SetModel()
         {
             Name = "SetModel";
-            PositiveResponseTemplate.Add("the seleced year is {slot:Year} ");
+            PositiveResponseTemplate.Add("The selected year is {slot:Model} ");
 
-            NegativeResponseTemplate.Add("there is no selected year");
+            NegativeResponseTemplate.Add("There is no selected model");
         }
     }
 }
