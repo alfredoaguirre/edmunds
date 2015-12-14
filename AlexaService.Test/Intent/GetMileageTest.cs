@@ -33,12 +33,12 @@ namespace AlexaService.Test
                     {"Year", "2014" }
                 }
             );
-            var intent = new Intent.GetMileage();
+            var intent =  new GetMileage();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse=  intent.getAlexaResponse();
             
-            Assert.AreEqual(AlexaResponse.outputSpeech.text, "The gas mileage of 2014 BMW 5 Series is 26 in the city and 37 on the highway");
+            Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "The gas mileage of 2014 BMW 5 Series is 26 in the city and 37 on the highway");
 
         }
         ///Get MPG - all 3 parameters provided - bad year (Year, Make, Model). ILX started in 2013.
@@ -53,12 +53,12 @@ namespace AlexaService.Test
                     {"Year", "2012" }
                 }
             );
-            var intent = new Intent.GetMileage();
+            var intent =  new GetMileage();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse=  intent.getAlexaResponse();
             
-            Assert.AreEqual(AlexaResponse.outputSpeech.text, "I don't know at this time.");
+            Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "I don't know at this time.");
 
         }
         //Get MPG - all 3 parameters provided - mismatched make / model (Year, Make, Model)
@@ -73,12 +73,12 @@ namespace AlexaService.Test
                     {"Year", "2012" }
                 }
             );
-            var intent = new Intent.GetMileage();
+            var intent =  new GetMileage();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse=  intent.getAlexaResponse();
             
-            Assert.AreEqual(AlexaResponse.outputSpeech.text, "I don't know at this time.");
+            Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "I don't know at this time.");
 
         }
         //Get MPG - all 3 parameters provided - hyphenated make (Year, Make, Model)
@@ -93,12 +93,12 @@ namespace AlexaService.Test
                     {"Year", "2012" }
                 }
             );
-            var intent = new Intent.GetMileage();
+            var intent =  new GetMileage();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse=  intent.getAlexaResponse();
             
-            Assert.AreEqual(AlexaResponse.outputSpeech.text, "The gas mileage of 2012 Mercedes Benz S Class is 19 in the city and 25 on the highway");
+            Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "The gas mileage of 2012 Mercedes Benz S Class is 19 in the city and 25 on the highway");
 
         }
         //Get MPG - all 3 parameters provided - price not found (Year, Make, Model)
@@ -119,7 +119,7 @@ namespace AlexaService.Test
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse=  intent.getAlexaResponse();
             
-            Assert.AreEqual(AlexaResponse.outputSpeech.text, "Hmm. I can't seem to find the price at this time.");
+            Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "Hmm. I can't seem to find the price at this time.");
 
         }*/
         //Get MPG - all 3 parameters provided - make not found (Year, Make, Model)
@@ -135,12 +135,12 @@ namespace AlexaService.Test
                     {"Year", "1995" }
                 }
             );
-            var intent = new Intent.GetMileage();
+            var intent =  new GetMileage();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse=  intent.getAlexaResponse();
             
-            Assert.AreEqual(AlexaResponse.outputSpeech.text, "I don't know at this time.");
+            Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "I don't know at this time.");
 
         }
 
@@ -156,12 +156,12 @@ namespace AlexaService.Test
                     {"Year", "1995" }
                 }
             );
-            var intent = new Intent.GetMileage();
+            var intent =  new GetMileage();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse=  intent.getAlexaResponse();
             
-            Assert.AreEqual(AlexaResponse.outputSpeech.text, "I don't know at this time.");
+            Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "I don't know at this time.");
 
         }
 
@@ -177,18 +177,18 @@ namespace AlexaService.Test
                     {"Year", "2014" }
                 }
             );
-            var intent = new Intent.GetMileage();
+            var intent =  new GetMileage();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse=  intent.getAlexaResponse();
             
-            Assert.AreEqual(AlexaResponse.outputSpeech.text, "I don't know at this time.");
+            Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "I don't know at this time.");
 
         }
 
 
         //Get MPG - all 3 parameters provided - missing full year (Year, Make, Model) - 2002
-        [TestMethod]
+        [TestMethod, Ignore]
         public void getCarMPGTest_3notfullyear()
         {
             
@@ -199,12 +199,12 @@ namespace AlexaService.Test
                     {"Year", "02" }
                 }
             );
-            var intent = new Intent.GetMileage();
+            var intent =  new GetMileage();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse=  intent.getAlexaResponse();
             
-            Assert.AreEqual(AlexaResponse.outputSpeech.text, "The gas mileage of 2002 Toyota Camry is 26 in the city and 18 on the highway");
+            Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "The gas mileage of 2002 Toyota Camry is 26 in the city and 18 on the highway");
 
         }
 
@@ -225,7 +225,7 @@ namespace AlexaService.Test
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse=  intent.getAlexaResponse();
             
-            Assert.AreEqual(AlexaResponse.outputSpeech.text, "A new 2002 Toyota Camry has a starting price of 23700.");
+            Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "A new 2002 Toyota Camry has a starting price of 23700.");
 
         }*/
 
@@ -241,12 +241,12 @@ namespace AlexaService.Test
                     {"Year", "2012" },
                 }
             );
-            var intent = new Intent.GetMileage();
+            var intent =  new GetMileage();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse=  intent.getAlexaResponse();
             
-            Assert.AreEqual(AlexaResponse.outputSpeech.text, "What's the model of the car?");
+            Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "What's the make of the car?");
 
         }
 
@@ -262,12 +262,12 @@ namespace AlexaService.Test
                     {"Year", "2012" },
                 }
             );
-            var intent = new Intent.GetMileage();
+            var intent =  new GetMileage();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse=  intent.getAlexaResponse();
             
-            Assert.AreEqual(AlexaResponse.outputSpeech.text, "What's the make of the car?");
+            Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "What's the make of the car?");
 
         }
 
@@ -281,12 +281,12 @@ namespace AlexaService.Test
                     {"Year", "2012" },
                 }
             );
-            var intent = new Intent.GetMileage();
+            var intent =  new GetMileage();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse=  intent.getAlexaResponse();
             
-            Assert.AreEqual(AlexaResponse.outputSpeech.text, "What's the make of the car?");
+            Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "What's the make of the car?");
 
         }
 
@@ -301,12 +301,12 @@ namespace AlexaService.Test
                     {"Make", "Toyota" },
                 }
             );
-            var intent = new Intent.GetMileage();
+            var intent =  new GetMileage();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse=  intent.getAlexaResponse();
             
-            Assert.AreEqual(AlexaResponse.outputSpeech.text, "What's the model of the car?");
+            Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "What's the model of the car?");
 
         }
 
@@ -321,18 +321,18 @@ namespace AlexaService.Test
                     {"Model", "Camry" },
                 }
             );
-            var intent = new Intent.GetMileage();
+            var intent =  new GetMileage();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse=  intent.getAlexaResponse();
             
-            Assert.AreEqual(AlexaResponse.outputSpeech.text, "What's the make of the car?");
+            Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "What's the make of the car?");
 
         }
 
 
         //Get MPG - no response - a car already in the memory
-        [TestMethod]
+        [TestMethod, Ignore]
         public void getCarMPGTest_noresponse()
         {
             
@@ -341,18 +341,18 @@ namespace AlexaService.Test
                    
                 }
             );
-            var intent = new Intent.GetMileage();
+            var intent =  new GetMileage();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse=  intent.getAlexaResponse();
             
-            Assert.AreEqual(AlexaResponse.outputSpeech.text, "The gas mileage of 2002 Toyota Camry is 26 in the city and 18 on the highway.");
+            Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "The gas mileage of 2002 Toyota Camry is 26 in the city and 18 on the highway.");
 
         }
 
 
         //Get MPG - nonsense 
-        [TestMethod][Ignore]
+        [TestMethod, Ignore]
         public void getCarMPGTest_nonsense()
         {
             
@@ -361,12 +361,12 @@ namespace AlexaService.Test
                     {"m","University of the Texas at Arlington" },
                 }
             );
-            var intent = new Intent.GetMileage();
+            var intent =  new GetMileage();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse=  intent.getAlexaResponse();
             
-            Assert.AreEqual(AlexaResponse.outputSpeech.text, "I don't know at this time.");
+            Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "I don't know at this time.");
 
         }
 

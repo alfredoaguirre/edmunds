@@ -39,8 +39,13 @@
   </PropertyGroup>
   <ItemGroup>
     <Content Include="AlexaSkillDesign\AlexaModel.json" />
+    <Content Include="AlexaSkillDesign\Ask_Car_Details-2.pdf" />
+    <Content Include="AlexaSkillDesign\Ask_Car_Details-2.rtf" />
+    <Content Include="AlexaSkillDesign\IntentSchema.json" />
+    <Content Include="AlexaSkillDesign\SampleUtterance.txt" />
     <Content Include="AlexaSkillDesign\Schema.json" />
     <Content Include="AlexaSkillDesign\Utterance.txt" />
+    <Content Include="event.json" />
     <Content Include="JSON.json" />
     <Content Include="package.json" />
     <Content Include="README.md" />

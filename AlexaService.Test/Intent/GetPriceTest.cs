@@ -10,7 +10,7 @@ using System.Security.Cryptography.X509Certificates;
 using Newtonsoft.Json;
 using AlexaService.Intent;
 
-namespace AlexaService.Test
+namespace AlexaService.Test.Intent
 {
     [TestClass]
     public class GetPriceTest
@@ -39,7 +39,7 @@ namespace AlexaService.Test
              var edmundsResponse = intent.GetEdmundsResponse();
              var AlexaResponse=  intent.getAlexaResponse();
 
-             Assert.AreEqual(AlexaResponse.outputSpeech.text, "What's the make of the car?");
+             Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "What's the make of the car?");
 
          }
          */
@@ -61,7 +61,7 @@ namespace AlexaService.Test
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse=  intent.getAlexaResponse();
             
-            Assert.AreEqual(AlexaResponse.outputSpeech.text, "A new 2014 BMW 5 Series has a starting price of 58900");
+            Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "A new 2014 BMW 5 Series has a starting price of 58900");
 
         }
         //Get Price - all 3 parameters provided - bad year (Year, Make, Model). ILX started in 2013.
@@ -80,7 +80,7 @@ namespace AlexaService.Test
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse=  intent.getAlexaResponse();
             
-            Assert.AreEqual(AlexaResponse.outputSpeech.text, "Hmm. I can't seem to find the price at this time.");
+            Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "Hmm. I can't seem to find the price at this time.");
 
         }
         //Get Price - all 3 parameters provided - mismatched make / model (Year, Make, Model)
@@ -100,7 +100,7 @@ namespace AlexaService.Test
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse=  intent.getAlexaResponse();
             
-            Assert.AreEqual(AlexaResponse.outputSpeech.text, "Hmm. I can't seem to find the price at this time.");
+            Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "Hmm. I can't seem to find the price at this time.");
 
         }
         //Get Price - all 3 parameters provided - hyphenated make (Year, Make, Model)
@@ -122,7 +122,11 @@ namespace AlexaService.Test
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse=  intent.getAlexaResponse();
             
+<<<<<<< HEAD
             Assert.AreEqual(AlexaResponse.outputSpeech.text, "A new 2012 Mercedes-Benz S Class has a starting price of 91850.");
+=======
+            Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "The 2012 Mercedes-Benz S Class has a starting price of 91850.");
+>>>>>>> 3e40171450bf1f7b8906490b14a8dc62b42777f1
 
         }
         //Get Price - all 3 parameters provided - price not found (Year, Make, Model)
@@ -142,7 +146,7 @@ namespace AlexaService.Test
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse=  intent.getAlexaResponse();
             
-            Assert.AreEqual(AlexaResponse.outputSpeech.text, "Hmm. I can't seem to find the price at this time.");
+            Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "Hmm. I can't seem to find the price at this time.");
 
         }
         //Get Price - all 3 parameters provided - make not found (Year, Make, Model)
@@ -162,7 +166,7 @@ namespace AlexaService.Test
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse=  intent.getAlexaResponse();
             
-            Assert.AreEqual(AlexaResponse.outputSpeech.text, "Hmm. I can't seem to find the price at this time.");
+            Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "Hmm. I can't seem to find the price at this time.");
 
         }
 
@@ -183,7 +187,7 @@ namespace AlexaService.Test
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse=  intent.getAlexaResponse();
             
-            Assert.AreEqual(AlexaResponse.outputSpeech.text, "Hmm. I can't seem to find the price at this time.");
+            Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "Hmm. I can't seem to find the price at this time.");
 
         }
 
@@ -204,13 +208,13 @@ namespace AlexaService.Test
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse=  intent.getAlexaResponse();
             
-            Assert.AreEqual(AlexaResponse.outputSpeech.text, "Hmm. I can't seem to find the price at this time.");
+            Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "Hmm. I can't seem to find the price at this time.");
 
         }
 
 
         //Get Price - all 3 parameters provided - missing full year (Year, Make, Model) - 2002
-        [TestMethod]
+        [TestMethod , Ignore]
         public void getCarPriceTest_3notfullyear()
         {
             
@@ -226,7 +230,7 @@ namespace AlexaService.Test
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse=  intent.getAlexaResponse();
             
-            Assert.AreEqual(AlexaResponse.outputSpeech.text, "The 2002 Toyota Camry has a starting price of 23700.");
+            Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "The 2002 Toyota Camry has a starting price of 23700.");
 
         }
 
@@ -246,7 +250,7 @@ namespace AlexaService.Test
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse=  intent.getAlexaResponse();
             
-            Assert.AreEqual(AlexaResponse.outputSpeech.text, "A new 2002 Toyota Camry has a starting price of 23700.");
+            Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "A new 2002 Toyota Camry has a starting price of 23700.");
 
         }*/
 
@@ -267,7 +271,7 @@ namespace AlexaService.Test
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse=  intent.getAlexaResponse();
             
-            Assert.AreEqual(AlexaResponse.outputSpeech.text, "What's the model of the car?");
+            Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "What's the model of the car?");
 
         }
 
@@ -288,7 +292,7 @@ namespace AlexaService.Test
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse=  intent.getAlexaResponse();
             
-            Assert.AreEqual(AlexaResponse.outputSpeech.text, "What's the make of the car?");
+            Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "What's the make of the car?");
 
         }
 
@@ -307,7 +311,7 @@ namespace AlexaService.Test
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse=  intent.getAlexaResponse();
             
-            Assert.AreEqual(AlexaResponse.outputSpeech.text, "What's the make of the car?");
+            Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "What's the make of the car?");
 
         }
 
@@ -327,7 +331,7 @@ namespace AlexaService.Test
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse=  intent.getAlexaResponse();
             
-            Assert.AreEqual(AlexaResponse.outputSpeech.text, "What's the model of the car?");
+            Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "What's the model of the car?");
 
         }
 
@@ -347,13 +351,13 @@ namespace AlexaService.Test
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse=  intent.getAlexaResponse();
             
-            Assert.AreEqual(AlexaResponse.outputSpeech.text, "What's the make of the car?");
+            Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "What's the make of the car?");
 
         }
 
 
         //Get Price - no response - a car already in the memory
-        [TestMethod]
+        [TestMethod, Ignore]
         public void getCarPriceTest_noresponse()
         {
             
@@ -367,7 +371,7 @@ namespace AlexaService.Test
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse=  intent.getAlexaResponse();
             
-            Assert.AreEqual(AlexaResponse.outputSpeech.text, "A new 2002 Toyota Camry has a starting price of 23700.");
+            Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "A new 2002 Toyota Camry has a starting price of 23700.");
 
         }
 
@@ -387,7 +391,7 @@ namespace AlexaService.Test
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse=  intent.getAlexaResponse();
             
-            Assert.AreEqual(AlexaResponse.outputSpeech.text, "Hmm. I can't seem to find the price at this time.");
+            Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "Hmm. I can't seem to find the price at this time.");
 
         }
 

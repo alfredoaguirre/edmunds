@@ -11,7 +11,7 @@ namespace AlexaService.Json
         public Request Request { get; set; }
         public Session Session { get; set; }
         public string Version { get; set; }
-
+      
     }
 
     public class Session
@@ -38,7 +38,7 @@ namespace AlexaService.Json
             get
             {
                 return Slots.Children()
-                    .Select(x => (JProperty) x)
+                    .Select(x => (JProperty)x)
                     .ToDictionary(x => x.Name, x => x.Value["value"]?.ToString());
             }
         }

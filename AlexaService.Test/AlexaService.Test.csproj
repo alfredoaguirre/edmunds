@@ -88,7 +88,9 @@
     </When>
     <Otherwise>
       <ItemGroup>
-        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework" />
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework">
+          <Private>False</Private>
+        </Reference>
       </ItemGroup>
     </Otherwise>
   </Choose>
@@ -100,6 +102,7 @@
     <Compile Include="Intent\GetMileageTest.cs" />
     <Compile Include="Intent\GetPriceTest.cs" />
     <Compile Include="Intent\SelectCarTest.cs" />
+    <Compile Include="Intent\SelectYearTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

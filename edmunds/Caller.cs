@@ -29,23 +29,31 @@ namespace EdmundsClient
             return o2.ToString();
 
         }
-        
+
         public static string GetRequest(string url)
         {
             if (responses.ContainsKey(url))
             {
                 return responses[url];
-               
+
             }
             WebRequest webRequest = WebRequest.Create(url);
-            Stream responseStream = webRequest.GetResponse().GetResponseStream();
-            string response;
-            using (StreamReader stream = new StreamReader(responseStream))
+            try
             {
-                response = stream.ReadToEnd();
-                responses[url]=response;
+                Stream responseStream = webRequest.GetResponse().GetResponseStream();
+                string response;
+                using (StreamReader stream = new StreamReader(responseStream))
+                {
+                    response = stream.ReadToEnd();
+                    responses[url] = response;
+                }
+                return response;
             }
-            return response;
+            catch
+            {
+                return null;
+            }
+
         }
     }
 }

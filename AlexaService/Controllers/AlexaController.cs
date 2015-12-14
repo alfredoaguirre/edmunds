@@ -22,7 +22,7 @@ namespace AlexaService.Controllers
 
         [Route("Alexa")]
         [HttpPost]
-        public SpeechletResponse Post()
+        public SpeechletResponseEnvelope Post()
         {
             var requestBody = JsonConvert.DeserializeObject<SpeechletRequestEnvelope>(Request.Content.ReadAsStringAsync().Result);
             var intentName = requestBody?.Request?.Intent?.Name;
@@ -33,7 +33,9 @@ namespace AlexaService.Controllers
             }
             CacheManager.AddSlots(requestBody.Request.Intent.GetSlots);
             IntentBase intent = IntentManager.GetIntent(intentName);
-            return intent.getAlexaResponse();
+            var alexaResponse = intent.getAlexaResponse();
+            CacheManager.Intent.Push(intent);
+            return alexaResponse;
         }
 
         [Route("alexa/sample-session")]
