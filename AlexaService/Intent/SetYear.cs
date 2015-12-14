@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,10 +11,10 @@ namespace AlexaService.Intent
         public SetYear()
         {
             Name = "SetYear";
-            PositiveResponseTemplate.Add("the seleced year is {slot:Year} ");
+            PositiveResponseTemplate.Add("The selected year is {slot:Year} ");
 
             //Encountered in the URL fails or car combo is unknown. Not prompting the user for further information
-            NegativeResponseTemplate.Add("there is no selected year");
+            NegativeResponseTemplate.Add("There is no selected year");
 
         }
     }
