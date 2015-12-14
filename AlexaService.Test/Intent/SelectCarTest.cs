@@ -300,7 +300,7 @@ namespace AlexaService.Test
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse = intent.getAlexaResponse();
 
-            Assert.AreEqual(AlexaResponse.outputSpeech.text, "Which model are you interested in?");
+            Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "Which model are you interested in?");
 
         }
 
@@ -335,7 +335,7 @@ namespace AlexaService.Test
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse = intent.getAlexaResponse();
 
-            Assert.AreEqual(AlexaResponse.outputSpeech.text, "The Camry manufactured by Toyota was first made in 1990. The last year the Camry was made was in 2016.");
+            Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "The Camry manufactured by Toyota was first made in 1990. The last year the Camry was made was in 2016.");
 
         }
 
