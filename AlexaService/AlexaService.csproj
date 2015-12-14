@@ -94,6 +94,7 @@
     <Compile Include="Intent\GetMileage.cs" />
     <Compile Include="Intent\IntentBase.cs" />
     <Compile Include="Intent\IntentManager.cs" />
+    <Compile Include="Intent\LaunchRequest.cs" />
     <Compile Include="Intent\SetModel.cs" />
     <Compile Include="Intent\SelectCar.cs" />
     <Compile Include="Intent\SetMake.cs" />

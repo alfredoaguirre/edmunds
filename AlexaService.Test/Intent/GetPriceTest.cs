@@ -56,7 +56,7 @@ namespace AlexaService.Test.Intent
                     {"Year", "2014" }
                 }
             );
-            var intent = new Intent.GetPrice();
+            var intent = new GetPrice();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse=  intent.getAlexaResponse();
@@ -75,7 +75,7 @@ namespace AlexaService.Test.Intent
                     {"Year", "2012" }
                 }
             );
-            var intent = new Intent.GetPrice();
+            var intent = new GetPrice();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse=  intent.getAlexaResponse();
@@ -95,7 +95,7 @@ namespace AlexaService.Test.Intent
                     {"Year", "2012" }
                 }
             );
-            var intent = new Intent.GetPrice();
+            var intent = new GetPrice();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse=  intent.getAlexaResponse();
@@ -117,16 +117,12 @@ namespace AlexaService.Test.Intent
                     {"Year", "2012" }
                 }
             );
-            var intent = new Intent.GetPrice();
+            var intent = new GetPrice();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse=  intent.getAlexaResponse();
             
-<<<<<<< HEAD
-            Assert.AreEqual(AlexaResponse.outputSpeech.text, "A new 2012 Mercedes-Benz S Class has a starting price of 91850.");
-=======
             Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "The 2012 Mercedes-Benz S Class has a starting price of 91850.");
->>>>>>> 3e40171450bf1f7b8906490b14a8dc62b42777f1
 
         }
         //Get Price - all 3 parameters provided - price not found (Year, Make, Model)
@@ -141,7 +137,7 @@ namespace AlexaService.Test.Intent
                     {"Year", "1995" }
                 }
             );
-            var intent = new Intent.GetPrice();
+            var intent = new GetPrice();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse=  intent.getAlexaResponse();
@@ -161,7 +157,7 @@ namespace AlexaService.Test.Intent
                     {"Year", "1995" }
                 }
             );
-            var intent = new Intent.GetPrice();
+            var intent = new GetPrice();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse=  intent.getAlexaResponse();
@@ -182,7 +178,7 @@ namespace AlexaService.Test.Intent
                     {"Year", "1995" }
                 }
             );
-            var intent = new Intent.GetPrice();
+            var intent = new GetPrice();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse=  intent.getAlexaResponse();
@@ -203,7 +199,7 @@ namespace AlexaService.Test.Intent
                     {"Year", "2014" }
                 }
             );
-            var intent = new Intent.GetPrice();
+            var intent = new GetPrice();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse=  intent.getAlexaResponse();
@@ -225,7 +221,7 @@ namespace AlexaService.Test.Intent
                     {"Year", "02" }
                 }
             );
-            var intent = new Intent.GetPrice();
+            var intent = new GetPrice();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse=  intent.getAlexaResponse();
@@ -266,7 +262,7 @@ namespace AlexaService.Test.Intent
                     {"Year", "2012" },
                 }
             );
-            var intent = new Intent.GetPrice();
+            var intent = new GetPrice();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse=  intent.getAlexaResponse();
@@ -287,7 +283,7 @@ namespace AlexaService.Test.Intent
                     {"Year", "2012" },
                 }
             );
-            var intent = new Intent.GetPrice();
+            var intent = new GetPrice();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse=  intent.getAlexaResponse();
@@ -306,7 +302,7 @@ namespace AlexaService.Test.Intent
                     {"Year", "2012" },
                 }
             );
-            var intent = new Intent.GetPrice();
+            var intent = new GetPrice();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse=  intent.getAlexaResponse();
@@ -326,7 +322,7 @@ namespace AlexaService.Test.Intent
                     {"Make", "Toyota" },
                 }
             );
-            var intent = new Intent.GetPrice();
+            var intent = new GetPrice();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse=  intent.getAlexaResponse();
@@ -346,7 +342,7 @@ namespace AlexaService.Test.Intent
                     {"Model", "Camry" },
                 }
             );
-            var intent = new Intent.GetPrice();
+            var intent = new GetPrice();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse=  intent.getAlexaResponse();
@@ -366,7 +362,7 @@ namespace AlexaService.Test.Intent
                    
                 }
             );
-            var intent = new Intent.GetPrice();
+            var intent = new GetPrice();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse=  intent.getAlexaResponse();
@@ -386,7 +382,7 @@ namespace AlexaService.Test.Intent
                     {"jhgfjh","University of the Texas at Arlington" },
                 }
             );
-            var intent = new Intent.GetPrice();
+            var intent = new GetPrice();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse=  intent.getAlexaResponse();
