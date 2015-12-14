@@ -25,6 +25,11 @@ namespace AlexaService.Controllers
         public SpeechletResponseEnvelope Post()
         {
             var requestBody = JsonConvert.DeserializeObject<SpeechletRequestEnvelope>(Request.Content.ReadAsStringAsync().Result);
+            var type = requestBody?.Request?.Type;
+            if (type == "LaunchRequest")
+            {
+                return LaunchRequest.getAlexaResponse();
+            }
             var intentName = requestBody?.Request?.Intent?.Name;
 
             if (string.IsNullOrEmpty(intentName))

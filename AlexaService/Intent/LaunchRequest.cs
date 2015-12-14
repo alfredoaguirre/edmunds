@@ -13,7 +13,8 @@ namespace AlexaService.Intent
         {
             Name = "LaunchRequest";
         }
-        public SpeechletResponseEnvelope getAlexaResponse()
+
+        public new  static SpeechletResponseEnvelope getAlexaResponse()
         {
             return new SpeechletResponseEnvelope()
             {
