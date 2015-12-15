@@ -85,22 +85,20 @@ namespace AlexaService.Intent
 
         virtual public string GetEdmundsResponse()
         {
+            JObject EdmundsJson = null;
             if (string.IsNullOrWhiteSpace(EdmundsUrlTemplate))
             {
-                return GetNegativeResponseTemplate();
             }
-            var EdmundsResponse = GetEdmundsFullResponse();
-            if (!string.IsNullOrWhiteSpace(MissingSlot) )
+            else
+            {
+                var EdmundsResponse = GetEdmundsFullResponse();
+                EdmundsJson = JObject.Parse(EdmundsResponse);
+            }
+            if (!string.IsNullOrWhiteSpace(MissingSlot))
             {
                 return GetErrorMissingSlotResponse();
 
             }
-            if (string.IsNullOrWhiteSpace(EdmundsResponse))
-            {
-                return GetNegativeResponseTemplate();
-            }
-            JObject EdmundsJson = JObject.Parse(EdmundsResponse);
-
             var positiveResponseTemplate = GetPositiveResponseTemplate();
 
             List<string> arg = new List<string>();
@@ -111,6 +109,8 @@ namespace AlexaService.Intent
                     arg.Add(CacheManager.Slots[mache.Groups[3].Value]);
                 else if (mache.Groups[3].Value == "")
                 {
+                    if (EdmundsJson == null)
+                        return GetNegativeResponseTemplate();
                     var value = EdmundsJson.SelectToken(Response[mache.Groups[2].Value]);
                     if (value == null)
                         return GetNegativeResponseTemplate();
