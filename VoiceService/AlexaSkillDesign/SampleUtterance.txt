@@ -122,9 +122,11 @@ GetColors what colors are available
 GetColors what colors does it come in
 GetColors what colors are available
 SetMake the make is {Make}
+SetMake the maker is {Make}
 SetModel the model is {Model}
 SetYear the year is {Year}
 SetYear set year {Year}
 SetMake set make {Make}
+SetMake set maker {Make}
 SetModel set model {Model}
 

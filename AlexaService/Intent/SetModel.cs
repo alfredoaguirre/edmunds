@@ -14,6 +14,9 @@ namespace AlexaService.Intent
             PositiveResponseTemplate.Add("The selected model is {slot:Model} ");
 
             NegativeResponseTemplate.Add("There is no selected model");
+            
+            ErrorSlotResponse["Model"] = "What's the model of the car?";
+            FollowingQuestiestionMissingSlot["Model"] = "Please tell me the model of the car.";
         }
     }
 }
