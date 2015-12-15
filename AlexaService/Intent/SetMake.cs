@@ -14,6 +14,11 @@ namespace AlexaService.Intent
             PositiveResponseTemplate.Add("The selected make is {slot:Make} ");
 
             NegativeResponseTemplate.Add("There is no selected manufacturer");
+            
+            //Encountered if the user starts app without declaring both make and model
+            ErrorSlotResponse["Make"] = "What's the make of the car?";
+            
+            FollowingQuestiestionMissingSlot["Make"] = "Please tell me who manufactures the car.";
         }
     }
 }

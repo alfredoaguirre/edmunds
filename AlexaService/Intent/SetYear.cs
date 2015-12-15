@@ -16,6 +16,8 @@ namespace AlexaService.Intent
             //Encountered in the URL fails or car combo is unknown. Not prompting the user for further information
             NegativeResponseTemplate.Add("There is no selected year");
 
+            ErrorSlotResponse["Year"] = "What's the year of the car?"; 
+            FollowingQuestiestionMissingSlot["Year"] = "Please tell me the year of the car.";
         }
     }
 }
