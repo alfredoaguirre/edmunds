@@ -10,7 +10,7 @@ namespace AlexaService.Intent
     {
         public SetMake()
         {
-            Name = "SelectMake";
+            Name = "SetMake";
             PositiveResponseTemplate.Add("The selected make is {slot:Make} ");
 
             NegativeResponseTemplate.Add("There is no selected manufacturer");
