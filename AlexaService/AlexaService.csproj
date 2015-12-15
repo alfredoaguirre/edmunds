@@ -80,6 +80,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
+    <Compile Include="Json\UtillResponces.cs" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

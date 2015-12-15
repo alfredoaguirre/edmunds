@@ -106,7 +106,19 @@ namespace AlexaService.Intent
             foreach (Match mache in maches)
             {
                 if (mache.Groups[2].Value == "slot" && mache.Groups[3].Value != "")
-                    arg.Add(CacheManager.Slots[mache.Groups[3].Value]);
+
+                {
+                    var slotKey = mache.Groups[3].Value;
+                    if (CacheManager.Slots.Keys.Any(x => x == slotKey))
+                    {
+                        arg.Add(CacheManager.Slots[mache.Groups[3].Value]);
+                    }
+                    else
+                    {
+                        this.MissingSlot = slotKey;
+                        return GetErrorMissingSlotResponse();
+                    }
+                }
                 else if (mache.Groups[3].Value == "")
                 {
                     if (EdmundsJson == null)

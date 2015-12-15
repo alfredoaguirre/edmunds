@@ -38,6 +38,8 @@ namespace AlexaService.Controllers
             }
             CacheManager.AddSlots(requestBody.Request.Intent.GetSlots);
             IntentBase intent = IntentManager.GetIntent(intentName);
+            if (intent == null)
+            { return AlexaService.Json.UtillResponces.NoIntent(intentName); }
             var alexaResponse = intent.getAlexaResponse();
             CacheManager.Intent.Push(intent);
             return alexaResponse;
