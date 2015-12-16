@@ -1,31 +1,34 @@
 {
-	"session": {
-		"sessionId": "SessionId.499a77dd-4796-4f1a-91c6-4493ad55f1fd",
-		"application": {
-			"applicationId": "amzn1.echo-sdk-ams.app.8de72717-a87d-4503-93d8-6dc3bc5b7789"
-		},
-		"user": {
-			"userId": "amzn1.account.AGQMN5GPWT45VKPIUEH3SHSXM34Q"
-		},
-		"new": true
-	},
-	"request": {
-		"type": "IntentRequest",
-		"requestId": "EdwRequestId.b5db1382-97e7-41ca-ad36-856a650d5539",
-		"timestamp": 1449021634165,
-		"intent": {
-			"name": "GetMileage",
-			"slots": {
-				"Year": {
-					"name": "Year"
-				},
-				"Model": {
-					"name": "Model"
-				},
-				"Make": {
-					"name": "Make"
-				}
-			}
-		}
-	}
+  "session": {
+    "sessionId": "SessionId.09a02df0-5bb8-4dc6-8619-baa29fd025a2",
+    "application": {
+      "applicationId": "amzn1.echo-sdk-ams.app.55e6d330-19b4-40cf-8d09-ffa38ddf30f0"
+    },
+    "user": {
+      "userId": "amzn1.account.AF2BRTD6LQ2BGLRONFMW5K2VANCQ"
+    },
+    "new": false
+  },
+  "request": {
+    "type": "IntentRequest",
+    "requestId": "EdwRequestId.bb796f33-e82e-4fef-a6f3-0bc0690ad754",
+    "timestamp": 1450237754285,
+    "intent": {
+      "name": "GetMileage",
+      "slots": {
+        "Year": {
+          "name": "Year",
+          "value": "2015"
+        },
+        "Model": {
+          "name": "Model",
+          "value": "Camry"
+        },
+        "Make": {
+          "name": "Make",
+          "value": "Toyota"
+        }
+      }
+    }
+  }
 }
