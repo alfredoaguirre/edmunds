@@ -42,6 +42,7 @@ namespace AlexaService.Test
 
         }
         //Get Car - all 3 parameters provided - bad year (Year, Make, Model). ILX started in 2013.
+        // select car does not need year
         [TestMethod]
         public void getCarTest_3badyr()
         {
@@ -56,8 +57,8 @@ namespace AlexaService.Test
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse = intent.getAlexaResponse();
-
-            Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "I don't have that car in my records. Hm try again later.");
+       
+            Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "The ILX manufactured by Acura was first made in 2013. The last year the ILX was made was in 2016.");
 
         }
         //Get Car - all 3 parameters provided - mismatched make / model (Year, Make, Model)
@@ -185,7 +186,7 @@ namespace AlexaService.Test
 
 
         //Get Car - all 3 parameters provided - missing full year (Year, Make, Model) - 2002
-        [TestMethod]
+        [TestMethod, Ignore]
         public void getCarTest_3notfullyear()
         {
 
@@ -335,7 +336,7 @@ namespace AlexaService.Test
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse = intent.getAlexaResponse();
 
-            Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "The Camry manufactured by Toyota was first made in 1990. The last year the Camry was made was in 2016.");
+            Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "What's the make of the car?");
 
         }
 

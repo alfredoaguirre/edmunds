@@ -99,11 +99,14 @@ namespace AlexaService.Intent
             {
                 return GetErrorMissingSlotResponse();
 
-            }  if ( string.IsNullOrWhiteSpace( EdmundsResponse))
+            }  if ( string.IsNullOrWhiteSpace( EdmundsResponse) && !string.IsNullOrWhiteSpace(EdmundsUrlTemplate))
             {
                 return GetNegativeResponseTemplate();
             }
+            if (!string.IsNullOrWhiteSpace(EdmundsResponse))
+            {
                 EdmundsJson = JObject.Parse(EdmundsResponse);
+            }
             var positiveResponseTemplate = GetPositiveResponseTemplate();
 
             List<string> arg = new List<string>();

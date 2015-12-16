@@ -23,7 +23,7 @@ namespace AlexaService.Intent
 
             //Encountered if the user starts app without declaring both make and model
             ErrorSlotResponse["Make"] = "What's the make of the car?";
-            ErrorSlotResponse["Model"] = "What's the model of the car? {slot:Make} {slot:Model}";
+            ErrorSlotResponse["Model"] = "What's the model of the car?";
             ErrorSlotResponse["Year"] = "What's the year of the car?"; 
 
 
