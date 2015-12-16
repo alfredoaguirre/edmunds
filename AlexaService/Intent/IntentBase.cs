@@ -86,19 +86,24 @@ namespace AlexaService.Intent
         virtual public string GetEdmundsResponse()
         {
             JObject EdmundsJson = null;
+            string EdmundsResponse = "";
             if (string.IsNullOrWhiteSpace(EdmundsUrlTemplate))
             {
             }
             else
             {
-                var EdmundsResponse = GetEdmundsFullResponse();
-                EdmundsJson = JObject.Parse(EdmundsResponse);
+                 EdmundsResponse = GetEdmundsFullResponse();
+              
             }
             if (!string.IsNullOrWhiteSpace(MissingSlot))
             {
                 return GetErrorMissingSlotResponse();
 
+            }  if ( string.IsNullOrWhiteSpace( EdmundsResponse))
+            {
+                return GetNegativeResponseTemplate();
             }
+                EdmundsJson = JObject.Parse(EdmundsResponse);
             var positiveResponseTemplate = GetPositiveResponseTemplate();
 
             List<string> arg = new List<string>();
@@ -154,6 +159,8 @@ namespace AlexaService.Intent
 
         public SpeechletResponseEnvelope getAlexaResponse()
         {
+            // reste misising slot
+            MissingSlot = null;
             return new SpeechletResponseEnvelope()
             {
                 response = new SpeechletResponse()
