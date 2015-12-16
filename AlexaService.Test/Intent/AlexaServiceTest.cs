@@ -21,7 +21,7 @@ namespace AlexaService.Test.Intent
             IntentBase.UseResponseNumber = 0;
             Cache.CacheManager.Clean();
         }
-     
+
         [TestMethod]
         public void Getjsone()
         {
@@ -31,7 +31,7 @@ namespace AlexaService.Test.Intent
             controller.Configuration = new HttpConfiguration();
 
             // Act
-            StreamReader file = new StreamReader(@"payload\event.json");
+            StreamReader file = new StreamReader(@"payload\GetMileage.json");
             var clas = JsonConvert.DeserializeObject<Json.SpeechletRequestEnvelope>(file.ReadToEnd());
 
             // Assert
@@ -42,7 +42,7 @@ namespace AlexaService.Test.Intent
         public void GetSlotTest()
         {
             // Arrange
-            StreamReader file = new StreamReader(@"payload\event.json");
+            StreamReader file = new StreamReader(@"payload\GetMileage.json");
             var payload = JsonConvert.DeserializeObject<Json.SpeechletRequestEnvelope>(file.ReadToEnd());
 
             // Act
@@ -50,9 +50,10 @@ namespace AlexaService.Test.Intent
 
             var spected = new Dictionary<string, string>()
             {
-                {"model", "Integra"},
-                {"make", "Acura"},
-                {"year", "2001"}
+                {"Year", "2015"} ,
+                { "Model", "Camry"},
+                {"Make", "Toyota"}
+
             };
 
             // Assert
@@ -62,7 +63,7 @@ namespace AlexaService.Test.Intent
                 Assert.AreEqual(slotPair.x.Value, slotPair.y.Value);
             }
         }
-       
+
         [TestMethod]
         public void SelectCare2()
         {
@@ -102,7 +103,7 @@ namespace AlexaService.Test.Intent
             Assert.AreEqual("https://api.edmunds.com/api/vehicle/v2/Dodge/Dart/2013/styles?view=full&fmt=json&api_key=67t7jtrnvz8wyzgfpwgcqa3y", edmundsURL);
 
             var edmundsResponse = intent.GetEdmundsResponse();
-          var AlexaResponse=  intent.getAlexaResponse();
+            var AlexaResponse = intent.getAlexaResponse();
         }
     }
 }

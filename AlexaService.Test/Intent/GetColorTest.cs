@@ -342,29 +342,6 @@ namespace AlexaService.Test.Intent
             Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "The gas mileage of 2002 Toyota Camry is 26 in the city and 18 on the highway.");
 
         }
-
-
-        //Get Color - nonsense 
-        [TestMethod][Ignore]
-        public void getCarColorTest_nonsense()
-        {
-            
-            AlexaService.Cache.CacheManager.AddSlots(new Dictionary<string, string>()
-                {
-                    {"l","University of the Texas at Arlington" },
-                }
-            );
-            var intent = new GetColor();
-            var edmundsURL = intent.GenEdmundsURL();
-            var edmundsResponse = intent.GetEdmundsResponse();
-            var AlexaResponse=  intent.getAlexaResponse();
-            
-            Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "I don't know at this time.");
-
-        }
-
-
-        
-        
+    
     }
 }

@@ -103,7 +103,10 @@
     <Compile Include="Intent\GetPriceTest.cs" />
     <Compile Include="Intent\SelectCarTest.cs" />
     <Compile Include="Intent\SelectYearTest.cs" />
+    <Compile Include="Intent\SetMakeTest.cs" />
+    <Compile Include="Intent\SetModelTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Util\UnitTest1.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AlexaService\AlexaService.csproj">
@@ -114,7 +117,16 @@
   <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
-    <None Include="payload\GetPrice for Price for 2013 Toyota Camry.json">
+    <None Include="payload\GetMileage.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="payload\GetPrice.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="payload\SelectCar.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Util\AllMaker.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>

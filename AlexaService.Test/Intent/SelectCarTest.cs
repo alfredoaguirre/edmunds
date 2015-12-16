@@ -82,7 +82,7 @@ namespace AlexaService.Test
 
         }
         //Get Car - all 3 parameters provided - hyphenated make (Year, Make, Model)
-        [TestMethod]
+        [TestMethod, Ignore]
         public void getCarTest_3hyphen()
         {
             // User says Mercedes Benz. Should match against mercedes-benz
@@ -301,7 +301,7 @@ namespace AlexaService.Test
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse = intent.getAlexaResponse();
 
-            Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "Which model are you interested in?");
+            Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "What's the model of the car?");
 
         }
 

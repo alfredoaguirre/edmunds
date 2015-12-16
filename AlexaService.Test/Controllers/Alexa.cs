@@ -65,7 +65,7 @@ namespace OwinApplicationTesting
             var clas = JsonConvert.DeserializeObject<SpeechletRequestEnvelope>(file.ReadToEnd());
             var result = await GetPostRequest(clas);
 
-            Assert.AreEqual(result.response.outputSpeech.text, "A new 2015 Toyota Camry starts at 23840 dollars");
+            Assert.AreEqual(result.response.outputSpeech.text, "A new 2015 Toyota Camry starts at 31370 dollars");
         }
         
         

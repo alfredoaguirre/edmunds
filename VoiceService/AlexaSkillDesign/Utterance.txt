@@ -1,6 +1,0 @@
-﻿Sample Utterances
-GetMPGByModel of {make} {model} {year} 
-
-
-Utterances
-GetMPGByModel of Acura Integra two thousand and one
