@@ -12,12 +12,24 @@ namespace AlexaService.Test.Util
     public class UnitTest1
     {
         [TestMethod]
-        public void TestMethod1()
+        public void getAllMake()
         {
             StreamReader file = new StreamReader(@"Util\AllMaker.json");
           var allmeker =   JsonConvert.DeserializeObject<JObject>(file.ReadToEnd());
             var makerList = from m in allmeker["makes"]
                             select m["name"];
+            StringBuilder s = new StringBuilder();
+            foreach (var n in makerList)
+                s.AppendLine(n.ToString());
+        }
+        [TestMethod]
+        public void getAllModel()
+        {
+            StreamReader file = new StreamReader(@"Util\AllMaker.json");
+            var allmeker = JsonConvert.DeserializeObject<JObject>(file.ReadToEnd());
+            var makerList = from make in allmeker["makes"]
+                            from model in make["models"]
+                            select model["name"];
             StringBuilder s = new StringBuilder();
             foreach (var n in makerList)
                 s.AppendLine(n.ToString());
