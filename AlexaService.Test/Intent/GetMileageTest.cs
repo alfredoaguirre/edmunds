@@ -39,7 +39,7 @@ namespace AlexaService.Test
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse=  intent.getAlexaResponse();
             
-            Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "The gas mileage of 2014 BMW 5 Series is 26 in the city and 37 on the highway");
+            Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "The gas mileage of 2014 BMW 5 Series is 17 in the city and 25 on the highway");
 
         }
         ///Get MPG - all 3 parameters provided - bad year (Year, Make, Model). ILX started in 2013.
@@ -99,7 +99,7 @@ namespace AlexaService.Test
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse=  intent.getAlexaResponse();
             
-            Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "The gas mileage of 2012 Mercedes Benz S Class is 19 in the city and 25 on the highway");
+            Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "The gas mileage of 2012 Mercedes Benz S Class is 21 in the city and 31 on the highway");
 
         }
         //Get MPG - all 3 parameters provided - price not found (Year, Make, Model)

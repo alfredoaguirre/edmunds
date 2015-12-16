@@ -11,13 +11,13 @@ namespace AlexaService.Intent
         public SetYear()
         {
             Name = "SetYear";
-            PositiveResponseTemplate.Add("The selected year is {slot:Year} ");
+            PositiveResponseTemplate.Add("The selected year is {slot:Year}");
 
             //Encountered in the URL fails or car combo is unknown. Not prompting the user for further information
             NegativeResponseTemplate.Add("There is no selected year");
 
-            ErrorSlotResponse["Year"] = "What's the year of the car?"; 
-            FollowingQuestiestionMissingSlot["Year"] = "Please tell me the year of the car.";
+            ErrorSlotResponse["Year"] = "There is no selected year"; 
+            FollowingQuestiestionMissingSlot["Year"] = "";
         }
     }
 }

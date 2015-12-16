@@ -27,7 +27,7 @@ namespace AlexaService.Test.Intent
             var intent = new SetYear();
             var AlexaResponse=  intent.getAlexaResponse();
             
-            Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "The selected year is 2015 ");
+            Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "The selected year is 2015");
         }
         
         //Set Year - Missing parameter
@@ -41,7 +41,7 @@ namespace AlexaService.Test.Intent
             var intent = new SetYear();
             var AlexaResponse=  intent.getAlexaResponse();
             
-            Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "What's the year of the car?");
+            Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "There is no selected year");
         }
 
     }
