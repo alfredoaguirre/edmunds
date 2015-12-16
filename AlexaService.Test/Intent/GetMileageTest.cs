@@ -247,7 +247,7 @@ namespace AlexaService.Test
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse=  intent.getAlexaResponse();
             
-            Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "What's the make of the car?");
+            Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "What's the model of the car?");
 
         }
 

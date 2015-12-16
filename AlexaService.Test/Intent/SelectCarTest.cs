@@ -38,7 +38,7 @@ namespace AlexaService.Test
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse = intent.getAlexaResponse();
 
-            Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "The 5 Series manufactured by BMW was first made in 2014. The last year the 5 Series was made was in 2014.");
+            Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "The 5 Series manufactured by BMW was first made in 1990. The last year the 5 Series was made was in 2016.");
 
         }
         //Get Car - all 3 parameters provided - bad year (Year, Make, Model). ILX started in 2013.
@@ -97,7 +97,7 @@ namespace AlexaService.Test
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse = intent.getAlexaResponse();
 
-            Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "The 5 Series manufactured by BMW was first made in 2014. The last year the 5 Series was made was in 2012.");
+            Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "The 5 Series manufactured by BMW was first made in 1994. The last year the 5 Series was made was in 2017.");
 
         }
         //Get Car - all 3 parameters provided - price not found (Year, Make, Model)
@@ -261,7 +261,7 @@ namespace AlexaService.Test
             var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse = intent.getAlexaResponse();
 
-            Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "Who manufactures the car?");
+            Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "What's the make of the car?");
 
         }
 

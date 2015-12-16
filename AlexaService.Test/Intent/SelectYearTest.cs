@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using AlexaService.Intent;
 using System.Collections.Generic;
@@ -14,21 +14,34 @@ namespace AlexaService.Test.Intent
             IntentBase.UseResponseNumber = 0;
             Cache.CacheManager.Clean();
         }
+
+        //Set Year - all 1 mandatory parameters provided
         [TestMethod]
-        public void TestMethod1()
+        public void setYearTest_1arg()
         {
             AlexaService.Cache.CacheManager.AddSlots(new Dictionary<string, string>()
                 {
-                    {"Make", "BMW" },
-                    {"Model", "5 Series" },
-                    {"Year", "2014" }
+                    {"Year", "2015" }
                 }
             );
-            var intent = new SelectCar();
-            var AlexaResponse = intent.getAlexaResponse();
-
-            Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "The 5 Series manufactured by BMW was first made in 2014. The last year the 5 Series was made was in 2014.");
-
+            var intent = new SetYear();
+            var AlexaResponse=  intent.getAlexaResponse();
+            
+            Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "The selected year is 2015 ");
+        }
+        
+        //Set Year - Missing parameter
+        [TestMethod]
+        public void setYearTest_0arg()
+        {
+            AlexaService.Cache.CacheManager.AddSlots(new Dictionary<string, string>()
+                {
+                }
+            );
+            var intent = new SetYear();
+            var AlexaResponse=  intent.getAlexaResponse();
+            
+            Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "What's the year of the car?");
         }
 
     }
