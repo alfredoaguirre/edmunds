@@ -251,7 +251,6 @@ Trax
 Uplander
 Venture
 Volt
-200
 300
 300M
 Aspen
@@ -405,7 +404,6 @@ Envoy
 Envoy XL
 Envoy XUV
 Jimmy
-R/V 3500 Series
 Rally Wagon
 S-15
 S-15 Jimmy
@@ -429,7 +427,6 @@ Sierra Classic 1500
 Sierra Classic 2500
 Sierra Classic 3500
 Sonoma
-Suburban
 Syclone
 Terrain
 Typhoon
@@ -438,10 +435,7 @@ Yukon
 Yukon Denali
 Yukon Hybrid
 Yukon XL
-Metro
-Prizm
 Storm
-Tracker
 H1
 H1 Alpha
 H2
@@ -513,7 +507,6 @@ I30
 I35
 J30
 JX
-M
 M30
 M35
 M37
@@ -651,7 +644,6 @@ SC 400
 SC 430
 Aviator
 Blackwood
-Continental
 LS
 MKC
 MKS
@@ -676,7 +668,6 @@ Cooper Countryman
 Cooper Coupe
 Cooper Paceman
 Cooper Roadster
-Coupe
 Ghibli
 GranSport
 GranTurismo
@@ -760,7 +751,6 @@ SLR McLaren
 SLS AMG
 SLS AMG GT
 SLS AMG GT Final Edition
-Sprinter
 Capri
 Cougar
 Grand Marquis
@@ -828,7 +818,6 @@ Rogue Select
 Sentra
 Stanza
 Titan
-Truck
 Van
 Versa
 Versa Note
@@ -854,14 +843,9 @@ Toronado
 Esperante
 Acclaim
 Breeze
-Colt
-Grand Voyager
 Horizon
 Laser
-Neon
-Prowler
 Sundance
-Voyager
 6000
 Aztek
 Bonneville
@@ -900,7 +884,6 @@ Panamera
 C/V Cargo Van
 C/V Tradesman
 CV Tradesman
-Dakota
 Promaster Cargo Van
 Promaster City
 Promaster Window Van
@@ -996,7 +979,6 @@ MR2 Spyder
 Matrix
 Mirai
 Paseo
-Pickup
 Previa
 Prius
 Prius Plug-in
@@ -1018,7 +1000,6 @@ Beetle
 Beetle Convertible
 CC
 Cabrio
-Cabriolet
 Corrado
 CrossBlue
 Eos
@@ -1055,7 +1036,6 @@ e-Golf
 960
 C30
 C70
-Coupe
 S40
 S60
 S70

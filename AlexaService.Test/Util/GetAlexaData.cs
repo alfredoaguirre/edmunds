@@ -27,9 +27,10 @@ namespace AlexaService.Test.Util
         {
             StreamReader file = new StreamReader(@"Util\AllMaker.json");
             var allmeker = JsonConvert.DeserializeObject<JObject>(file.ReadToEnd());
-            var makerList = from make in allmeker["makes"]
+            var makerList =( from make in allmeker["makes"]
                             from model in make["models"]
-                            select model["name"];
+                            select model["name"].ToString()).Distinct();
+
             StringBuilder s = new StringBuilder();
             foreach (var n in makerList)
                 s.AppendLine(n.ToString());
