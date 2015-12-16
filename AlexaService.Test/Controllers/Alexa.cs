@@ -1,4 +1,4 @@
-﻿using Microsoft.Owin.Testing;
+using Microsoft.Owin.Testing;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Owin;
 using System.Net.Http;
@@ -58,14 +58,41 @@ namespace OwinApplicationTesting
 
 
         [TestMethod]
-        public async Task AlexaPostTest()
+        public async Task AlexaPostTest1()
         {
             IntentBase.UseResponseNumber = 1;
-            StreamReader file = new StreamReader(@"payload\GetPrice for Price for 2013 Toyota Camry.json");
+            StreamReader file = new StreamReader(@"payload\GetPrice.json");
             var clas = JsonConvert.DeserializeObject<SpeechletRequestEnvelope>(file.ReadToEnd());
             var result = await GetPostRequest(clas);
 
             Assert.AreEqual(result.response.outputSpeech.text, "A new 2015 Toyota Camry starts at 23840 dollars");
         }
+        
+        
+        [TestMethod]
+        public async Task AlexaPostTest2()
+        {
+            IntentBase.UseResponseNumber = 1;
+            StreamReader file = new StreamReader(@"payload\SelectCar.json");
+            var clas = JsonConvert.DeserializeObject<SpeechletRequestEnvelope>(file.ReadToEnd());
+            var result = await GetPostRequest(clas);
+
+            Assert.AreEqual(result.response.outputSpeech.text, "The Camry manufactured by Toyota was first made in 1990. The last year the Camry was made was in 2016.");
+        }
+        
+        
+        [TestMethod]
+        public async Task AlexaPostTest3()
+        {
+            IntentBase.UseResponseNumber = 1;
+            StreamReader file = new StreamReader(@"payload\GetMileage.json");
+            var clas = JsonConvert.DeserializeObject<SpeechletRequestEnvelope>(file.ReadToEnd());
+            var result = await GetPostRequest(clas);
+
+            Assert.AreEqual(result.response.outputSpeech.text, "The city MPG of the 2015 Toyota Camry is 21 and the highway MPG is 31");
+        }
+        
+        
+        
     }
 }
