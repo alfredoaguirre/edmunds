@@ -9,7 +9,7 @@ using System.Text;
 namespace AlexaService.Test.Util
 {
     [TestClass]
-    public class UnitTest1
+    public class GetAlexaData
     {
         [TestMethod]
         public void getAllMake()

@@ -4,8 +4,7 @@
     "application": {
       "applicationId": "amzn1.echo-sdk-ams.app.55e6d330-19b4-40cf-8d09-ffa38ddf30f0"
     },
-    "attributes": {},
-    "user": {
+       "user": {
       "userId": "amzn1.account.AF2BRTD6LQ2BGLRONFMW5K2VANCQ"
     },
     "new": false

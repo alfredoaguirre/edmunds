@@ -34,8 +34,6 @@ namespace AlexaService.Test.Intent
                 }
             );
             var intent = new GetPrice();
-            //var edmundsURL = intent.GenEdmundsURL();
-            //var edmundsResponse = intent.GetEdmundsResponse();
             var AlexaResponse=  intent.getAlexaResponse();
             
             Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "What's the make of the car?");

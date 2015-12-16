@@ -39,10 +39,11 @@
   </PropertyGroup>
   <ItemGroup>
     <Content Include="AlexaSkillDesign\AlexaModel.json" />
-    <Content Include="AlexaSkillDesign\allMake.txt" />
+    <Content Include="AlexaSkillDesign\Make.txt" />
     <Content Include="AlexaSkillDesign\Ask_Car_Details-2.pdf" />
     <Content Include="AlexaSkillDesign\Ask_Car_Details-2.rtf" />
     <Content Include="AlexaSkillDesign\IntentSchema.json" />
+    <Content Include="AlexaSkillDesign\Model.txt" />
     <Content Include="AlexaSkillDesign\SampleUtterance.txt" />
     <Content Include="AlexaSkillDesign\Schema.json" />
     <Content Include="event.json" />
