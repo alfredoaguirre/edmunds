@@ -154,6 +154,8 @@ namespace AlexaService.Intent
 
         public SpeechletResponseEnvelope getAlexaResponse()
         {
+            // reste misising slot
+            MissingSlot = null;
             return new SpeechletResponseEnvelope()
             {
                 response = new SpeechletResponse()
