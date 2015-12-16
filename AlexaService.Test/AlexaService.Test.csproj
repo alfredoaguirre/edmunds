@@ -114,9 +114,6 @@
   <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
-    <Content Include="payload\event.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <None Include="payload\GetPrice for Price for 2013 Toyota Camry.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
