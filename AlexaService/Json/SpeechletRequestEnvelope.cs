@@ -37,6 +37,8 @@ namespace AlexaService.Json
         {
             get
             {
+                if (Slots == null)
+                    return new Dictionary<string, string>();
                 return Slots.Children()
                     .Select(x => (JProperty)x)
                     .ToDictionary(x => x.Name, x => x.Value["value"]?.ToString());
