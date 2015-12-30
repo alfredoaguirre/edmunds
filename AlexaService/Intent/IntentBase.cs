@@ -176,7 +176,7 @@ namespace AlexaService.Intent
                     {
                         outputSpeech = new OutputSpeech()
                         {
-                            text = getReprompt()
+                            text = ""// getReprompt()
                         }
                     },
                     shouldEndSession = false,

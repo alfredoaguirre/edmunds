@@ -46,7 +46,7 @@ namespace AlexaService.Test.Intent
             
             AlexaResponse = intent.getAlexaResponse();
             
-            Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "A new 2002 Toyota Camry has a starting price of 23700.");
+            Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "A new 2002 Toyota Camry has a starting price of 25405");
         }
         
     }
