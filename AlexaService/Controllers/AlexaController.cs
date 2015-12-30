@@ -36,7 +36,7 @@ namespace AlexaService.Controllers
                 return LaunchRequest.getAlexaResponse();
             }
             var intentName = requestBody?.Request?.Intent?.Name;
-
+            Trace.TraceInformation("intent Name" +intentName);
             if (string.IsNullOrEmpty(intentName))
             {
                 return null;
