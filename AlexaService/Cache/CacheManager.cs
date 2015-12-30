@@ -25,7 +25,7 @@ namespace AlexaService.Cache
         {
             foreach (var d in slots)
             {
-                Console.WriteLine("+" + d.Key + "+-  " + d.Value);
+                Trace.TraceInformation("+" + d.Key + "+-  " + d.Value);
             }
             slots.Where(x => !string.IsNullOrEmpty(x.Value)).ToList().ForEach(x => Slots[x.Key] = x.Value);
             foreach (var d in Slots)

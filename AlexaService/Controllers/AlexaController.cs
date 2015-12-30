@@ -8,6 +8,7 @@ using Newtonsoft.Json;
 using AlexaService.Intent;
 using AlexaService.Cache;
 using AlexaService.Json;
+using System.Diagnostics;
 
 namespace AlexaService.Controllers
 {
@@ -24,8 +25,12 @@ namespace AlexaService.Controllers
         [HttpPost]
         public SpeechletResponseEnvelope Post()
         {
-            var requestBody = JsonConvert.DeserializeObject<SpeechletRequestEnvelope>(Request.Content.ReadAsStringAsync().Result);
+            var r = Request.Content.ReadAsStringAsync().Result;
+            var requestBody = JsonConvert.DeserializeObject<SpeechletRequestEnvelope>(r);
+            Trace.TraceInformation(r);
+            Trace.TraceInformation("---------");
             var type = requestBody?.Request?.Type;
+            Trace.TraceInformation(type);
             if (type == "LaunchRequest")
             {
                 return LaunchRequest.getAlexaResponse();
