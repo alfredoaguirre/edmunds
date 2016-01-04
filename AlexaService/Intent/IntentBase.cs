@@ -11,18 +11,23 @@ namespace AlexaService.Intent
     public class IntentBase
     {
         public string Name { get; set; }
-
-        public string MissingSlot { get; set; }
         public static int? UseResponseNumber { get; set; }
-        public string EdmundsUrlTemplate { get; set; }
-        public Dictionary<string, string> FollowingQuestiestionMissingSlot { get; set; }
-        static Random random = new Random();
-        public List<string> PositiveResponseTemplate { get; private set; }
-        public List<string> NegativeResponseTemplate { get; private set; }
-        public Dictionary<string, string> ErrorSlotResponse { get; private set; }
-        public Dictionary<string, string> Response { get; private set; }
-        internal static string key = "67t7jtrnvz8wyzgfpwgcqa3y";
-        internal static string basePath = "https://api.edmunds.com/";
+
+        protected string MissingSlot { get; set; }
+
+        protected string EdmundsUrlTemplate { get; set; }
+
+        protected List<string> PositiveResponseTemplate { get; private set; }
+        protected List<string> PositiveCardsResponseTemplate { get; private set; }
+        protected List<string> NegativeResponseTemplate { get; private set; }
+        protected Dictionary<string, string> ErrorSlotResponse { get; private set; }
+        protected Dictionary<string, string> Response { get; private set; }
+        protected Dictionary<string, string> FollowingQuestiestionMissingSlot { get; set; }
+
+        private static string key = "67t7jtrnvz8wyzgfpwgcqa3y";
+        private static string basePath = "https://api.edmunds.com/";
+
+        private static Random random = new Random();
 
         public IntentBase()
         {
@@ -36,31 +41,8 @@ namespace AlexaService.Intent
         virtual public string GenEdmundsURL()
         {
             if (string.IsNullOrWhiteSpace(EdmundsUrlTemplate))
-            {
                 return null;
-            }
-            List<string> arg = new List<string>();
-            var maches = Regex.Matches(EdmundsUrlTemplate, @"(\{(\w*):(\w*)\})");
-            foreach (Match mache in maches)
-            {
-                if (mache.Groups[2].Value == "slot")
-                {
-                    if (CacheManager.Slots.Keys.Any(x => x == (mache.Groups[3].Value)))
-                        arg.Add(CacheManager.Slots[mache.Groups[3].Value]);
-                    else
-                    {
-                        MissingSlot = mache.Groups[3].Value;
-                        return null;
-                    }
-                }
-                else
-                    throw new Exception();
-            }
-            var r = new Regex(@"(\{(\w*:\w*)\})");
-            int count = 0;
-            var path = r.Replace(EdmundsUrlTemplate, x => "{" + count++ + "}");
-            var url = basePath + string.Format(path, arg.ToArray()) + "&api_key=" + key;
-            return url;
+            return basePath + FillTemplate(EdmundsUrlTemplate, null) + "&api_key=" + key;
         }
 
         virtual public string GetEdmundsFullResponse()
@@ -73,16 +55,19 @@ namespace AlexaService.Intent
 
         virtual public string GetPositiveResponseTemplate()
         {
-            if (UseResponseNumber != null)
-                return PositiveResponseTemplate[UseResponseNumber.Value];
-            return PositiveResponseTemplate[random.Next(0, PositiveResponseTemplate.Count)];
-        }
+            return GetResponse(PositiveResponseTemplate);
 
+        }
         public string GetNegativeResponseTemplate()
         {
+            return GetResponse(NegativeResponseTemplate);
+        }
+
+        private string GetResponse(List<string> responses)
+        {
             if (UseResponseNumber != null)
-                return NegativeResponseTemplate[UseResponseNumber.Value];
-            return NegativeResponseTemplate[random.Next(0, PositiveResponseTemplate.Count)];
+                return responses[UseResponseNumber.Value];
+            return responses[random.Next(0, responses.Count - 1)];
         }
 
         virtual public string GetEdmundsResponse()
@@ -94,19 +79,21 @@ namespace AlexaService.Intent
             if (!string.IsNullOrWhiteSpace(MissingSlot))
                 return GetErrorMissingSlotResponse();
 
-
             if (string.IsNullOrWhiteSpace(EdmundsResponse) && !string.IsNullOrWhiteSpace(EdmundsUrlTemplate))
-            {
                 return GetNegativeResponseTemplate();
-            }
-            if (!string.IsNullOrWhiteSpace(EdmundsResponse))
-            {
-                EdmundsJson = JObject.Parse(EdmundsResponse);
-            }
-            var positiveResponseTemplate = GetPositiveResponseTemplate();
 
+            if (!string.IsNullOrWhiteSpace(EdmundsResponse))
+                EdmundsJson = JObject.Parse(EdmundsResponse);
+
+            var positiveResponseTemplate = GetPositiveResponseTemplate();
+            return FillTemplate(positiveResponseTemplate, EdmundsJson);
+        }
+
+
+        protected string FillTemplate(string Temaplate, JObject json = null)
+        {
             var arg = new List<string>();
-            var maches = Regex.Matches(positiveResponseTemplate, @"(\{(\w*):?(\w*)\})");
+            var maches = Regex.Matches(Temaplate, @"(\{(\w*):?(\w*)\})");
             foreach (Match mache in maches)
             {
                 if (mache.Groups[2].Value == "slot" && mache.Groups[3].Value != "")
@@ -124,9 +111,9 @@ namespace AlexaService.Intent
                 }
                 else if (mache.Groups[3].Value == "")
                 {
-                    if (EdmundsJson == null)
+                    if (json == null)
                         return GetNegativeResponseTemplate();
-                    var value = EdmundsJson.SelectToken(Response[mache.Groups[2].Value]);
+                    var value = json.SelectToken(Response[mache.Groups[2].Value]);
                     if (value == null)
                         return GetNegativeResponseTemplate();
                     arg.Add(value.ToString());
@@ -136,7 +123,7 @@ namespace AlexaService.Intent
             }
             var r = new Regex(@"(\{(\w*:?\w*)\})");
             int count = 0;
-            var positiveResponse = r.Replace(positiveResponseTemplate, x => "{" + count++ + "}");
+            var positiveResponse = r.Replace(Temaplate, x => "{" + count++ + "}");
             return string.Format(positiveResponse, arg.ToArray());
         }
 
@@ -145,13 +132,16 @@ namespace AlexaService.Intent
             return ErrorSlotResponse[MissingSlot];
         }
 
-
         public string getReprompt()
         {
             if (!string.IsNullOrEmpty(MissingSlot))
                 return FollowingQuestiestionMissingSlot[MissingSlot];
             else
                 return "";
+        }
+        protected virtual Card getCard()
+        {
+            return new Card { content = "" };
         }
 
         public SpeechletResponseEnvelope getAlexaResponse()
@@ -174,7 +164,7 @@ namespace AlexaService.Intent
                         }
                     },
                     shouldEndSession = false,
-                    card = new Card()
+                    card = getCard()
                 },
                 version = "1.0",
             };

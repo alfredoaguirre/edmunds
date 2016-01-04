@@ -30,13 +30,13 @@ namespace AlexaService.Controllers
             Trace.TraceInformation(r);
             Trace.TraceInformation("---------");
             var type = requestBody?.Request?.Type;
-            Trace.TraceInformation(type);
+            Trace.TraceInformation("intent type" + type);
             if (type == "LaunchRequest")
             {
                 return LaunchRequest.getAlexaResponse();
             }
             var intentName = requestBody?.Request?.Intent?.Name;
-            Trace.TraceInformation("intent Name" +intentName);
+            Trace.TraceInformation("intent Name" + intentName);
             if (string.IsNullOrEmpty(intentName))
             {
                 return null;
