@@ -11,7 +11,7 @@ namespace AlexaService.Intent
     public class IntentBase
     {
         public string Name { get; set; }
-        public string BasePath { get; set; }
+
         public string MissingSlot { get; set; }
         public static int? UseResponseNumber { get; set; }
         public string EdmundsUrlTemplate { get; set; }
@@ -21,16 +21,18 @@ namespace AlexaService.Intent
         public List<string> NegativeResponseTemplate { get; private set; }
         public Dictionary<string, string> ErrorSlotResponse { get; private set; }
         public Dictionary<string, string> Response { get; private set; }
+        internal static string key = "67t7jtrnvz8wyzgfpwgcqa3y";
+        internal static string basePath = "https://api.edmunds.com/";
 
         public IntentBase()
         {
-            BasePath = "";
             PositiveResponseTemplate = new List<string>();
             Response = new Dictionary<string, string>();
             ErrorSlotResponse = new Dictionary<string, string>();
             NegativeResponseTemplate = new List<string>();
             FollowingQuestiestionMissingSlot = new Dictionary<string, string>();
         }
+
         virtual public string GenEdmundsURL()
         {
             if (string.IsNullOrWhiteSpace(EdmundsUrlTemplate))
@@ -56,8 +58,8 @@ namespace AlexaService.Intent
             }
             var r = new Regex(@"(\{(\w*:\w*)\})");
             int count = 0;
-            var url = r.Replace(EdmundsUrlTemplate, x => "{" + count++ + "}");
-            url = String.Format(url, arg.ToArray());
+            var path = r.Replace(EdmundsUrlTemplate, x => "{" + count++ + "}");
+            var url = basePath + string.Format(path, arg.ToArray()) + "&api_key=" + key;
             return url;
         }
 
@@ -87,19 +89,13 @@ namespace AlexaService.Intent
         {
             JObject EdmundsJson = null;
             string EdmundsResponse = "";
-            if (string.IsNullOrWhiteSpace(EdmundsUrlTemplate))
-            {
-            }
-            else
-            {
-                 EdmundsResponse = GetEdmundsFullResponse();
-              
-            }
+            if (!string.IsNullOrWhiteSpace(EdmundsUrlTemplate))
+                EdmundsResponse = GetEdmundsFullResponse();
             if (!string.IsNullOrWhiteSpace(MissingSlot))
-            {
                 return GetErrorMissingSlotResponse();
 
-            }  if ( string.IsNullOrWhiteSpace( EdmundsResponse) && !string.IsNullOrWhiteSpace(EdmundsUrlTemplate))
+
+            if (string.IsNullOrWhiteSpace(EdmundsResponse) && !string.IsNullOrWhiteSpace(EdmundsUrlTemplate))
             {
                 return GetNegativeResponseTemplate();
             }
@@ -109,12 +105,11 @@ namespace AlexaService.Intent
             }
             var positiveResponseTemplate = GetPositiveResponseTemplate();
 
-            List<string> arg = new List<string>();
+            var arg = new List<string>();
             var maches = Regex.Matches(positiveResponseTemplate, @"(\{(\w*):?(\w*)\})");
             foreach (Match mache in maches)
             {
                 if (mache.Groups[2].Value == "slot" && mache.Groups[3].Value != "")
-
                 {
                     var slotKey = mache.Groups[3].Value;
                     if (CacheManager.Slots.Keys.Any(x => x == slotKey))
@@ -123,7 +118,7 @@ namespace AlexaService.Intent
                     }
                     else
                     {
-                        this.MissingSlot = slotKey;
+                        MissingSlot = slotKey;
                         return GetErrorMissingSlotResponse();
                     }
                 }
@@ -142,8 +137,7 @@ namespace AlexaService.Intent
             var r = new Regex(@"(\{(\w*:?\w*)\})");
             int count = 0;
             var positiveResponse = r.Replace(positiveResponseTemplate, x => "{" + count++ + "}");
-            positiveResponse = String.Format(positiveResponse, arg.ToArray());
-            return positiveResponse;
+            return string.Format(positiveResponse, arg.ToArray());
         }
 
         virtual public string GetErrorMissingSlotResponse()

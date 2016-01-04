@@ -12,7 +12,7 @@ using AlexaService.Intent;
 
 namespace AlexaService.Test.Intent
 {
-    [TestClass] [Ignore]
+  
     public class GetColorTest
     {
     
@@ -95,27 +95,7 @@ namespace AlexaService.Test.Intent
             Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "The gas mileage of 2012 Mercedes Benz S Class is 25 in the city and 19 on the highway");
 
         }
-        //Get MPG - all 3 parameters provided - price not found (Year, Make, Model)
-        /* Couldn't find an example car
-        [TestMethod]
-        public void getCarMPGTest_3noprice()
-        {
-            
-            AlexaService.Cache.CacheManager.AddSlots(new Dictionary<string, string>()
-                {
-                    {"Make", "Mazda" },
-                    {"Model", "MX-3" },
-                    {"Year", "1995" }
-                }
-            );
-            var intent = new GetMileage();
-            var edmundsURL = intent.GenEdmundsURL();
-            var edmundsResponse = intent.GetEdmundsResponse();
-            var AlexaResponse=  intent.getAlexaResponse();
-            
-            Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "Hmm. I can't seem to find the price at this time.");
-
-        }*/
+       
         //Get Color - all 3 parameters provided - make not found (Year, Make, Model)
         [TestMethod][Ignore]
         public void getCarColorTest_3badmake()

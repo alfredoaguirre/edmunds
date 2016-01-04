@@ -1,0 +1,34 @@
+{
+	"session": {
+		"sessionId": "SessionId.84c95dc2-0c1b-4370-959c-ff48dd51e1c6",
+		"application": {
+			"applicationId": "amzn1.echo-sdk-ams.app.55e6d330-19b4-40cf-8d09-ffa38ddf30f0"
+		},
+		"user": {
+			"userId": "amzn1.account.AF2BRTD6LQ2BGLRONFMW5K2VANCQ"
+		},
+		"new": false
+	},
+	"request": {
+		"type": "IntentRequest",
+		"requestId": "EdwRequestId.c086a6e2-9b41-4d2c-9025-40d10c424a2f",
+		"timestamp": 1449541306057,
+		"intent": {
+			"name": "SelectCar",
+			"slots": {
+				"Year": {
+					"name": "Year",
+					"value": "2014"
+				},
+				"Model": {
+					"name": "Model",
+					"value": "5 series"
+				},
+				"Make": {
+					"name": "Make",
+					"value": "BMW"
+				}
+			}
+		}
+	}
+}

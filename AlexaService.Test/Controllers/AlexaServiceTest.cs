@@ -1,16 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using AlexaService.Controllers;
 using System.Net.Http;
 using System.Web.Http;
 using System.IO;
 using System.Linq;
-using System.Security.Cryptography.X509Certificates;
 using Newtonsoft.Json;
 using AlexaService.Intent;
 
-namespace AlexaService.Test.Intent
+namespace AlexaService.Test.Controllers
 {
     [TestClass]
     public class AlexaServiceTest
@@ -31,7 +29,7 @@ namespace AlexaService.Test.Intent
             controller.Configuration = new HttpConfiguration();
 
             // Act
-            StreamReader file = new StreamReader(@"payload\GetMileage.json");
+            StreamReader file = new StreamReader(@"Controllers\Payload\GetMileage.json");
             var clas = JsonConvert.DeserializeObject<Json.SpeechletRequestEnvelope>(file.ReadToEnd());
 
             // Assert
@@ -42,7 +40,7 @@ namespace AlexaService.Test.Intent
         public void GetSlotTest()
         {
             // Arrange
-            StreamReader file = new StreamReader(@"payload\GetMileage.json");
+            StreamReader file = new StreamReader(@"Controllers\Payload\GetMileage.json");
             var payload = JsonConvert.DeserializeObject<Json.SpeechletRequestEnvelope>(file.ReadToEnd());
 
             // Act

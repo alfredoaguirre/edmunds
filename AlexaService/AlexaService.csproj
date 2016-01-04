@@ -80,6 +80,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
+    <Compile Include="Intent\Cancel.cs" />
+    <Compile Include="Intent\Help.cs" />
+    <Compile Include="Intent\Stop.cs" />
+    <Compile Include="Intent\Trouble.cs" />
     <Compile Include="Json\UtillResponces.cs" />
     <Content Include="Web.config" />
   </ItemGroup>

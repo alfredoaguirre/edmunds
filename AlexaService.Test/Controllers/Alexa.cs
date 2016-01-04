@@ -61,7 +61,7 @@ namespace OwinApplicationTesting
         public async Task AlexaPostTest1()
         {
             IntentBase.UseResponseNumber = 1;
-            StreamReader file = new StreamReader(@"payload\GetPrice.json");
+            StreamReader file = new StreamReader(@"Controllers\Payload\GetPrice.json");
             var clas = JsonConvert.DeserializeObject<SpeechletRequestEnvelope>(file.ReadToEnd());
             var result = await GetPostRequest(clas);
 
@@ -73,11 +73,11 @@ namespace OwinApplicationTesting
         public async Task AlexaPostTest2()
         {
             IntentBase.UseResponseNumber = 1;
-            StreamReader file = new StreamReader(@"payload\SelectCar.json");
+            StreamReader file = new StreamReader(@"Controllers\Payload\SelectCar.json");
             var clas = JsonConvert.DeserializeObject<SpeechletRequestEnvelope>(file.ReadToEnd());
             var result = await GetPostRequest(clas);
 
-            Assert.AreEqual(result.response.outputSpeech.text, "The Camry manufactured by Toyota was first made in 1990. The last year the Camry was made was in 2016.");
+            Assert.AreEqual(result.response.outputSpeech.text, "The BMW 5 series was first introduced in 1990. The last time a 5 series was rolled out was in 2016.");
         }
         
         
@@ -85,7 +85,7 @@ namespace OwinApplicationTesting
         public async Task AlexaPostTest3()
         {
             IntentBase.UseResponseNumber = 1;
-            StreamReader file = new StreamReader(@"payload\GetMileage.json");
+            StreamReader file = new StreamReader(@"Controllers\Payload\GetMileage.json");
             var clas = JsonConvert.DeserializeObject<SpeechletRequestEnvelope>(file.ReadToEnd());
             var result = await GetPostRequest(clas);
 

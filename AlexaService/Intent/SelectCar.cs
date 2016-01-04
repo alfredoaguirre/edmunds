@@ -1,9 +1,5 @@
 using AlexaService.Cache;
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AlexaService.Intent
 {
@@ -31,7 +27,7 @@ namespace AlexaService.Intent
             FollowingQuestiestionMissingSlot["Model"] = "Please tell me the model of the car.";
             FollowingQuestiestionMissingSlot["Year"] = "Please tell me the year of the car.";
 
-            EdmundsUrlTemplate = "https://api.edmunds.com/api/vehicle/v2/{slot:Make}/{slot:Model}?view=basic&fmt=json&api_key=67t7jtrnvz8wyzgfpwgcqa3y";
+            EdmundsUrlTemplate = "api/vehicle/v2/{slot:Make}/{slot:Model}?view=basic&fmt=json";
         }
 
         /// <summary>
