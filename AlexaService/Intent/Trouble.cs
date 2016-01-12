@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -10,13 +10,9 @@ namespace AlexaService.Intent
         public Trouble()
         {
             Name = "";
-            PositiveResponseTemplate.Add("");
+            PositiveResponseTemplate.Add("Car Details encountered trouble. Goodbye.");
 
-            //Encountered in the URL fails or car combo is unknown. Not prompting the user for further information
-            NegativeResponseTemplate.Add("");
-
-            ErrorSlotResponse[""] = "";
-            FollowingQuestiestionMissingSlot[""] = "";
+           
         }
     }
 }
