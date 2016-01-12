@@ -15,19 +15,13 @@ namespace AlexaService.Test.Intent
             Cache.CacheManager.Clean();
         }
 
-        //Set Make - all 1 parameters provided
+        //Trouble Test
         [TestMethod]
         public void TroubleTest_1arg()
         {
-            AlexaService.Cache.CacheManager.AddSlots(new Dictionary<string, string>()
-                {
-                    {"Make", "Dodge" }
-                }
-            );
-            var intent = new SetMake();
-            var AlexaResponse=  intent.getAlexaResponse();
+                        var AlexaResponse=  intent.getAlexaResponse();
             
-            Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "The selected make is Dodge");
+            Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "Car Details encountered trouble. Goodbye.");
         }    
     }
 }
