@@ -19,7 +19,8 @@ namespace AlexaService.Test.Intent
         [TestMethod]
         public void TroubleTest_1arg()
         {
-                        var AlexaResponse=  intent.getAlexaResponse();
+            var intent = new Trouble();
+            var AlexaResponse=  intent.GetAlexaResponse();
             
             Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "Car Details encountered trouble. Goodbye.");
         }    

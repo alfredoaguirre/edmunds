@@ -20,7 +20,8 @@ namespace OwinApplicationTesting
 
         [TestInitialize]
         public void Setup()
-        {  IntentBase.UseResponseNumber = 1;
+        {
+            IntentBase.UseResponseNumber = 1;
             server = TestServer.Create(app =>
             {
                 HttpConfiguration config = new HttpConfiguration();
@@ -67,8 +68,8 @@ namespace OwinApplicationTesting
 
             Assert.AreEqual(result.response.outputSpeech.text, "A new 2015 Toyota Camry starts at 31370 dollars");
         }
-        
-        
+
+
         [TestMethod]
         public async Task AlexaPostTest2()
         {
@@ -79,8 +80,8 @@ namespace OwinApplicationTesting
 
             Assert.AreEqual(result.response.outputSpeech.text, "The BMW 5 series was first introduced in 1990. The last time a 5 series was rolled out was in 2016.");
         }
-        
-        
+
+
         [TestMethod]
         public async Task AlexaPostTest3()
         {
@@ -91,8 +92,8 @@ namespace OwinApplicationTesting
 
             Assert.AreEqual(result.response.outputSpeech.text, "The city MPG of the 2015 Toyota Camry is 21 and the highway MPG is 31");
         }
-        
-        
-        
+
+
+
     }
 }

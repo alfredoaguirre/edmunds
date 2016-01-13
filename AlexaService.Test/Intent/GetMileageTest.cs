@@ -37,7 +37,7 @@ namespace AlexaService.Test
             var intent =  new GetMileage();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
-            var AlexaResponse=  intent.getAlexaResponse();
+            var AlexaResponse=  intent.GetAlexaResponse();
             
             Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "The gas mileage of 2014 BMW 5 Series is 17 in the city and 25 on the highway");
 
@@ -57,7 +57,7 @@ namespace AlexaService.Test
             var intent =  new GetMileage();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
-            var AlexaResponse=  intent.getAlexaResponse();
+            var AlexaResponse=  intent.GetAlexaResponse();
             
             Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "I don't know at this time.");
 
@@ -77,7 +77,7 @@ namespace AlexaService.Test
             var intent =  new GetMileage();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
-            var AlexaResponse=  intent.getAlexaResponse();
+            var AlexaResponse=  intent.GetAlexaResponse();
             
             Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "I don't know at this time.");
 
@@ -97,7 +97,7 @@ namespace AlexaService.Test
             var intent =  new GetMileage();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
-            var AlexaResponse=  intent.getAlexaResponse();
+            var AlexaResponse=  intent.GetAlexaResponse();
             
             Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "The gas mileage of 2012 Mercedes Benz S Class is 21 in the city and 31 on the highway");
 
@@ -139,7 +139,7 @@ namespace AlexaService.Test
             var intent =  new GetMileage();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
-            var AlexaResponse=  intent.getAlexaResponse();
+            var AlexaResponse=  intent.GetAlexaResponse();
             
             Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "I don't know at this time.");
 
@@ -160,7 +160,7 @@ namespace AlexaService.Test
             var intent =  new GetMileage();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
-            var AlexaResponse=  intent.getAlexaResponse();
+            var AlexaResponse=  intent.GetAlexaResponse();
             
             Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "I don't know at this time.");
 
@@ -181,7 +181,7 @@ namespace AlexaService.Test
             var intent =  new GetMileage();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
-            var AlexaResponse=  intent.getAlexaResponse();
+            var AlexaResponse=  intent.GetAlexaResponse();
             
             Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "I don't know at this time.");
 
@@ -203,7 +203,7 @@ namespace AlexaService.Test
             var intent =  new GetMileage();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
-            var AlexaResponse=  intent.getAlexaResponse();
+            var AlexaResponse=  intent.GetAlexaResponse();
             
             Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "The gas mileage of 2002 Toyota Camry is 26 in the city and 18 on the highway");
 
@@ -245,7 +245,7 @@ namespace AlexaService.Test
             var intent =  new GetMileage();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
-            var AlexaResponse=  intent.getAlexaResponse();
+            var AlexaResponse=  intent.GetAlexaResponse();
             
             Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "What's the model of the car?");
 
@@ -266,7 +266,7 @@ namespace AlexaService.Test
             var intent =  new GetMileage();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
-            var AlexaResponse=  intent.getAlexaResponse();
+            var AlexaResponse=  intent.GetAlexaResponse();
             
             Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "What's the make of the car?");
 
@@ -285,7 +285,7 @@ namespace AlexaService.Test
             var intent =  new GetMileage();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
-            var AlexaResponse=  intent.getAlexaResponse();
+            var AlexaResponse=  intent.GetAlexaResponse();
             
             Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "What's the make of the car?");
 
@@ -305,7 +305,7 @@ namespace AlexaService.Test
             var intent =  new GetMileage();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
-            var AlexaResponse=  intent.getAlexaResponse();
+            var AlexaResponse=  intent.GetAlexaResponse();
             
             Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "What's the model of the car?");
 
@@ -325,7 +325,7 @@ namespace AlexaService.Test
             var intent =  new GetMileage();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
-            var AlexaResponse=  intent.getAlexaResponse();
+            var AlexaResponse=  intent.GetAlexaResponse();
             
             Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "What's the make of the car?");
 
@@ -345,7 +345,7 @@ namespace AlexaService.Test
             var intent =  new GetMileage();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
-            var AlexaResponse=  intent.getAlexaResponse();
+            var AlexaResponse=  intent.GetAlexaResponse();
             
             Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "The gas mileage of 2002 Toyota Camry is 26 in the city and 18 on the highway.");
 
@@ -365,7 +365,7 @@ namespace AlexaService.Test
             var intent =  new GetMileage();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
-            var AlexaResponse=  intent.getAlexaResponse();
+            var AlexaResponse=  intent.GetAlexaResponse();
             
             Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "I don't know at this time.");
 

@@ -19,8 +19,8 @@ namespace AlexaService.Test.Intent
         [TestMethod]
         public void HelpTest_1arg()
         {
-            
-            var AlexaResponse=  intent.getAlexaResponse();
+            var intent = new Help();
+            var AlexaResponse=  intent.GetAlexaResponse();
             
             Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "What car would you like to know more about?");
         }    

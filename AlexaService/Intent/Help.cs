@@ -6,14 +6,11 @@ using System.Threading.Tasks;
 
 namespace AlexaService.Intent
 {
-    class Help : IntentBase
+    public class Help : LaunchRequest
     {
         public Help()
         {
             Name = "Help";
-            PositiveResponseTemplate.Add("");
-            
-            //Alfredo, write the code so it sends the user to the "Launch Request" Intent 
         }
     }
 }

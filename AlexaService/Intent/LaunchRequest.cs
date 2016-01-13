@@ -2,14 +2,14 @@ using AlexaService.Json;
 
 namespace AlexaService.Intent
 {
-    class LaunchRequest : IntentBase
+  public class LaunchRequest : IntentBase
     {
         public LaunchRequest()
         {
             Name = "LaunchRequest";
         }
 
-        public new  static SpeechletResponseEnvelope getAlexaResponse()
+        public override SpeechletResponseEnvelope GetAlexaResponse()
         {
             return new SpeechletResponseEnvelope()
             {

@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace AlexaService.Intent
 {
-    class Stop : IntentBase
+    public class Stop : IntentBase
     {
         public Stop()
         {
             Name = "Cancel";
             PositiveResponseTemplate.Add("Car Details Stopping");
-            
+            ShouldEndSession = true;
 
         }
     }

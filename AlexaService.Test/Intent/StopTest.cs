@@ -19,8 +19,8 @@ namespace AlexaService.Test.Intent
         [TestMethod]
         public void StopTest_1arg()
         {
-           
-            var AlexaResponse=  intent.getAlexaResponse();
+            var intent = new Stop();
+            var AlexaResponse=  intent.GetAlexaResponse();
             
             Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "Car Details Stopping");
         }    

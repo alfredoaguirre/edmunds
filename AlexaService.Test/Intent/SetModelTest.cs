@@ -25,7 +25,7 @@ namespace AlexaService.Test.Intent
                 }
             );
             var intent = new SetModel();
-            var AlexaResponse=  intent.getAlexaResponse();
+            var AlexaResponse=  intent.GetAlexaResponse();
             
             Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "The selected model is tercel ");
         }
@@ -40,7 +40,7 @@ namespace AlexaService.Test.Intent
                 }
             );
             var intent = new SetModel();
-            var AlexaResponse=  intent.getAlexaResponse();
+            var AlexaResponse=  intent.GetAlexaResponse();
             
             Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "What's the model of the car?");
         }

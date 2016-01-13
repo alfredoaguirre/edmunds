@@ -33,7 +33,8 @@ namespace AlexaService.Controllers
             Trace.TraceInformation("intent type" + type);
             if (type == "LaunchRequest")
             {
-                return LaunchRequest.getAlexaResponse();
+                return IntentManager.GetIntent("LaunchRequest").GetAlexaResponse();
+                //   return  LaunchRequest.GetAlexaResponse();
             }
             var intentName = requestBody?.Request?.Intent?.Name;
             Trace.TraceInformation("intent Name" + intentName);
@@ -44,8 +45,10 @@ namespace AlexaService.Controllers
             CacheManager.AddSlots(requestBody.Request.Intent.GetSlots);
             IntentBase intent = IntentManager.GetIntent(intentName);
             if (intent == null)
-            { return AlexaService.Json.UtillResponces.NoIntent(intentName); }
-            var alexaResponse = intent.getAlexaResponse();
+            {
+                return AlexaService.Json.UtillResponces.NoIntent(intentName);
+            }
+            var alexaResponse = intent.GetAlexaResponse();
             CacheManager.Intent.Push(intent);
             return alexaResponse;
         }

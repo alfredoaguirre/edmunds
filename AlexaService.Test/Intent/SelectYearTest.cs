@@ -25,7 +25,7 @@ namespace AlexaService.Test.Intent
                 }
             );
             var intent = new SetYear();
-            var AlexaResponse=  intent.getAlexaResponse();
+            var AlexaResponse=  intent.GetAlexaResponse();
             
             Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "The selected year is 2015");
         }
@@ -39,7 +39,7 @@ namespace AlexaService.Test.Intent
                 }
             );
             var intent = new SetYear();
-            var AlexaResponse=  intent.getAlexaResponse();
+            var AlexaResponse=  intent.GetAlexaResponse();
             
             Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "There is no selected year");
         }

@@ -25,7 +25,7 @@ namespace AlexaService.Test.Intent
                 }
             );
             var intent = new SetMake();
-            var AlexaResponse=  intent.getAlexaResponse();
+            var AlexaResponse=  intent.GetAlexaResponse();
             
             Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "The selected make is Dodge");
         }
@@ -39,7 +39,7 @@ namespace AlexaService.Test.Intent
                 }
             );
             var intent = new SetMake();
-            var AlexaResponse=  intent.getAlexaResponse();
+            var AlexaResponse=  intent.GetAlexaResponse();
             
             Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "What's the make of the car?");
         }

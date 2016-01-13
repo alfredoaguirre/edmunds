@@ -101,7 +101,7 @@ namespace AlexaService.Test.Controllers
             Assert.AreEqual("https://api.edmunds.com/api/vehicle/v2/Dodge/Dart/2013/styles?view=full&fmt=json&api_key=67t7jtrnvz8wyzgfpwgcqa3y", edmundsURL);
 
             var edmundsResponse = intent.GetEdmundsResponse();
-            var AlexaResponse = intent.getAlexaResponse();
+            var AlexaResponse = intent.GetAlexaResponse();
         }
     }
 }

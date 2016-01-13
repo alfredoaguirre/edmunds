@@ -36,7 +36,7 @@ namespace AlexaService.Test
             var intent = new SelectCar();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
-            var AlexaResponse = intent.getAlexaResponse();
+            var AlexaResponse = intent.GetAlexaResponse();
 
             Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "The 5 Series manufactured by BMW was first made in 1990. The last year the 5 Series was made was in 2016.");
 
@@ -56,7 +56,7 @@ namespace AlexaService.Test
             var intent = new SelectCar();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
-            var AlexaResponse = intent.getAlexaResponse();
+            var AlexaResponse = intent.GetAlexaResponse();
        
             Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "The ILX manufactured by Acura was first made in 2013. The last year the ILX was made was in 2016.");
 
@@ -76,7 +76,7 @@ namespace AlexaService.Test
             var intent = new SelectCar();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
-            var AlexaResponse = intent.getAlexaResponse();
+            var AlexaResponse = intent.GetAlexaResponse();
 
             Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "I don't have that car in my records. Hm try again later.");
 
@@ -96,7 +96,7 @@ namespace AlexaService.Test
             var intent = new SelectCar();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
-            var AlexaResponse = intent.getAlexaResponse();
+            var AlexaResponse = intent.GetAlexaResponse();
 
             Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "The 5 Series manufactured by BMW was first made in 1994. The last year the 5 Series was made was in 2017.");
 
@@ -136,7 +136,7 @@ namespace AlexaService.Test
             var intent = new SelectCar();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
-            var AlexaResponse = intent.getAlexaResponse();
+            var AlexaResponse = intent.GetAlexaResponse();
 
             Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "I don't have that car in my records. Hm try again later.");
 
@@ -157,7 +157,7 @@ namespace AlexaService.Test
             var intent = new SelectCar();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
-            var AlexaResponse = intent.getAlexaResponse();
+            var AlexaResponse = intent.GetAlexaResponse();
 
             Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "I don't have that car in my records. Hm try again later.");
 
@@ -178,7 +178,7 @@ namespace AlexaService.Test
             var intent = new SelectCar();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
-            var AlexaResponse = intent.getAlexaResponse();
+            var AlexaResponse = intent.GetAlexaResponse();
 
             Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "I don't have that car in my records. Hm try again later.");
 
@@ -200,7 +200,7 @@ namespace AlexaService.Test
             var intent = new SelectCar();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
-            var AlexaResponse = intent.getAlexaResponse();
+            var AlexaResponse = intent.GetAlexaResponse();
 
             Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "The Camry manufactured by Toyota was first made in 1990. The last year the Camry was made was in 2016");
 
@@ -241,7 +241,7 @@ namespace AlexaService.Test
             var intent = new SelectCar();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
-            var AlexaResponse = intent.getAlexaResponse();
+            var AlexaResponse = intent.GetAlexaResponse();
 
             Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "What's the model of the car?");
         }
@@ -260,7 +260,7 @@ namespace AlexaService.Test
             var intent = new SelectCar();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
-            var AlexaResponse = intent.getAlexaResponse();
+            var AlexaResponse = intent.GetAlexaResponse();
 
             Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "What's the make of the car?");
 
@@ -279,7 +279,7 @@ namespace AlexaService.Test
             var intent = new SelectCar();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
-            var AlexaResponse = intent.getAlexaResponse();
+            var AlexaResponse = intent.GetAlexaResponse();
 
            Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "What's the make of the car?");
 
@@ -299,7 +299,7 @@ namespace AlexaService.Test
             var intent = new SelectCar();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
-            var AlexaResponse = intent.getAlexaResponse();
+            var AlexaResponse = intent.GetAlexaResponse();
 
             Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "What's the model of the car?");
 
@@ -319,7 +319,7 @@ namespace AlexaService.Test
             var intent = new SelectCar();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
-            var AlexaResponse = intent.getAlexaResponse();
+            var AlexaResponse = intent.GetAlexaResponse();
 
             Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "What's the make of the car?");
         }
@@ -334,7 +334,7 @@ namespace AlexaService.Test
             var intent = new SelectCar();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
-            var AlexaResponse = intent.getAlexaResponse();
+            var AlexaResponse = intent.GetAlexaResponse();
 
             Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "What's the make of the car?");
 
@@ -354,7 +354,7 @@ namespace AlexaService.Test
             var intent = new SelectCar();
             var edmundsURL = intent.GenEdmundsURL();
             var edmundsResponse = intent.GetEdmundsResponse();
-            var AlexaResponse = intent.getAlexaResponse();
+            var AlexaResponse = intent.GetAlexaResponse();
 
             Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "I don't know at this time.");
 

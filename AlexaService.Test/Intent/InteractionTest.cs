@@ -34,7 +34,7 @@ namespace AlexaService.Test.Intent
                 }
             );
             var intent = new GetPrice();
-            var AlexaResponse=  intent.getAlexaResponse();
+            var AlexaResponse=  intent.GetAlexaResponse();
             
             Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "What's the make of the car?");
             
@@ -44,7 +44,7 @@ namespace AlexaService.Test.Intent
                 }
             );
             
-            AlexaResponse = intent.getAlexaResponse();
+            AlexaResponse = intent.GetAlexaResponse();
             
             Assert.AreEqual(AlexaResponse.response.outputSpeech.text, "A new 2002 Toyota Camry has a starting price of 25405");
         }

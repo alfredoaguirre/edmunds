@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace AlexaService.Intent
 {
-    class Cancel : IntentBase
+    public class Cancel : IntentBase
     {
         public Cancel()
         {
             Name = "Cancel";
             PositiveResponseTemplate.Add("Cancelling");
-           
+
 
         }
     }

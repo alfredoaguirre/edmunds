@@ -12,6 +12,7 @@ namespace AlexaService.Intent
     {
         public string Name { get; set; }
         public static int? UseResponseNumber { get; set; }
+        public bool ShouldEndSession { get; set; }
 
         protected string MissingSlot { get; set; }
 
@@ -33,9 +34,11 @@ namespace AlexaService.Intent
         {
             PositiveResponseTemplate = new List<string>();
             Response = new Dictionary<string, string>();
+
             ErrorSlotResponse = new Dictionary<string, string>();
             NegativeResponseTemplate = new List<string>();
             FollowingQuestiestionMissingSlot = new Dictionary<string, string>();
+            ShouldEndSession = false;
         }
 
         virtual public string GenEdmundsURL()
@@ -144,7 +147,7 @@ namespace AlexaService.Intent
             return new Card { content = "" };
         }
 
-        public SpeechletResponseEnvelope getAlexaResponse()
+        public virtual SpeechletResponseEnvelope GetAlexaResponse()
         {
             // reste misising slot
             MissingSlot = null;
@@ -163,7 +166,7 @@ namespace AlexaService.Intent
                             text = ""// getReprompt()
                         }
                     },
-                    shouldEndSession = false,
+                    shouldEndSession = ShouldEndSession,
                     card = getCard()
                 },
                 version = "1.0",
